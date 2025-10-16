@@ -5,12 +5,20 @@ import json
 
 
 def parse_args():
-    parser = ArgumentParser("Convert a JSON file provided by ISU to a tabular CSV format")
+    parser = ArgumentParser(
+        "Convert a JSON file provided by ISU to a tabular CSV format"
+    )
 
-    parser.add_argument("json_path", help="The path to the JSON file to convert", type=str)
-
-    parser.add_argument("--out_dir", "-o", help="The output directory of the resulting CSV files", type=str, default=os.getcwd())
-
+    parser.add_argument(
+        "json_path", help="The path to the JSON file to convert", type=str
+    )
+    parser.add_argument(
+        "--out_dir",
+        "-o",
+        help="The output directory of the resulting CSV files",
+        type=str,
+        default=os.getcwd(),
+    )
 
     return parser.parse_args()
 
@@ -31,8 +39,9 @@ if __name__ == "__main__":
         print("Could not find Data key in provided JSON")
         exit(1)
 
-
-    output_path = os.path.splitext(os.path.basename(args.json_path))[0].replace(" ", "_")
+    output_path = os.path.splitext(os.path.basename(args.json_path))[0].replace(
+        " ", "_"
+    )
 
     with open(f"{output_path}_race_results.csv", "w") as file:
         competitors_data = dict()
@@ -53,7 +62,9 @@ if __name__ == "__main__":
                 "DateOfBirth": person["DateOfBirth"]["Date"],
                 "NationalFederationCode": competitor.get("StartedForNfCode"),
                 "NationalFederationName": competitor.get("StartedForNfName"),
-                "NationalFederationCountryName": competitor.get("StartedForNfCountryName"),
+                "NationalFederationCountryName": competitor.get(
+                    "StartedForNfCountryName"
+                ),
             }
 
             if len(fieldnames) == 0:
@@ -80,20 +91,23 @@ if __name__ == "__main__":
                     "HeatStartDate": heat["Start"]["Date"],
                 }
                 for competitor in heat["Competitors"]:
-                    competitor_data = competitors_data[competitor["CompetitionCompetitorId"]]
+                    competitor_data = competitors_data[
+                        competitor["CompetitionCompetitorId"]
+                    ]
                     result_data = {
                         **competitor_data,
                         **heat_data,
                         "StartingPosition": competitor["StartingPosition"],
                         "FinalRank": competitor["FinalRank"],
                         "FinalResult": competitor["FinalResult"],
-
                     }
                     laps = competitor["Laps"]
                     if max_n_laps is None:
                         max_n_laps = len(laps)
                     elif not len(laps) == max_n_laps:
-                        print("Warning: Not all heats have the same number of laps, expect missing values in CSV")
+                        print(
+                            "Warning: Not all heats have the same number of laps, expect missing values in CSV"
+                        )
                         max_n_laps = max(max_n_laps, len(laps))
 
                     for lap in laps:
@@ -114,7 +128,3 @@ if __name__ == "__main__":
 
         for heat in results:
             heats_csv.writerow(heat)
-
-
-
-
