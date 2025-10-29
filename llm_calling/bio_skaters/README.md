@@ -38,7 +38,7 @@ It's possible that:
 If you have additional context—such as a specific competition, club affiliation, or recent result—I’d be happy to help investigate further. Otherwise, based on currently available public information, there is no notable record of a Swiss short track speed skater by that name.
 ```
 
-### Qwen-plus with tool calling (use *few_skaters.ndjson* file)
+### Qwen-plus (agent) with tool calling (use *few_skaters.ndjson* file)
 
 #### Prompt
 
@@ -88,7 +88,7 @@ If you're looking for information about a specific short track speed skater from
 If you have additional context or believe there may be an emerging or lesser-known athlete by that name, please provide more details!
 ```
 
-### Qwen-plus with tool calling (use *few_skaters.ndjson* file)
+### Qwen-plus (agent) with tool calling (use *few_skaters.ndjson* file)
 
 #### Prompt
 
@@ -103,3 +103,16 @@ Thibault Metraux is a Swiss short track speed skater, born on January 10, 2002, 
 Metraux has taken part in several ISU World Cup events and European and World Championships, achieving notable placements such as 27th in the 1500m at the 2021 European Championships and 39th in the 1500m at the 2023 World Championships. While still developing his competitive profile, he continues to gain experience across all distances—500m, 1000m, and 1500m—on the global circuit. Unusually for a short track specialist, Metraux has also competed in long track speed skating, including appearances on the World Cup circuit and at the 2024 European Single Distances Championships in Heerenveen.
 Off the ice, Metraux is a student and lists cycling and music among his hobbies. Fluent in French and English, he goes by the nickname "Pepito," given to him by his first coach. His sporting idol is Russian short tracker Victor An, and he credits his family as the most influential force in his career. Motivated by the quote “Train hard, it will pay off,” Metraux aims to compete at the 2026 Winter Olympics in Milan-Cortina and eventually become a coach or sports teacher after retiring from competition.
 ```
+
+### Qwen-plus with json data in prompt (*generate_biography.py*)
+
+#### Prompt
+
+```
+"system" : "Your task is to write a text of 5 sentences using given data. If some information is missing, do not make anything up. I would like to have a general summary of this athlete (including sporting achievements), but also any unusual information."
+"human" : skater_json_str
+```
+
+#### Result
+
+Same result as above.
