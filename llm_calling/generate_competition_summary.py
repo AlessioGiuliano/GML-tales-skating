@@ -17,8 +17,8 @@ def generate_summary(model, competition_data, nationality_code):
         ),
         ("human", competition_json_str),
     ]
-    skater_biography = model.invoke(messages).text
-    return skater_biography
+    competition_summary = model.invoke(messages).text
+    return competition_summary
 
 def get_competition_summaries(competition_data, model, nationality_codes):
     result = {}
