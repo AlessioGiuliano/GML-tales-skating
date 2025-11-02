@@ -1,2 +1,3 @@
 yt-dlp
 pytesseract
+opencv-python
