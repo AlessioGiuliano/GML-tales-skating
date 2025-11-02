@@ -80,7 +80,7 @@ def get_race_info(discipline_name: str = "", round_name: str = "", heat_name: st
                          c["Id"] == competitor["CompetitionCompetitorId"]), None)
                     competitor["LastName"] = next(
                         (c["Competitor"]["Person"]["LastName"] for c in RACES_DATA["Data"]["Competitors"] if
-                         c["Competitor"]["Person"]["Id"] == competitor["CompetitionCompetitorId"]), None)
+                         c["Id"] == competitor["CompetitionCompetitorId"]), None)
                 return heat_data
             else:
                 return {"error": f"Heat '{heat_name}' not found."}
