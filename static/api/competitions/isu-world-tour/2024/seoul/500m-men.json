@@ -1,0 +1,240 @@
+{
+    "competition": {
+    "id": "isu_world_tour_seoul_2024",
+    "name": "ISU Short Track World Tour - Seoul 2024",
+    "season": "2024/25",
+    "location": "Seoul, South Korea",
+    "dates": {
+    "start": "2024-11-02",
+    "end": "2024-11-05"
+    },
+    "category": "500m Men",
+
+        "personalized_summaries": {
+          "NED": {
+            "title": "Les Pays-Bas confirment leur montée en puissance",
+            "text": "L’équipe néerlandaise s’illustre à Séoul avec plusieurs podiums et une constance remarquable en demi-finales comme en finale."
+          },
+          "CHN": {
+            "title": "La Chine poursuit sa domination",
+            "text": "Les patineurs chinois s’imposent encore une fois avec un doublé impressionnant, menés par Cheng Hu-Yen."
+          }
+        },
+
+        "phases": [
+          {
+            "name": "Semifinals",
+            "races": [
+              {
+                "id": "semi_heat_1",
+                "title": "Semifinal Heat 1",
+                "video_url": "https://videos.isu.org/seoul2024/500m_men_semifinal_heat1.mp4",
+                "hype_score": 8.7,
+                "personalized_summaries": {
+                  "NED": {
+                    "title": "Janssen file vers la finale",
+                    "text": "Pieter Janssen décroche la deuxième place et valide son ticket pour la finale avec maîtrise."
+                  },
+                  "CHN": {
+                    "title": "Cheng Hu-Yen domine sa série",
+                    "text": "Le champion chinois s’impose avec aisance et signe le meilleur temps des demi-finales."
+                  }
+                },
+                "results": [
+                  {
+                    "rank": 1,
+                    "athlete": {
+                      "id": "cheng_huyen",
+                      "name": "Cheng Hu-Yen",
+                      "country": "CHN",
+                      "team": "China National Team",
+                      "bio": "Champion du monde 2023 et figure emblématique du sprint asiatique, Cheng Hu-Yen est connu pour son explosivité et sa technique impeccable sur 500m."
+                    },
+                    "time": "40.318",
+                    "splits": [
+                      { "lap": 1, "time": "8.10" },
+                      { "lap": 2, "time": "8.05" },
+                      { "lap": 3, "time": "8.00" },
+                      { "lap": 4, "time": "8.06" },
+                      { "lap": 5, "time": "8.10" }
+                    ]
+                  },
+                  {
+                    "rank": 2,
+                    "athlete": {
+                      "id": "pieter_janssen",
+                      "name": "Pieter Janssen",
+                      "country": "NED",
+                      "team": "Netherlands National Team",
+                      "bio": "Jeune espoir néerlandais, Pieter Janssen s’est imposé comme un spécialiste du 500m grâce à sa régularité et ses fins de course puissantes."
+                    },
+                    "time": "40.402",
+                    "splits": [
+                      { "lap": 1, "time": "8.12" },
+                      { "lap": 2, "time": "8.07" },
+                      { "lap": 3, "time": "7.99" },
+                      { "lap": 4, "time": "8.09" },
+                      { "lap": 5, "time": "8.13" }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "semi_heat_2",
+                "title": "Semifinal Heat 2",
+                "video_url": "https://videos.isu.org/seoul2024/500m_men_semifinal_heat2.mp4",
+                "hype_score": 8.3,
+                "personalized_summaries": {
+                  "NED": {
+                    "title": "Un autre Néerlandais manque la finale",
+                    "text": "Malgré une bonne entame de course, Tom Vermeer termine 4e et ne parvient pas à se qualifier."
+                  },
+                  "CHN": {
+                    "title": "Qualification tranquille de Li Wenhao",
+                    "text": "Li Wenhao gère parfaitement sa demi-finale et décroche la 2e place synonyme de finale."
+                  }
+                },
+                "results": [
+                  {
+                    "rank": 1,
+                    "athlete": {
+                      "id": "kim_jun",
+                      "name": "Kim Jun-Ho",
+                      "country": "KOR",
+                      "team": "Korea National Team",
+                      "bio": "Patineur expérimenté, Kim Jun-Ho est connu pour ses départs ultra-rapides et son sens tactique en course."
+                    },
+                    "time": "40.295",
+                    "splits": [
+                      { "lap": 1, "time": "8.09" },
+                      { "lap": 2, "time": "8.01" },
+                      { "lap": 3, "time": "7.98" },
+                      { "lap": 4, "time": "8.05" },
+                      { "lap": 5, "time": "8.12" }
+                    ]
+                  },
+                  {
+                    "rank": 2,
+                    "athlete": {
+                      "id": "li_wenhao",
+                      "name": "Li Wenhao",
+                      "country": "CHN",
+                      "team": "China National Team",
+                      "bio": "Membre de l’équipe nationale chinoise depuis 2019, Li Wenhao s’est distingué par ses excellents chronos en sprint court."
+                    },
+                    "time": "40.410",
+                    "splits": [
+                      { "lap": 1, "time": "8.14" },
+                      { "lap": 2, "time": "8.06" },
+                      { "lap": 3, "time": "7.97" },
+                      { "lap": 4, "time": "8.08" },
+                      { "lap": 5, "time": "8.20" }
+                    ]
+                  },
+                  {
+                    "rank": 4,
+                    "athlete": {
+                      "id": "tom_vermeer",
+                      "name": "Tom Vermeer",
+                      "country": "NED",
+                      "team": "Netherlands National Team",
+                      "bio": "Tom Vermeer est un sprinteur néerlandais prometteur, réputé pour ses débuts de course rapides mais irréguliers."
+                    },
+                    "time": "40.910",
+                    "splits": [
+                      { "lap": 1, "time": "8.00" },
+                      { "lap": 2, "time": "8.12" },
+                      { "lap": 3, "time": "8.20" },
+                      { "lap": 4, "time": "8.25" },
+                      { "lap": 5, "time": "8.33" }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Final",
+            "races": [
+              {
+                "id": "final_heat",
+                "title": "Final Heat",
+                "video_url": "https://videos.isu.org/seoul2024/500m_men_final.mp4",
+                "hype_score": 9.4,
+                "personalized_summaries": {
+                  "NED": {
+                    "title": "Janssen décroche l’argent",
+                    "text": "Superbe performance pour Pieter Janssen, battu seulement de 0.08s par Cheng Hu-Yen."
+                  },
+                  "CHN": {
+                    "title": "Cheng Hu-Yen sacré champion à Séoul",
+                    "text": "Le patineur chinois remporte la finale du 500m avec autorité, devançant Pieter Janssen et Kim Jun-Ho."
+                  }
+                },
+                "results": [
+                  {
+                    "rank": 1,
+                    "athlete": {
+                      "id": "cheng_huyen",
+                      "name": "Cheng Hu-Yen",
+                      "country": "CHN",
+                      "team": "China National Team",
+                      "bio": "Champion du monde 2023 et figure emblématique du sprint asiatique, Cheng Hu-Yen est connu pour son explosivité et sa technique impeccable sur 500m."
+                    },
+                    "time": "40.210",
+                    "splits": [
+                      { "lap": 1, "time": "8.05" },
+                      { "lap": 2, "time": "8.02" },
+                      { "lap": 3, "time": "7.94" },
+                      { "lap": 4, "time": "8.08" },
+                      { "lap": 5, "time": "8.10" }
+                    ]
+                  },
+                  {
+                    "rank": 2,
+                    "athlete": {
+                      "id": "pieter_janssen",
+                      "name": "Pieter Janssen",
+                      "country": "NED",
+                      "team": "Netherlands National Team",
+                      "bio": "Jeune espoir néerlandais, Pieter Janssen s’est imposé comme un spécialiste du 500m grâce à sa régularité et ses fins de course puissantes."
+                    },
+                    "time": "40.288",
+                    "splits": [
+                      { "lap": 1, "time": "8.10" },
+                      { "lap": 2, "time": "8.06" },
+                      { "lap": 3, "time": "7.97" },
+                      { "lap": 4, "time": "8.06" },
+                      { "lap": 5, "time": "8.09" }
+                    ]
+                  },
+                  {
+                    "rank": 3,
+                    "athlete": {
+                      "id": "kim_jun",
+                      "name": "Kim Jun-Ho",
+                      "country": "KOR",
+                      "team": "Korea National Team",
+                      "bio": "Patineur expérimenté, Kim Jun-Ho est connu pour ses départs ultra-rapides et son sens tactique en course."
+                    },
+                    "time": "40.390",
+                    "splits": [
+                      { "lap": 1, "time": "8.07" },
+                      { "lap": 2, "time": "8.08" },
+                      { "lap": 3, "time": "8.01" },
+                      { "lap": 4, "time": "8.10" },
+                      { "lap": 5, "time": "8.13" }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+    },
+    "supported_teams": [
+        { "key": "NED", "name": "Netherlands National Team" },
+        { "key": "CHN", "name": "China National Team" },
+        { "key": "KOR", "name": "Korea National Team" }
+    ]
+}
