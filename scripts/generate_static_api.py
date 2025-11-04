@@ -232,6 +232,8 @@ if __name__ == '__main__':
                         "time": lap['LapTime'],
                     }
 
+                    result['splits'].append(split)
+
                 race['results'].append(result)
 
             phase['races'].append(race)
