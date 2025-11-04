@@ -78,9 +78,10 @@ const App: React.FC = () => {
     if (viewedCompetition) {
       return (
           <CompetitionDetail
-              competition={viewedCompetition}
-              selectedTeam={selectedTeam}
-              onBack={handleBackToSchedule}
+              selectedTeam={selectedTeam.iso_name}
+              year="2024"
+              location="seoul"
+              category="500m-men"
           />
       );
     }
