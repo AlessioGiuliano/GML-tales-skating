@@ -1,13 +1,11 @@
 import React from 'react';
-import { MainContentProps } from '../types';
-import { COMPETITIONS } from '../constants';
+import {MainContentProps} from '../types';
+import {COMPETITIONS} from '../constants';
 import CompetitionCard from './CompetitionCard';
-import TheEdge from './TheEdge';
 
 const MainContent: React.FC<MainContentProps> = ({ selectedTeam, onViewCompetition }) => {
   return (
     <div className="p-4 sm:p-8 animate-fadeIn relative overflow-hidden flex-grow">
-      <TheEdge />
       <div className="relative z-10">
         <main className="max-w-7xl mx-auto">
           <h2 

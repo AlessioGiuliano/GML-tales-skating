@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { Team, Competition } from './types';
-import { TEAMS } from './constants';
+import React, {useEffect, useState} from 'react';
+import {Competition, Team} from './types';
+import {TEAMS} from './constants';
 import IntroScreen from './components/IntroScreen';
 import TeamSelection from './components/TeamSelection';
 import MainContent from './components/MainContent';
 import CompetitionDetail from './components/CompetitionDetail';
 import Header from './components/Header';
+import TheEdge from './components/TheEdge';
 
 const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -14,7 +15,6 @@ const App: React.FC = () => {
   const [viewedCompetition, setViewedCompetition] = useState<Competition | null>(null);
   const [overlayColor, setOverlayColor] = useState<string | null>(null);
 
-  // --- ⚙️ Vérifie le paramètre d'URL au démarrage ---
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const teamParam = params.get('team');
@@ -29,15 +29,13 @@ const App: React.FC = () => {
     }
   }, []);
 
-  // --- 🌀 Animation d'intro ---
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 3800);
+    }, 1000);
     return () => clearTimeout(timer);
   }, []);
 
-  // --- 🧭 Sélection d'équipe + synchro URL ---
   const handleSelectTeam = (team: Team) => {
     setSelectedTeam(team);
     setHoveredTeam(null);
@@ -48,17 +46,14 @@ const App: React.FC = () => {
     window.history.replaceState({}, '', `${window.location.pathname}?${params}`);
   };
 
-  // --- 🔁 Changement d'équipe ---
   const handleSwitchTeam = () => {
     setSelectedTeam(null);
     setViewedCompetition(null);
     const params = new URLSearchParams(window.location.search);
     params.delete('team');
     window.history.replaceState({}, '', `${window.location.pathname}?${params}`);
-    // setOverlayColor(null); // décommente si tu veux remettre fond neutre
   };
 
-  // --- 📅 Navigation entre compétitions ---
   const handleViewCompetition = (competition: Competition) => {
     setViewedCompetition(competition);
   };
@@ -69,7 +64,6 @@ const App: React.FC = () => {
 
   const isTeamSelectionView = !selectedTeam;
 
-  // --- 🧩 Rendu du contenu principal ---
   const renderContent = () => {
     if (!selectedTeam) {
       return (
@@ -102,7 +96,6 @@ const App: React.FC = () => {
     return <IntroScreen />;
   }
 
-  // --- 🎨 Rendu principal ---
   return (
       <div
           className={`relative w-full font-sans ${
@@ -110,10 +103,13 @@ const App: React.FC = () => {
           }`}
       >
         <div
-            className="absolute inset-0 w-full h-full transition-all duration-500 ease-in-out"
+            className="absolute inset-0 w-full h-full transition-[background-color,opacity] duration-500 ease-in-out"
             style={{
-              backgroundColor: overlayColor || hoveredTeam?.bgColor || 'transparent',
-              opacity: overlayColor || hoveredTeam ? 0.2 : 0,
+              backgroundColor: hoveredTeam?.bgColor
+                  ? `${hoveredTeam.bgColor}B3`
+                  : overlayColor
+                      ? `${overlayColor}B3`
+                      : 'transparent',
               zIndex: 0,
             }}
         />
@@ -131,6 +127,8 @@ const App: React.FC = () => {
             {renderContent()}
           </main>
         </div>
+
+        <TheEdge color={hoveredTeam?.bgColor || overlayColor || '#0e3be1'} />
       </div>
   );
 };

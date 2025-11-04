@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import { CompetitionDetailProps, Qualifier, Race, Stat, TeamStatComparison, EventStage, Team } from '../types';
-import TheEdge from './TheEdge';
+import React, {useState} from 'react';
+import {CompetitionDetailProps, EventStage, Qualifier, Race, Stat, Team, TeamStatComparison} from '../types';
 import CountryFlag from './CountryFlag';
 
 const ArrowLeftIcon: React.FC<{className?: string}> = ({ className }) => (
@@ -163,7 +162,6 @@ const CompetitionDetail: React.FC<CompetitionDetailProps> = ({ competition, sele
     
   return (
     <div className="p-4 sm:p-8 animate-fadeIn relative overflow-hidden flex-grow">
-        <TheEdge />
         <div className="relative z-10">
             <main className="max-w-7xl mx-auto">
                 {/* Page Header */}
