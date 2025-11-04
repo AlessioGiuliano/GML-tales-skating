@@ -107,9 +107,7 @@ const App: React.FC = () => {
             style={{
               backgroundColor: hoveredTeam?.bgColor
                   ? `${hoveredTeam.bgColor}B3`
-                  : overlayColor
-                      ? `${overlayColor}B3`
-                      : 'transparent',
+                  : 'transparent',
               zIndex: 0,
             }}
         />
@@ -128,7 +126,7 @@ const App: React.FC = () => {
           </main>
         </div>
 
-        <TheEdge color={hoveredTeam?.bgColor || overlayColor || '#0e3be1'} />
+        <TheEdge color={hoveredTeam?.bgColor ? `${hoveredTeam?.bgColor}B3` : '#0e3be1'} />
       </div>
   );
 };

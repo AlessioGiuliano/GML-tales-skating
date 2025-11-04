@@ -5,8 +5,10 @@ export interface Team {
   name: string;
   nameParts: [string, string];
   country: string;
+  iso_name: string;     // ISO Alpha-3 code (ex: "CHE", "CAN")
   bgColor: string;
   textColor: string;
+  photo_url: string;    // Path to team photo (ex: "/team-photos/switzerland.png")
 }
 
 export interface Qualifier {

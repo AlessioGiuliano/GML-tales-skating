@@ -8,50 +8,19 @@ interface TeamLogoProps {
   className?: string;
 }
 
-// A mapping from a sanitized team name to its logo component.
-const componentMap: { [key: string]: React.FC<{ className?: string }> } = {
-  'KoreanWhiteTigers': Logos.KoreanWhiteTigersLogo,
-  'USAEagles': Logos.UsaEaglesLogo,
-  'DutchLions': Logos.DutchLionsLogo,
-  'BelgiumIceBears': Logos.BelgiumIceBearsLogo,
-  'CanadianIceMaples': Logos.CanadianIceMaplesLogo,
-  'ChineseLoongs': Logos.ChineseLoongsLogo,
-  'PolishHussars': Logos.PolishHussarsLogo,
-  'ItalianGladiators': Logos.ItalianGladiatorsLogo,
-  'KazakhNomads': Logos.KazakhNomadsLogo,
-  'JapaneseNinjas': Logos.JapaneseNinjasLogo,
-  'HungarianFalcons': Logos.HungarianFalconsLogo,
-  'FrenchRoosters': Logos.FrenchRoostersLogo,
-  'BritishRoyals': Logos.BritishRoyalsLogo,
-  'UkrainianWildCats': Logos.UkrainianWildCatsLogo,
-  'CroatianDalmatians': Logos.CroatianDalmatiansLogo,
-  'GermanWolves': Logos.GermanWolvesLogo,
-  'CzechiaIceSpiders': Logos.CzechiaIceSpidersLogo,
-  'BulgarianKings': Logos.BulgarianKingsLogo,
-  'LatvianGoldenStars': Logos.LatvianGoldenStarsLogo,
-  'AustralianRacingRoos': Logos.AustralianRacingRoosLogo,
-  'TurkishAnatolianPars': Logos.TurkishAnatolianParsLogo,
-  'HongKongIceQilins': Logos.HongKongIceQilinsLogo,
-  'NewZealandIceKeas': Logos.NewZealandIceKeasLogo,
-  'IrishWolfHounds': Logos.IrishWolfHoundsLogo,
-  'SwissIbex': Logos.SwissIbexLogo,
-  'NorwegianVikings': Logos.NorwegianVikingsLogo,
-  'ThaiElephants': Logos.ThaiElephantsLogo,
-  'SingaporeGazelles': Logos.SingaporeGazellesLogo,
-  'PhilippineTamaraws': Logos.PhilippineTamarawsLogo,
-};
-
 const TeamLogo: React.FC<TeamLogoProps> = ({ team, className }) => {
-  // Generate a key like "KoreanWhiteTigers" from "Korean White Tigers"
-  const componentKey = team.name.replace(/\s/g, '');
-  const LogoComponent = componentMap[componentKey];
-
-  if (LogoComponent) {
-    return <LogoComponent className={className} />;
+  if (team.iso_name !== 'USA') {
+    return <img
+        src={team.photo_url}
+        alt={`${team.name} photo`}
+        className={`${className} object-cover w-full h-full rounded-lg`}
+    />
   }
 
   // Fallback to the template totem if a specific logo isn't found
-  return <TemplateTotem className={className} />;
+  return <div className={"self-center flex content-center text-2xl font-display font-extrabold tracking-wider h-full"}>
+    {team.iso_name}
+  </div>;
 };
 
 export default TeamLogo;
