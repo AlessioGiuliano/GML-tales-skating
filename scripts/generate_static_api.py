@@ -8,6 +8,9 @@ import json
 from langchain_openai import ChatOpenAI
 
 import llm_calling.generate_biography as generate_bio
+import llm_calling.generate_competition_summary as competition_summary
+import llm_calling.generate_race_description as race_summary
+
 
 class Athlete(TypedDict):
     id: str
@@ -93,7 +96,7 @@ def competitor_to_athlete(competitor: dict, skaters_data: dict[str, any], model:
         "name": competitor['Competitor']['FirstName'] + " " + competitor['Competitor']['LastName'],
         "country": competitor['Competitor']['StartedForNfCode'],
         "team": competitor['Competitor']['StartedForNfCountryName'],
-        "bio": str(skater_data['details']) # generate_bio.generate_biography(model, skater_data)
+        "bio": str(skater_data['details']) # TODO uncomment generate_bio.generate_biography(model, skater_data)
     }
 
 # if not selected team, support all teams.
@@ -171,7 +174,7 @@ if __name__ == '__main__':
     competition['personalized_summaries'] = {
         team['key']: {
             'title': 'TODO',
-            'text': 'TODO'
+            'text': 'todo' # TODO uncomment competition_summary.generate_summary(model, competition_data, team['key'])
         }
         for team in supported_teams
     }
@@ -202,7 +205,13 @@ if __name__ == '__main__':
                 "personalized_summaries": { # TODO
                     team['key']: {
                         'title': 'TODO',
-                        'text': 'TODO'
+                        'text': 'TODO' # TODO uncomment race_summary.generate_description(
+                        #     model,
+                        #     race_data=heat,
+                        #     discipline_name=competition_data['DisciplineName'],
+                        #     round_name=round['Name'],
+                        #     heat_name=heat['Name'],
+                        # )
                     }
                     for team in supported_teams
                 },
