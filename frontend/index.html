@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Short Track World Tour 2024/2025</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Montserrat', 'sans-serif'],
+              display: ['Montserrat', 'sans-serif'],
+            },
+            keyframes: {
+              skateUp: {
+                '0%': { transform: 'translateY(100vh) rotate(-15deg)', opacity: '0' },
+                '20%': { opacity: '1' },
+                '80%': { opacity: '1' },
+                '100%': { transform: 'translateY(-100vh) rotate(15deg)', opacity: '0' },
+              },
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            },
+            animation: {
+              skateUp: 'skateUp 4s ease-in-out forwards',
+              fadeIn: 'fadeIn 1.5s ease-in-out forwards',
+              fadeInUp: 'fadeInUp 0.8s ease-out forwards',
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background: linear-gradient(to top right, #192266 0%, #0e3be1 60%, #00b3ff 80%, #00d7ff 100%);
+        background-attachment: fixed;
+        color: #ffffff;
+      }
+      /* Custom Scrollbar Styles */
+      /* For Webkit-based browsers (Chrome, Safari, Edge) */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(0, 179, 255, 0.6);
+        border-radius: 10px;
+        border: 2px solid transparent;
+        background-clip: content-box;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgba(0, 215, 255, 0.8);
+      }
+      /* For Firefox */
+      * {
+        scrollbar-width: thin;
+        scrollbar-color: rgba(0, 179, 255, 0.6) rgba(0, 0, 0, 0.2);
+      }
+
+      /* Scrollable area fade effect */
+      .scroll-fade-container {
+        position: relative;
+      }
+      .scroll-fade-container::before,
+      .scroll-fade-container::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 2; /* Above scrolling content */
+        pointer-events: none;
+        transition: opacity 0.3s ease-in-out;
+        opacity: 0;
+      }
+      .scroll-fade-container::before {
+        top: 0;
+        height: 3rem; /* 48px */
+        background: linear-gradient(to bottom, #16216a 10%, rgba(22, 33, 106, 0) 100%);
+      }
+      .scroll-fade-container::after {
+        bottom: 0;
+        height: 3rem; /* 48px */
+        background: linear-gradient(to top, #16216a 10%, rgba(22, 33, 106, 0) 100%);
+      }
+      .scroll-fade-container.fade-top::before {
+        opacity: 1;
+      }
+      .scroll-fade-container.fade-bottom::after {
+        opacity: 1;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
