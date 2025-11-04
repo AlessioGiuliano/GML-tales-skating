@@ -5,6 +5,10 @@ import sys
 from typing import List, TypedDict
 import json
 
+from langchain_openai import ChatOpenAI
+
+import llm_calling.generate_biography as generate_bio
+
 class Athlete(TypedDict):
     id: str
     name: str
@@ -25,13 +29,11 @@ class Split(TypedDict):
     lap: int
     time: str
 
-
 class Result(TypedDict):
     rank: int
     athlete: Athlete
     time: str
     splits: List[Split]
-
 
 class Race(TypedDict):
     id: str
@@ -82,13 +84,16 @@ def competition_data_to_competition(location: str, competition: dict) -> Competi
         "category": competition['DisciplineName'],
     }
 
-def competitor_to_athlete(competitor: dict) -> Athlete:
+def competitor_to_athlete(competitor: dict, skaters_data: dict[str, any], model: ChatOpenAI) -> Athlete:
+    api_id = competitor['Competitor']['Person']['Id']
+    skater_data = skaters_data[api_id]
+
     return {
         "id": competitor['Id'],
         "name": competitor['Competitor']['FirstName'] + " " + competitor['Competitor']['LastName'],
         "country": competitor['Competitor']['StartedForNfCode'],
         "team": competitor['Competitor']['StartedForNfCountryName'],
-        "bio": "TODO bio"
+        "bio": str(skater_data['details']) # generate_bio.generate_biography(model, skater_data)
     }
 
 # if not selected team, support all teams.
@@ -106,28 +111,44 @@ def extract_supported_teams(athletes: List[Athlete], selected_teams: List[str]) 
 
     return teams
 
+def load_skaters_data():
+    useful_columns = ['api_id', 'first_name', 'last_name', 'gender', 'nationality_code', 'organization_code',
+                      'thumbnail_image', 'status', 'created_at', 'updated_at', 'discipline', 'is_favourite', 'results',
+                      'details']
+    skaters_list = generate_bio.load_skaters_data(
+        './static/data/scrapper/skater/skaters.ndjson',
+        useful_columns
+    )
 
-
-
+    return {skater['api_id']: skater for skater in skaters_list}
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.DEBUG)
     args = sys.argv[1:]
 
-    if len(args) != 3:
-        logging.error("Usage: python generate_static_api.py path/to/competition.json path/to/output.json NED,CHN")
+    if len(args) != 4:
+        logging.error("Usage: python generate_static_api.py path/to/competition.json path/to/output.json NED,CHN MODEL_KEY")
 
+    # read cli args
     competition_path = args[0]
     output_path = args[1]
     selected_teams = args[2].split(',')
+    api_key = args[3]
 
+    # load skaters data
+    skater_data = load_skaters_data()
+    MODEL_NAME = "qwen-plus"
+    API_BASE_URL = "https://dashscope-intl.aliyuncs.com/compatible-mode/v1"
+    model = ChatOpenAI(model=MODEL_NAME, base_url=API_BASE_URL, api_key=api_key)
+
+    # load competition data
     logging.info(f"Generating static API files for {competition_path}")
     competition_data = load_competition_data(competition_path)
 
     # generate competition data
     logging.info("Generation base competition object")
     competition = competition_data_to_competition(
-        os.path.basename(competition_path).split(" ")[0], # todo improve
+        os.path.basename(competition_path).split(" ")[0], # ugly way to extract location :D
         competition_data
     )
     logging.debug(competition)
@@ -135,7 +156,7 @@ if __name__ == '__main__':
     # generate bio for all skaters
     logging.info("Generating skater data")
     athletes = [
-        competitor_to_athlete(competitor)
+        competitor_to_athlete(competitor, skater_data, model)
         for competitor in competition_data['Competitors']
     ]
     logging.debug(athletes)
