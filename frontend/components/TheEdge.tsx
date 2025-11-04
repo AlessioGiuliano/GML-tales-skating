@@ -1,5 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
+import { useEffect } from 'react';
 
 interface TheEdgeProps {
     color?: string;
@@ -7,6 +8,28 @@ interface TheEdgeProps {
 
 const TheEdge: React.FC<TheEdgeProps> = ({ color = '#0e3be1' }) => {
     const tipColor = '#00d7ff';
+    const controls = useAnimation();
+
+    // Looping wave movement
+    useEffect(() => {
+        controls.start({
+            d: [
+                // Base wave
+                'M0,250 C360,150 720,280 1080,180 C1440,80 1440,150 1440,150 L1440,250 L0,250 Z',
+                // Move up slightly
+                'M0,250 C360,140 720,260 1080,170 C1440,90 1440,160 1440,150 L1440,250 L0,250 Z',
+                // Move down slightly
+                'M0,250 C360,160 720,300 1080,190 C1440,70 1440,140 1440,150 L1440,250 L0,250 Z',
+                // Back to base
+                'M0,250 C360,150 720,280 1080,180 C1440,80 1440,150 1440,150 L1440,250 L0,250 Z',
+            ],
+            transition: {
+                duration: 8,
+                ease: 'easeInOut',
+                repeat: Infinity,
+            },
+        });
+    }, [controls]);
 
     return (
         <motion.div
@@ -28,12 +51,13 @@ const TheEdge: React.FC<TheEdgeProps> = ({ color = '#0e3be1' }) => {
                         <stop offset="100%" stopColor={tipColor} />
                     </linearGradient>
                 </defs>
+
                 <motion.path
-                    d="M0,250 C360,150 720,280 1080,180 C1440,80 1440,150 1440,150 L1440,250 L0,250 Z"
                     fill="url(#edgeGradient)"
-                    initial={{ pathLength: 0 }}
-                    animate={{ pathLength: 1 }}
-                    transition={{ duration: 1.5, ease: 'easeOut' }}
+                    animate={controls}
+                    initial={{
+                        d: 'M0,250 C360,150 720,280 1080,180 C1440,80 1440,150 1440,150 L1440,250 L0,250 Z',
+                    }}
                 />
             </svg>
         </motion.div>
