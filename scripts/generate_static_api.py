@@ -4,12 +4,24 @@ import sys
 
 from typing import List, TypedDict
 import json
+import pandas as pd
 
 from langchain_openai import ChatOpenAI
 
 import llm_calling.generate_biography as generate_bio
 import llm_calling.generate_competition_summary as competition_summary
 import llm_calling.generate_race_description as race_summary
+
+# Import hype score functions from enrichCsv
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+from hype_score.enrichCsv import (
+    enrich_race_id,
+    enrich_lap_times,
+    enrich_detect_falls,
+    compute_close_finish,
+    compute_lead_changes,
+    compute_hype_score
+)
 
 
 class Athlete(TypedDict):
@@ -114,6 +126,72 @@ def extract_supported_teams(athletes: List[Athlete], selected_teams: List[str]) 
 
     return teams
 
+def convert_race_to_dataframe(heat: dict, round_data: dict, competition_data: dict) -> pd.DataFrame:
+    """
+    Convert JSON race data to DataFrame matching enrichCsv requirements.
+    The dataframe should contain columns similar to the CSV format:
+    - Season, Series, City, Country, Year, Month, Day, Distance, Round, Group
+    - Name, Nationality, Rank_In_Group, Time
+    - time_lap1, time_lap2, ..., time_lap5
+    - rank_lap1, rank_lap2, ..., rank_lap5
+    """
+    rows = []
+    
+    for competitor in heat.get('Competitors', []):
+        row = {
+            'Season': competition_data.get('Start', {}).get('Year', 2024),
+            'Series': competition_data.get('EventName', ''),
+            'City': '',  # Not available in JSON
+            'Country': '',  # Not available in JSON
+            'Year': competition_data.get('Start', {}).get('Year', 2024),
+            'Month': competition_data.get('Start', {}).get('Month', 1),
+            'Day': competition_data.get('Start', {}).get('Day', 1),
+            'Distance': competition_data.get('DisciplineName', ''),
+            'Round': round_data.get('Name', ''),
+            'Group': heat.get('Name', ''),
+            'Name': '',  # Will be filled if we have competitor info
+            'Nationality': '',
+            'Rank_In_Group': competitor.get('FinalRank', 0),
+            'Time': float(competitor.get('FinalResult', 0)) if competitor.get('FinalResult') else 0,
+        }
+        
+        # Add lap times and ranks
+        for lap in competitor.get('Laps', []):
+            lap_num = lap.get('LapNumber', '')
+            if lap_num:
+                lap_num = int(lap_num) if isinstance(lap_num, str) else lap_num
+                row[f'time_lap{lap_num}'] = float(lap.get('LapTime', 0)) if lap.get('LapTime') else 0
+                row[f'rank_lap{lap_num}'] = int(lap.get('Rank', 0)) if lap.get('Rank') else 0
+        
+        rows.append(row)
+    
+    return pd.DataFrame(rows)
+
+def compute_race_hype_score(heat: dict, round_data: dict, competition_data: dict) -> float:
+    """
+    Compute hype score for a race using functions from enrichCsv.
+    Returns the hype score as a float.
+    """
+    # Convert race data to dataframe
+    df = convert_race_to_dataframe(heat, round_data, competition_data)
+    
+    if df.empty:
+        return 0.0
+    
+    # Apply enrichment functions from enrichCsv
+    df = enrich_race_id(df)
+    df = enrich_lap_times(df)
+    df = enrich_detect_falls(df)
+    df = compute_close_finish(df)
+    df = compute_lead_changes(df)
+    df = compute_hype_score(df)
+    
+    # Return the hype score (should be same for all rows in the race)
+    if 'HypeScore' in df.columns and not df.empty:
+        return float(df['HypeScore'].iloc[0])
+    
+    return 0.0
+
 def load_skaters_data():
     useful_columns = ['api_id', 'first_name', 'last_name', 'gender', 'nationality_code', 'organization_code',
                       'thumbnail_image', 'status', 'created_at', 'updated_at', 'discipline', 'is_favourite', 'results',
@@ -197,11 +275,14 @@ if __name__ == '__main__':
         }
 
         for heat in round['Heats']:
+            # Compute hype score for this race
+            hype_score = compute_race_hype_score(heat, round, competition_data)
+            
             race: Race = {
                 "id": heat['Id'],
                 "title": heat['Name'],
                 "video_url": "TODO", # TODO
-                "hype_score": 3, # TODO
+                "hype_score": hype_score,
                 "personalized_summaries": { # TODO
                     team['key']: {
                         'title': 'TODO',
