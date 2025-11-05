@@ -129,11 +129,18 @@ def extract_supported_teams(athletes: List[Athlete], selected_teams: List[str]) 
 def convert_race_to_dataframe(heat: dict, round_data: dict, competition_data: dict) -> pd.DataFrame:
     """
     Convert JSON race data to DataFrame matching enrichCsv requirements.
-    The dataframe should contain columns similar to the CSV format:
-    - Season, Series, City, Country, Year, Month, Day, Distance, Round, Group
-    - Name, Nationality, Rank_In_Group, Time
-    - time_lap1, time_lap2, ..., time_lap5
-    - rank_lap1, rank_lap2, ..., rank_lap5
+    
+    Args:
+        heat: Heat data from ISU API containing competitors and lap information
+        round_data: Round data containing round name and other metadata
+        competition_data: Competition-level data with event name, dates, etc.
+    
+    Returns:
+        DataFrame with columns required by enrichCsv functions:
+        - Season, Series, City, Country, Year, Month, Day, Distance, Round, Group
+        - Name, Nationality, Rank_In_Group, Time
+        - time_lap1, time_lap2, ..., time_lap5
+        - rank_lap1, rank_lap2, ..., rank_lap5
     """
     rows = []
     
@@ -199,7 +206,23 @@ def convert_race_to_dataframe(heat: dict, round_data: dict, competition_data: di
 def compute_race_hype_score(heat: dict, round_data: dict, competition_data: dict) -> float:
     """
     Compute hype score for a race using functions from enrichCsv.
-    Returns the hype score as a float.
+    
+    The hype score quantifies race excitement based on:
+    - Falls detected: -1.0 per fall (negative impact)
+    - Close finish: +2.5 if finish within 0.15 seconds
+    - Lead changes: +1.5 per lead change across laps
+    - Round factor: +1.0 base score
+    
+    Args:
+        heat: Heat data from ISU API containing competitors and lap information
+        round_data: Round data containing round name and other metadata
+        competition_data: Competition-level data with event name, dates, etc.
+    
+    Returns:
+        Computed hype score as a float. Typical ranges:
+        - 0.0-1.0: Low excitement (falls, no close finish, no lead changes)
+        - 1.0-2.0: Moderate excitement (base round factor)
+        - 2.5-4.0: High excitement (close finish and/or lead changes)
     """
     # Convert race data to dataframe
     df = convert_race_to_dataframe(heat, round_data, competition_data)
