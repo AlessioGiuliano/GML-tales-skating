@@ -148,15 +148,18 @@ def convert_race_to_dataframe(heat: dict, round_data: dict, competition_data: di
         row = {
             'Season': competition_data.get('Start', {}).get('Year', 2024),
             'Series': competition_data.get('EventName', ''),
-            'City': heat.get('Id', '')[:8],  # Use heat ID prefix as location identifier
-            'Country': competition_data.get('EventName', ''),  # Use event name for uniqueness
+            # City and Country are used by enrich_race_id to generate unique race IDs via hash
+            # Since actual location isn't in JSON, use heat ID and event name for uniqueness
+            'City': heat.get('Id', '')[:8],
+            'Country': competition_data.get('EventName', ''),
             'Year': competition_data.get('Start', {}).get('Year', 2024),
             'Month': competition_data.get('Start', {}).get('Month', 1),
             'Day': competition_data.get('Start', {}).get('Day', 1),
             'Distance': competition_data.get('DisciplineName', ''),
             'Round': round_data.get('Name', ''),
             'Group': heat.get('Name', ''),
-            'Name': competitor.get('CompetitionCompetitorId', ''),  # Use competitor ID for lead change tracking
+            # Name is used by compute_lead_changes to track leaders across laps
+            'Name': competitor.get('CompetitionCompetitorId', ''),
             'Nationality': '',
             'Rank_In_Group': competitor.get('FinalRank', 0),
             'Time': time_value,
@@ -166,7 +169,12 @@ def convert_race_to_dataframe(heat: dict, round_data: dict, competition_data: di
         for lap in competitor.get('Laps', []):
             lap_num = lap.get('LapNumber', '')
             if lap_num:
-                lap_num = int(lap_num) if isinstance(lap_num, str) else lap_num
+                # Convert lap number to int, handling both string and numeric types
+                try:
+                    lap_num = int(lap_num)
+                except (ValueError, TypeError):
+                    continue  # Skip invalid lap numbers
+                
                 # Parse lap time, handling non-numeric values
                 lap_time = lap.get('LapTime', 0)
                 try:
@@ -174,8 +182,15 @@ def convert_race_to_dataframe(heat: dict, round_data: dict, competition_data: di
                 except (ValueError, TypeError):
                     lap_time_value = 0.0
                 
+                # Parse rank, handling non-numeric values
+                rank = lap.get('Rank', 0)
+                try:
+                    rank_value = int(rank) if rank else 0
+                except (ValueError, TypeError):
+                    rank_value = 0
+                
                 row[f'time_lap{lap_num}'] = lap_time_value
-                row[f'rank_lap{lap_num}'] = int(lap.get('Rank', 0)) if lap.get('Rank') else 0
+                row[f'rank_lap{lap_num}'] = rank_value
         
         rows.append(row)
     
