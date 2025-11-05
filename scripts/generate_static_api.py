@@ -148,15 +148,15 @@ def convert_race_to_dataframe(heat: dict, round_data: dict, competition_data: di
         row = {
             'Season': competition_data.get('Start', {}).get('Year', 2024),
             'Series': competition_data.get('EventName', ''),
-            'City': '',  # Not available in JSON
-            'Country': '',  # Not available in JSON
+            'City': heat.get('Id', '')[:8],  # Use heat ID prefix as location identifier
+            'Country': competition_data.get('EventName', ''),  # Use event name for uniqueness
             'Year': competition_data.get('Start', {}).get('Year', 2024),
             'Month': competition_data.get('Start', {}).get('Month', 1),
             'Day': competition_data.get('Start', {}).get('Day', 1),
             'Distance': competition_data.get('DisciplineName', ''),
             'Round': round_data.get('Name', ''),
             'Group': heat.get('Name', ''),
-            'Name': '',  # Will be filled if we have competitor info
+            'Name': competitor.get('CompetitionCompetitorId', ''),  # Use competitor ID for lead change tracking
             'Nationality': '',
             'Rank_In_Group': competitor.get('FinalRank', 0),
             'Time': time_value,
