@@ -5,7 +5,6 @@ import sys
 from typing import List, TypedDict
 import json
 import pandas as pd
-
 from langchain_openai import ChatOpenAI
 
 import llm_calling.generate_biography as generate_bio
@@ -13,7 +12,6 @@ import llm_calling.generate_competition_summary as competition_summary
 import llm_calling.generate_race_description as race_summary
 
 # Import hype score functions from enrichCsv
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 from hype_score.enrichCsv import (
     enrich_race_id,
     enrich_lap_times,
