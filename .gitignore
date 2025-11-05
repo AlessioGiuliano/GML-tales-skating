@@ -1,3 +1,6 @@
 .idea
 .venv
 /llm_calling/.env
+__pycache__/
+*.py[cod]
+*$py.class

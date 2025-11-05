@@ -138,6 +138,13 @@ def convert_race_to_dataframe(heat: dict, round_data: dict, competition_data: di
     rows = []
     
     for competitor in heat.get('Competitors', []):
+        # Parse final result, handling 'no time' and other non-numeric values
+        final_result = competitor.get('FinalResult', 0)
+        try:
+            time_value = float(final_result) if final_result else 0.0
+        except (ValueError, TypeError):
+            time_value = 0.0
+        
         row = {
             'Season': competition_data.get('Start', {}).get('Year', 2024),
             'Series': competition_data.get('EventName', ''),
@@ -152,7 +159,7 @@ def convert_race_to_dataframe(heat: dict, round_data: dict, competition_data: di
             'Name': '',  # Will be filled if we have competitor info
             'Nationality': '',
             'Rank_In_Group': competitor.get('FinalRank', 0),
-            'Time': float(competitor.get('FinalResult', 0)) if competitor.get('FinalResult') else 0,
+            'Time': time_value,
         }
         
         # Add lap times and ranks
@@ -160,7 +167,14 @@ def convert_race_to_dataframe(heat: dict, round_data: dict, competition_data: di
             lap_num = lap.get('LapNumber', '')
             if lap_num:
                 lap_num = int(lap_num) if isinstance(lap_num, str) else lap_num
-                row[f'time_lap{lap_num}'] = float(lap.get('LapTime', 0)) if lap.get('LapTime') else 0
+                # Parse lap time, handling non-numeric values
+                lap_time = lap.get('LapTime', 0)
+                try:
+                    lap_time_value = float(lap_time) if lap_time else 0.0
+                except (ValueError, TypeError):
+                    lap_time_value = 0.0
+                
+                row[f'time_lap{lap_num}'] = lap_time_value
                 row[f'rank_lap{lap_num}'] = int(lap.get('Rank', 0)) if lap.get('Rank') else 0
         
         rows.append(row)
