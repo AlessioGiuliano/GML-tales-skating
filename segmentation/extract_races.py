@@ -2,12 +2,11 @@ import argparse
 from collections import defaultdict
 from dataclasses import dataclass
 import csv
+from glob import glob
 import json
 import os
 import re
-from datetime import datetime
 
-from pprint import pprint
 from dateutil import parser
 from dateutil.relativedelta import relativedelta
 
@@ -18,9 +17,13 @@ def parse_args():
 
     parser.add_argument("--input_dir", "-i", default=cwd)
     parser.add_argument("--output_dir", "-o", default=cwd)
-    parser.add_argument("--json", "-j")
+    parser.add_argument("--json_pattern", "-j", default="*.json")
 
-    return parser.parse_args()
+    args = parser.parse_args()
+    args.input_dir = os.path.abspath(args.input_dir)
+    args.output_dir = os.path.abspath(args.output_dir)
+
+    return args
 
 
 @dataclass
@@ -36,10 +39,7 @@ if __name__ == "__main__":
 
     races = defaultdict(dict)
 
-    for file in os.listdir(args.input_dir):
-        if not os.path.splitext(file)[1] == ".json":
-            continue
-
+    for file in glob(os.path.join(args.input_dir, args.json_pattern)):
         try:
             with open(os.path.join(args.input_dir, file), "r") as f:
                 competition_name = os.path.splitext(file)[0]
@@ -148,5 +148,6 @@ if __name__ == "__main__":
                     url = f"https://www.youtube.com/embed/{video_id}?start={int(start)}&end={int(end)}&autoplay=1"
                     result[heat.id] = url
 
-        with open(f"{video_id}_races.json", "w") as file:
+        path = os.path.join(args.output_dir, f"{video_id}_output_races.json")
+        with open(path, "w") as file:
             json.dump(result, file, indent=4)
