@@ -23,8 +23,8 @@ const BracketTournamentView: React.FC<BracketTournamentViewProps> = ({ competiti
         };
     };
 
-    const preliminaries = phases.find(p => p.name.toLowerCase() === "preliminaries");
-    const heats = phases.find(p => p.name.toLowerCase() === "heats");
+    const preliminaries = phases.find((p) => p.name.toLowerCase() === "preliminaries");
+    const heats = phases.find((p) => p.name.toLowerCase() === "heats");
 
     const SectionTitle = ({ title }: { title: string }) => (
         <h2 className="text-center font-extrabold tracking-wide text-lg md:text-2xl bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent drop-shadow-md mb-5">
@@ -32,24 +32,59 @@ const BracketTournamentView: React.FC<BracketTournamentViewProps> = ({ competiti
         </h2>
     );
 
-    const RaceCard = ({ title, color = "white" }: { title: string; color?: string }) => {
+    // === RACE CARD WITH HYPE BADGE ===
+    const RaceCard = ({
+                          title,
+                          color = "white",
+                          hype,
+                      }: {
+        title: string;
+        color?: string;
+        hype?: number;
+    }) => {
         const isFinal = color === "yellow";
+        hype = Math.random() * 10;
+
+        // Dynamic gradient based on hype intensity
+        const hypeColor =
+            hype !== undefined
+                ? hype < 4
+                    ? "from-blue-400 to-cyan-300"
+                    : hype < 7
+                        ? "from-violet-400 to-pink-400"
+                        : "from-orange-400 to-red-500"
+                : "from-gray-300 to-gray-400";
+
+        const isHot = hype !== undefined && hype >= 8;
+
         return (
             <div
-                className={`px-4 py-2 rounded-md font-semibold shadow-lg transition-all duration-200
-          ${
+                className={`relative px-3 cursor-pointer py-3 rounded-md font-semibold shadow-md transition-all duration-200 group
+        ${
                     isFinal
                         ? "bg-gradient-to-br from-yellow-300 to-amber-400 text-blue-900 shadow-yellow-300/30 hover:scale-105"
                         : "bg-white/95 text-blue-900 hover:bg-white hover:shadow-xl hover:-translate-y-[2px]"
                 }`}
             >
                 {title}
+
+                {hype !== undefined && (
+                    <div
+                        className={`absolute -top-2 -right-2 text-[10px] font-bold text-white 
+              bg-gradient-to-br ${hypeColor} rounded-full px-[6px] py-[2px] shadow-md
+              border border-white/40 ${
+                            isHot ? "animate-pulse-glow shadow-orange-500/50" : ""
+                        }`}
+                    >
+                        {hype.toFixed(1)}
+                    </div>
+                )}
             </div>
         );
     };
 
     const Divider = () => (
-        <div className="relative my-8">
+        <div className="relative mt-8 mb-4">
             <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-white/40 to-transparent blur-[0.5px]" />
         </div>
     );
@@ -67,7 +102,13 @@ const BracketTournamentView: React.FC<BracketTournamentViewProps> = ({ competiti
                         <SectionTitle title={phase.name} />
                         <div className="flex flex-wrap justify-center gap-3">
                             {phase.races?.length ? (
-                                phase.races.map((race, j) => <RaceCard key={j} title={race.title} />)
+                                phase.races.map((race, j) => (
+                                    <RaceCard
+                                        key={j}
+                                        title={race.title}
+                                        hype={race.hype_score}
+                                    />
+                                ))
                             ) : (
                                 <div className="italic text-gray-300">No races</div>
                             )}
@@ -78,16 +119,17 @@ const BracketTournamentView: React.FC<BracketTournamentViewProps> = ({ competiti
             </div>
 
             {/* ===== DESKTOP BRACKET VIEW ===== */}
-            {/* ===== DESKTOP BRACKET (compact with smaller phase titles) ===== */}
-            <div className="hidden xl:flex flex-col items-center space-y-8">
+            <div className="hidden xl:flex flex-col items-center space-y-3">
                 {/* PRELIMINARIES */}
                 {preliminaries && preliminaries.races?.length > 0 && (
-                    <div className="w-full px-6 mb-6">
-                        <h2 className="text-center font-bold text-lg md:text-xl bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent mb-3">
+                    <div className="w-full px-6 mb-2">
+                        <h2 className="text-center font-bold text-lg md:text-xl bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent mb-6">
                             {preliminaries.name}
                         </h2>
-                        <div className="flex flex-wrap justify-center gap-2 md:gap-3">
-                            {preliminaries.races.map((r, i) => <RaceCard key={i} title={r.title} />)}
+                        <div className="flex flex-wrap justify-center gap-3 md:gap-3">
+                            {preliminaries.races.map((r, i) => (
+                                <RaceCard key={i} title={r.title} hype={r.hype_score} />
+                            ))}
                         </div>
                         <Divider />
                     </div>
@@ -95,12 +137,14 @@ const BracketTournamentView: React.FC<BracketTournamentViewProps> = ({ competiti
 
                 {/* HEATS */}
                 {heats && heats.races?.length > 0 && (
-                    <div className="w-full px-6 mb-6">
-                        <h2 className="text-center font-bold text-lg md:text-xl bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent mb-3">
+                    <div className="w-full px-6 mb-2">
+                        <h2 className="text-center font-bold text-lg md:text-xl bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent mb-6">
                             {heats.name}
                         </h2>
-                        <div className="flex flex-wrap justify-center gap-2 md:gap-3">
-                            {heats.races.map((r, i) => <RaceCard key={i} title={r.title} />)}
+                        <div className="flex flex-wrap justify-center gap-3 md:gap-3">
+                            {heats.races.map((r, i) => (
+                                <RaceCard key={i} title={r.title} hype={r.hype_score} />
+                            ))}
                         </div>
                         <Divider />
                     </div>
@@ -114,14 +158,20 @@ const BracketTournamentView: React.FC<BracketTournamentViewProps> = ({ competiti
                             if (["preliminaries", "heats"].includes(phase.name.toLowerCase())) return null;
                             const { left } = splitRaces(phase.races || []);
                             return (
-                                <div key={i} className="flex flex-col items-end justify-center text-center text-xs md:text-sm">
-                                    <h3 className="text-cyan-300 font-semibold text-xs md:text-sm mb-1 tracking-wide opacity-80">
+                                <div key={i} className="flex flex-col items-end justify-center text-center items-center text-xs md:text-sm">
+                                    <h3 className="text-cyan-300 font-semibold text-xs md:text-sm mb-3 tracking-wide opacity-80">
                                         {phase.name}
                                     </h3>
-                                    <ul className="flex flex-col gap-1 justify-center">
-                                        {left.length ? left.map((r, j) => (
-                                            <li key={j}><RaceCard title={r.title} /></li>
-                                        )) : <li className="italic text-gray-300">No races</li>}
+                                    <ul className="flex flex-col gap-3 justify-center">
+                                        {left.length ? (
+                                            left.map((r, j) => (
+                                                <li key={j}>
+                                                    <RaceCard title={r.title} hype={r.hype_score} />
+                                                </li>
+                                            ))
+                                        ) : (
+                                            <li className="italic text-gray-300">No races</li>
+                                        )}
                                     </ul>
                                 </div>
                             );
@@ -133,11 +183,11 @@ const BracketTournamentView: React.FC<BracketTournamentViewProps> = ({ competiti
                         <h2 className="text-lg md:text-xl font-extrabold tracking-wide bg-gradient-to-r from-yellow-300 to-amber-400 bg-clip-text text-transparent drop-shadow-md mb-1">
                             Finals
                         </h2>
-                        <ul className="space-y-2">
+                        <ul className="space-y-3">
                             {finals?.races?.length ? (
                                 finals.races.map((r, j) => (
                                     <li key={j}>
-                                        <RaceCard title={r.title} color="yellow" />
+                                        <RaceCard title={r.title} color="yellow" hype={r.hype_score} />
                                     </li>
                                 ))
                             ) : (
@@ -152,14 +202,20 @@ const BracketTournamentView: React.FC<BracketTournamentViewProps> = ({ competiti
                             if (["preliminaries", "heats"].includes(phase.name.toLowerCase())) return null;
                             const { right } = splitRaces(phase.races || []);
                             return (
-                                <div key={i} className="flex flex-col items-start justify-center text-center text-xs md:text-sm">
-                                    <h3 className="text-cyan-300 font-semibold text-xs md:text-sm mb-1 tracking-wide opacity-80">
+                                <div key={i} className="flex flex-col items-start justify-center text-center items-center text-xs md:text-sm">
+                                    <h3 className="text-cyan-300 font-semibold text-xs md:text-sm mb-3 tracking-wide opacity-80">
                                         {phase.name}
                                     </h3>
-                                    <ul className="flex flex-col gap-1 justify-center">
-                                        {right.length ? right.map((r, j) => (
-                                            <li key={j}><RaceCard title={r.title} /></li>
-                                        )) : <li className="italic text-gray-300">No races</li>}
+                                    <ul className="flex flex-col gap-3 justify-center">
+                                        {right.length ? (
+                                            right.map((r, j) => (
+                                                <li key={j}>
+                                                    <RaceCard title={r.title} hype={r.hype_score} />
+                                                </li>
+                                            ))
+                                        ) : (
+                                            <li className="italic text-gray-300">No races</li>
+                                        )}
                                     </ul>
                                 </div>
                             );
@@ -167,7 +223,6 @@ const BracketTournamentView: React.FC<BracketTournamentViewProps> = ({ competiti
                     </div>
                 </div>
             </div>
-
         </div>
     );
 };

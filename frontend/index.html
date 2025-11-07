@@ -74,6 +74,17 @@
         scrollbar-width: thin;
         scrollbar-color: rgba(0, 179, 255, 0.6) rgba(0, 0, 0, 0.2);
       }
+
+      /* === Add this in your global.css or tailwind.css ===
+         to make the high-hype scores pulse subtly */
+      @keyframes pulse-glow {
+        0%, 100% { box-shadow: 0 0 6px 2px rgba(255, 125, 0, 0.4); }
+        50% { box-shadow: 0 0 10px 5px rgba(255, 90, 0, 0.7); }
+      }
+      .animate-pulse-glow {
+        animation: pulse-glow 1.5s infinite;
+      }
+
     </style>
   <script type="importmap">
 {
