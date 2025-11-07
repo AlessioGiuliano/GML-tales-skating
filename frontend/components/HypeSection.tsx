@@ -1,7 +1,14 @@
 import React from 'react';
 import { HypeSectionProps } from '../types';
 
-const HypeSection: React.FC<HypeSectionProps> = ({ races }) => {
+const HypeSection: React.FC<HypeSectionProps> = ({ competition }) => {
+    const races = competition.phases.map((p) => {
+        return {
+            ...p, races: p.races.map((r) => {
+                return {...r, phaseName: p.name}
+            })
+        }}).flatMap(p => p.races);
+
     const topRaces = [...races]
         .sort((a, b) => b.hype_score - a.hype_score)
         .slice(0, 3);
@@ -13,7 +20,7 @@ const HypeSection: React.FC<HypeSectionProps> = ({ races }) => {
                 {topRaces.map((race, index) => {
                     const videoId = race.video_url.split('/embed/')[1]?.split('?')[0];
                     return (
-                        <div key={race.id} className="rounded-xl overflow-hidden relative group aspect-video shadow-lg border border-white/10" style={{
+                        <div key={race.id} className="rounded-xl cursor-pointer overflow-hidden relative group aspect-video shadow-lg border border-white/10" style={{
                             animation: `fadeInUp 0.5s ease-out ${index * 0.1 + 0.3}s both`,
                         }}>
                             <img
@@ -23,7 +30,7 @@ const HypeSection: React.FC<HypeSectionProps> = ({ races }) => {
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                             <div className="absolute bottom-0 left-0 p-4 w-full">
-                                <h3 className="font-bold text-lg leading-tight">{race.title}</h3>
+                                <h3 className="font-bold text-lg leading-tight">{race.phaseName} - {race.title}</h3>
                                 <p className="text-sm font-bold text-yellow-400">Hype Score: {race.hype_score.toFixed(1)}</p>
                             </div>
                         </div>

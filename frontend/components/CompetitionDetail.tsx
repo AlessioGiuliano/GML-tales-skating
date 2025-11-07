@@ -53,11 +53,11 @@ const CompetitionDetail: React.FC<CompetitionDetailProps> = ({ selectedTeam, yea
 
             <div className="my-12 border-t border-white/20"></div>
 
-            <PhaseList phases={competition.phases} selectedTeam={selectedTeam} />
+            <HypeSection competition={competition} />
 
             <div className="my-12 border-t border-white/20"></div>
 
-            <HypeSection races={competition.phases.flatMap(p => p.races)} />
+            <PhaseList phases={competition.phases} selectedTeam={selectedTeam} />
         </div>
     );
 };

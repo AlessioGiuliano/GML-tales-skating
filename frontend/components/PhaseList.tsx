@@ -1,40 +1,114 @@
-import React from 'react';
-import { PhaseListProps } from '../types';
-import RaceVideo from './RaceVideo';
-import RaceResults from './RaceResults';
+import React, { useEffect, useState } from "react";
+import { PhaseListProps } from "../types";
+import RaceVideo from "./RaceVideo";
+import RaceResults from "./RaceResults";
 
 const PhaseList: React.FC<PhaseListProps> = ({ phases, selectedTeam }) => {
+    const [openPhases, setOpenPhases] = useState<Record<string, boolean>>({});
+
+    const togglePhase = (name: string) => {
+        setOpenPhases((prev) => ({ ...prev, [name]: !prev[name] }));
+    };
+
+    // Listen for custom event from bracket cards
+    useEffect(() => {
+        const handleOpen = (e: Event) => {
+            const { phaseName } = (e as CustomEvent).detail;
+            setOpenPhases({ [phaseName]: true });
+        };
+
+        const handleCloseAll = () => {
+            setOpenPhases({});
+        };
+
+        window.addEventListener("openPhaseSection", handleOpen);
+        window.addEventListener("closeAllPhases", handleCloseAll);
+
+        return () => {
+            window.removeEventListener("openPhaseSection", handleOpen);
+            window.removeEventListener("closeAllPhases", handleCloseAll);
+        };
+    }, []);
+
     return (
-        <section className="animate-fadeInUp" style={{animationDelay: '200ms'}}>
-            {phases.map(phase => (
-                <div key={phase.name} className="mb-12">
-                    <h2 className="text-3xl font-extrabold uppercase mb-6 border-b-2 border-blue-400 pb-2">{phase.name}</h2>
-                    {phase.races.map(race => {
-                        const summary = race.personalized_summaries[selectedTeam];
-                        return (
-                            <div key={race.id} className="mb-10 p-4 sm:p-6 rounded-lg" style={{ backgroundColor: 'rgba(0,0,0,0.1)' }}>
-                                <h3 className="text-2xl font-bold mb-4">{race.title}</h3>
-                                {summary && (
-                                    <div className="mb-6 p-4 rounded-md text-sm" style={{ backgroundColor: 'rgba(0,0,0,0.2)' }}>
-                                        <h4 className="font-bold text-base">{summary.title}</h4>
-                                        <p className="text-white/80">{summary.text}</p>
+        <section className="animate-fadeInUp" style={{ animationDelay: "200ms" }}>
+            {phases.map((phase) => {
+                const isOpen = openPhases[phase.name];
+                const anchorId = phase.name.toLowerCase().replace(/\s+/g, "-");
+
+                return (
+                    <div
+                        key={phase.name}
+                        id={anchorId}
+                        className="mb-10 border-b border-blue-500/30 pb-2"
+                    >
+                        {/* Collapsible Header */}
+                        <button
+                            onClick={() => togglePhase(phase.name)}
+                            className="w-full flex items-center justify-between text-left group transition-all duration-200"
+                        >
+                            <h2 className="text-2xl sm:text-3xl font-extrabold uppercase mb-2 flex-1 bg-gradient-to-r from-blue-300 to-cyan-400 bg-clip-text text-transparent">
+                                {phase.name}
+                            </h2>
+                            <span
+                                className={`text-blue-300 text-2xl transform transition-transform duration-300 group-hover:text-cyan-300 ${
+                                    isOpen ? "rotate-180" : "rotate-0"
+                                }`}
+                            >
+                            ▼
+                          </span>
+                        </button>
+
+                        {/* Collapsible Content */}
+                        <div
+                            className={`transition-all duration-1000 ${
+                                isOpen ? "opacity-100 mt-4" : "hidden opacity-0"
+                            }`}
+                        >
+                            {phase.races.map((race) => {
+                                const summary = race.personalized_summaries[selectedTeam];
+                                const raceAnchor = `${anchorId}-${race.id}`;
+
+                                return (
+                                    <div
+                                        key={race.id}
+                                        id={raceAnchor}
+                                        className="mb-10 p-4 sm:p-6 rounded-lg bg-white/5 hover:bg-white/10 transition-colors duration-300"
+                                    >
+                                        <h3 className="text-xl sm:text-2xl font-bold mb-4 text-cyan-300">
+                                            {race.title}
+                                        </h3>
+
+                                        {summary && (
+                                            <div className="mb-6 p-4 rounded-md text-sm bg-black/30">
+                                                <h4 className="font-bold text-base text-white/90">
+                                                    {summary.title}
+                                                </h4>
+                                                <p className="text-white/70">{summary.text}</p>
+                                            </div>
+                                        )}
+
+                                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                                            <div>
+                                                <h4 className="text-lg font-semibold mb-3 text-blue-300">
+                                                    Race Video
+                                                </h4>
+                                                <RaceVideo url={"https://www.youtube.com/embed/GEsS5ZBIQN0?start=5825&end=5896"} title={race.title} />
+                                            </div>
+                                            <div>
+                                                <h4 className="text-lg font-semibold mb-3 text-blue-300">
+                                                    Results
+                                                </h4>
+                                                <RaceResults results={race.results} />
+                                            </div>
+                                        </div>
                                     </div>
-                                )}
-                                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-                                    <div>
-                                        <h4 className="text-xl font-semibold mb-3">Race Video</h4>
-                                        <RaceVideo url={race.video_url} title={race.title} />
-                                    </div>
-                                    <div>
-                                        <h4 className="text-xl font-semibold mb-3">Results</h4>
-                                        <RaceResults results={race.results} />
-                                    </div>
-                                </div>
-                            </div>
-                        );
-                    })}
-                </div>
-            ))}
+                                );
+                            })}
+                        </div>
+                    </div>
+                );
+            })}
         </section>
     );
 };

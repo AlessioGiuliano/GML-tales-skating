@@ -33,7 +33,7 @@ const TheEdge: React.FC<TheEdgeProps> = ({ color = '#0e3be1' }) => {
 
     return (
         <motion.div
-            className="absolute bottom-0 left-0 w-full h-auto pointer-events-none z-0 mix-blend-screen opacity-80"
+            className="fixed bottom-0 left-0 w-full h-auto pointer-events-none z-0 mix-blend-screen opacity-80"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: 'easeOut' }}

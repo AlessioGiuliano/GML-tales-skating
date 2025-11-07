@@ -5,7 +5,7 @@ import CompetitionCard from './CompetitionCard';
 
 const MainContent: React.FC<MainContentProps> = ({ selectedTeam, onViewCompetition }) => {
   return (
-    <div className="p-4 sm:p-8 animate-fadeIn relative overflow-hidden flex-grow">
+    <div className="p-4 sm:p-8 animate-fadeIn relative overflow-hidden flex-grow align-middle">
       <div className="relative z-10">
         <main className="max-w-7xl mx-auto">
           <h2 
