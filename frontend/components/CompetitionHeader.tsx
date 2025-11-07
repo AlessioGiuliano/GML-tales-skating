@@ -6,9 +6,8 @@ const CompetitionHeader: React.FC<CompetitionHeaderProps> = ({ name, location, d
 
     return (
         <header className="mb-8 text-center animate-fadeInUp">
-            <h1 className="text-4xl sm:text-5xl font-display font-extrabold uppercase tracking-wider">{name}</h1>
-            <p className="text-xl text-white/80 mt-2">{location} | {formatDate(dates.start)} - {formatDate(dates.end)}, {new Date(dates.end).getFullYear()}</p>
-            <p className="text-md text-white/60 uppercase tracking-widest">{season} Season</p>
+            <h1 className="text-4xl sm:text-5xl font-display font-extrabold uppercase tracking-wider">{name} - {location}</h1>
+            <p className="text-xl text-white/80 mt-2">{formatDate(dates.start)} - {formatDate(dates.end)}, {new Date(dates.end).getFullYear()}</p>
         </header>
     );
 };

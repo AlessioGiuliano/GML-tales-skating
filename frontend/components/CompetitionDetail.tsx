@@ -5,6 +5,7 @@ import CompetitionHeader from './CompetitionHeader';
 import CompetitionSummary from './CompetitionSummary';
 import PhaseList from './PhaseList';
 import HypeSection from './HypeSection';
+import BracketTournamentView from "./BracketTournamentView";
 
 const CompetitionDetail: React.FC<CompetitionDetailProps> = ({ selectedTeam, year, location, category }) => {
     const [data, setData] = useState<CompetitionData | null>(null);
@@ -43,6 +44,7 @@ const CompetitionDetail: React.FC<CompetitionDetailProps> = ({ selectedTeam, yea
                 dates={competition.dates}
                 season={competition.season}
             />
+            <BracketTournamentView competition={competition} />
             <CompetitionSummary summary={personalizedSummary} />
 
             <div className="my-12 border-t border-white/20"></div>

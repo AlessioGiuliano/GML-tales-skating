@@ -11,30 +11,6 @@ export interface Team {
   photo_url: string;    // Path to team photo (ex: "/team-photos/switzerland.png")
 }
 
-export interface Qualifier {
-  name: string;
-  country: string;
-  time: string;
-}
-
-export interface EventStage {
-  name:string;
-  topQualifiers: Qualifier[];
-}
-
-export interface Stat {
-  title: string;
-  value: string;
-}
-
-export interface TeamStatComparison {
-  metric: string;
-  teamValue: string;
-  averageValue: string;
-  delta: string;
-  positive: boolean;
-}
-
 export interface Competition {
   id: number;
   title: string;
@@ -42,10 +18,6 @@ export interface Competition {
   country: string;
   date: string;
   details?: string;
-  stages?: EventStage[];
-  races?: Race[];
-  stats?: Stat[];
-  teamStats?: TeamStatComparison[];
 }
 
 export interface HeaderProps {

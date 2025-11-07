@@ -2,18 +2,18 @@
   "competition": {
     "category": "Men 500 m",
     "dates": {
-      "end": "2024-12-13",
-      "start": "2024-12-13"
+      "end": "2024-12-15",
+      "start": "2024-12-14"
     },
     "id": "fca24ec1-f917-47f3-9fca-1d21e68d5f8a",
     "location": "Seoul",
-    "name": "ISU Short Track World Tour - Seoul 2024",
+    "name": "World Cup 4",
     "personalized_summaries": {
       "CHN": {
         "text": "todo",
         "title": "TODO"
       },
-      "NED": {
+      "NLD": {
         "text": "todo",
         "title": "TODO"
       }
@@ -31,7 +31,7 @@
                 "text": "TODO",
                 "title": "TODO"
               },
-              "NED": {
+              "NLD": {
                 "text": "TODO",
                 "title": "TODO"
               }
@@ -214,7 +214,7 @@
                 "text": "TODO",
                 "title": "TODO"
               },
-              "NED": {
+              "NLD": {
                 "text": "TODO",
                 "title": "TODO"
               }
@@ -223,7 +223,7 @@
               {
                 "athlete": {
                   "bio": "{'date_of_birth': '13 Jun 1994', 'height': '175 CM', 'profession': 'Artist, Athlete, Designer', 'hometown': 'Leeuwarden', 'place_of_birth': 'Leeuwarden', 'start_skating___club': 'He began skating at age eight at Trias Shorttrack in Leeuwarden, Netherlands. Trias Shorttrack: Leeuwarden, NED', 'hobbies': 'Drawing, painting, music. (Instagram profile, 03 Nov 2020)', 'languages': 'Dutch, English', 'famliy': 'Partner Martha de Jong', 'awards_and_honours': 'He was named the 2020 Male Short Track Athlete of the Year by the Royal Dutch Skating Federation [KNSB]. (lc.nl, 07 Sep 2020)', 'hero__idol': 'US golfer Tiger Woods. (Athlete, 08 Nov 2017)', 'most_influential_person_in_career': 'His father. (Athlete, 08 Nov 2017)', 'injuries': 'He was troubled by an ankle injury during the 2022/23 season. (lc.nl, 19 Oct 2023)He missed the 2022 World Cup event in Montreal, QC, Canada, due to laryngitis. (Instagram profile, 26 Oct 2022; omropfryslan.nl, 26 Oct 2022)He injured his left arm and ribs after colliding with an opponent in the quarterfinals of the 1500m at the 2022 Olympic Winter Games in Beijing. He was taken to hospital for checks but was able to continue competing at the Games. (Instagram profile, 09 Feb 2022; schaatsen.nl, 09 Feb 2022)', 'ambitions': 'To win a gold medal at the Olympic Winter Games. (comebacksports.nl, 28 Jul 2020)', 'other_information': 'EXPERIENCED SKATERHe made his World Cup debut for the Netherlands in 2011, and hopes to continue competing until at least the 2026 Olympic Winter Games in Milan-Cortina. \"I\\'ve been going for a while, I skated my first World Cup when I was 16. That was already 10 years ago [speaking in 2021]. Sometimes I don\\'t realise how long I\\'ve been around. When [Dutch short track skaters] Daan Breeuwsma and Sjinkie Knegt are gone, I will suddenly be the oldest. I still have growth potential. That\\'s why I don\\'t feel like I\\'m getting older. [After the 2026 Olympic Winter Games] I will be 31 and will have had three Games. That would be a good time to stop.\" (lc.nl, 19 Oct 2023; schaatsen.nl, 13 Jan 2023; skatenl.nl, 07 Mar 2021)HELMET DESIGNERHe designs the images on his helmets, often finding inspiration in heavy metal music. \"I have been drawing and being creative since I was little. [In 2015] we learned that we could wear our own helmets during competitions, so I started designing and spraying my helmet. Since the [2018 Olympic Winter] Games I have also been doing it for others. Skating is the main goal, airbrushing is fun to do and if I can earn something with it, fine. I\\'m far from done with short track. For now [speaking in 2022] it is nothing more than a fun hobby. I have some contacts, but I first need to gain some more experience and build up a portfolio.\" (Comeback Business & Sports Instagram profile, 22 May 2023; schaatsen.nl, 13 Jan 2023, 26 Jan 2022, 09 Aug 2018; skatenl.nl, 07 Mar 2021; ad.nl, 06 Mar 2021; frieschdagblad.nl, 25 Feb 2021; Skating ISU YouTube channel, 26 Feb 2021)', 'reason_for_choosing_this_sport': 'He was inspired by other skaters who were showing their skills and doing tricks on ice. \"It looked fun to me.\"'}",
-                  "country": "NED",
+                  "country": "NLD",
                   "id": "29f872c9-cead-450c-9997-3b6d6dacc1e8",
                   "name": "Itzhak DE LAAT",
                   "team": "Netherlands"
@@ -397,7 +397,7 @@
                 "text": "TODO",
                 "title": "TODO"
               },
-              "NED": {
+              "NLD": {
                 "text": "TODO",
                 "title": "TODO"
               }
@@ -555,7 +555,7 @@
                 "text": "TODO",
                 "title": "TODO"
               },
-              "NED": {
+              "NLD": {
                 "text": "TODO",
                 "title": "TODO"
               }
@@ -734,7 +734,7 @@
                 "text": "TODO",
                 "title": "TODO"
               },
-              "NED": {
+              "NLD": {
                 "text": "TODO",
                 "title": "TODO"
               }
@@ -917,7 +917,7 @@
                 "text": "TODO",
                 "title": "TODO"
               },
-              "NED": {
+              "NLD": {
                 "text": "TODO",
                 "title": "TODO"
               }
@@ -1075,7 +1075,7 @@
                 "text": "TODO",
                 "title": "TODO"
               },
-              "NED": {
+              "NLD": {
                 "text": "TODO",
                 "title": "TODO"
               }
@@ -1258,7 +1258,7 @@
                 "text": "TODO",
                 "title": "TODO"
               },
-              "NED": {
+              "NLD": {
                 "text": "TODO",
                 "title": "TODO"
               }
@@ -1441,7 +1441,7 @@
                 "text": "TODO",
                 "title": "TODO"
               },
-              "NED": {
+              "NLD": {
                 "text": "TODO",
                 "title": "TODO"
               }
@@ -1616,7 +1616,7 @@
                 "text": "TODO",
                 "title": "TODO"
               },
-              "NED": {
+              "NLD": {
                 "text": "TODO",
                 "title": "TODO"
               }
@@ -1799,7 +1799,7 @@
                 "text": "TODO",
                 "title": "TODO"
               },
-              "NED": {
+              "NLD": {
                 "text": "TODO",
                 "title": "TODO"
               }
@@ -1947,7 +1947,7 @@
                 "text": "TODO",
                 "title": "TODO"
               },
-              "NED": {
+              "NLD": {
                 "text": "TODO",
                 "title": "TODO"
               }
@@ -2130,7 +2130,7 @@
                 "text": "TODO",
                 "title": "TODO"
               },
-              "NED": {
+              "NLD": {
                 "text": "TODO",
                 "title": "TODO"
               }
@@ -2313,7 +2313,7 @@
                 "text": "TODO",
                 "title": "TODO"
               },
-              "NED": {
+              "NLD": {
                 "text": "TODO",
                 "title": "TODO"
               }
@@ -2496,7 +2496,7 @@
                 "text": "TODO",
                 "title": "TODO"
               },
-              "NED": {
+              "NLD": {
                 "text": "TODO",
                 "title": "TODO"
               }
@@ -2679,7 +2679,7 @@
                 "text": "TODO",
                 "title": "TODO"
               },
-              "NED": {
+              "NLD": {
                 "text": "TODO",
                 "title": "TODO"
               }
@@ -2688,7 +2688,7 @@
               {
                 "athlete": {
                   "bio": "{'date_of_birth': '13 Jun 1994', 'height': '175 CM', 'profession': 'Artist, Athlete, Designer', 'hometown': 'Leeuwarden', 'place_of_birth': 'Leeuwarden', 'start_skating___club': 'He began skating at age eight at Trias Shorttrack in Leeuwarden, Netherlands. Trias Shorttrack: Leeuwarden, NED', 'hobbies': 'Drawing, painting, music. (Instagram profile, 03 Nov 2020)', 'languages': 'Dutch, English', 'famliy': 'Partner Martha de Jong', 'awards_and_honours': 'He was named the 2020 Male Short Track Athlete of the Year by the Royal Dutch Skating Federation [KNSB]. (lc.nl, 07 Sep 2020)', 'hero__idol': 'US golfer Tiger Woods. (Athlete, 08 Nov 2017)', 'most_influential_person_in_career': 'His father. (Athlete, 08 Nov 2017)', 'injuries': 'He was troubled by an ankle injury during the 2022/23 season. (lc.nl, 19 Oct 2023)He missed the 2022 World Cup event in Montreal, QC, Canada, due to laryngitis. (Instagram profile, 26 Oct 2022; omropfryslan.nl, 26 Oct 2022)He injured his left arm and ribs after colliding with an opponent in the quarterfinals of the 1500m at the 2022 Olympic Winter Games in Beijing. He was taken to hospital for checks but was able to continue competing at the Games. (Instagram profile, 09 Feb 2022; schaatsen.nl, 09 Feb 2022)', 'ambitions': 'To win a gold medal at the Olympic Winter Games. (comebacksports.nl, 28 Jul 2020)', 'other_information': 'EXPERIENCED SKATERHe made his World Cup debut for the Netherlands in 2011, and hopes to continue competing until at least the 2026 Olympic Winter Games in Milan-Cortina. \"I\\'ve been going for a while, I skated my first World Cup when I was 16. That was already 10 years ago [speaking in 2021]. Sometimes I don\\'t realise how long I\\'ve been around. When [Dutch short track skaters] Daan Breeuwsma and Sjinkie Knegt are gone, I will suddenly be the oldest. I still have growth potential. That\\'s why I don\\'t feel like I\\'m getting older. [After the 2026 Olympic Winter Games] I will be 31 and will have had three Games. That would be a good time to stop.\" (lc.nl, 19 Oct 2023; schaatsen.nl, 13 Jan 2023; skatenl.nl, 07 Mar 2021)HELMET DESIGNERHe designs the images on his helmets, often finding inspiration in heavy metal music. \"I have been drawing and being creative since I was little. [In 2015] we learned that we could wear our own helmets during competitions, so I started designing and spraying my helmet. Since the [2018 Olympic Winter] Games I have also been doing it for others. Skating is the main goal, airbrushing is fun to do and if I can earn something with it, fine. I\\'m far from done with short track. For now [speaking in 2022] it is nothing more than a fun hobby. I have some contacts, but I first need to gain some more experience and build up a portfolio.\" (Comeback Business & Sports Instagram profile, 22 May 2023; schaatsen.nl, 13 Jan 2023, 26 Jan 2022, 09 Aug 2018; skatenl.nl, 07 Mar 2021; ad.nl, 06 Mar 2021; frieschdagblad.nl, 25 Feb 2021; Skating ISU YouTube channel, 26 Feb 2021)', 'reason_for_choosing_this_sport': 'He was inspired by other skaters who were showing their skills and doing tricks on ice. \"It looked fun to me.\"'}",
-                  "country": "NED",
+                  "country": "NLD",
                   "id": "29f872c9-cead-450c-9997-3b6d6dacc1e8",
                   "name": "Itzhak DE LAAT",
                   "team": "Netherlands"
@@ -2862,7 +2862,7 @@
                 "text": "TODO",
                 "title": "TODO"
               },
-              "NED": {
+              "NLD": {
                 "text": "TODO",
                 "title": "TODO"
               }
@@ -2871,7 +2871,7 @@
               {
                 "athlete": {
                   "bio": "{'date_of_birth': '05 May 2001', 'height': 'N/A', 'profession': 'Student', 'hometown': 'Nijmegen', 'place_of_birth': 'N/A', 'start_skating___club': 'He began skating as a child at the Triavium rink in Nijmegen, Netherlands.', 'hobbies': 'N/A', 'languages': 'Dutch, English', 'injuries': 'He was affected by problems with his tonsils during the 2022/23 season, and had surgery to remove his tonsils in 2023. (schaatsen.nl, 18 Sep 2023)'}",
-                  "country": "NED",
+                  "country": "NLD",
                   "id": "21cc4579-3a1c-4a8a-bf39-5a7475bb319c",
                   "name": "Teun BOER",
                   "team": "Netherlands"
@@ -3016,7 +3016,7 @@
                 "text": "TODO",
                 "title": "TODO"
               },
-              "NED": {
+              "NLD": {
                 "text": "TODO",
                 "title": "TODO"
               }
@@ -3178,7 +3178,7 @@
                 "text": "TODO",
                 "title": "TODO"
               },
-              "NED": {
+              "NLD": {
                 "text": "TODO",
                 "title": "TODO"
               }
@@ -3187,7 +3187,7 @@
               {
                 "athlete": {
                   "bio": "{'date_of_birth': '06 Oct 2001', 'height': 'N/A', 'profession': 'Athlete', 'hometown': 'Sintjohannesga', 'place_of_birth': 'N/A', 'start_skating___club': 'Trias Shorttrack: Leeuwarden, NED', 'hobbies': 'Playing video games. (sportstories.nl, 09 Feb 2020)', 'languages': 'Dutch, English', 'milestones': 'He was part of the Dutch team that won the first mixed 2000m relay title at the short track world championships when the event made its debut at the tournament in 2023 in Seoul, Republic of Korea. (SportsDeskOnline, 30 Oct 2023; ISU Speed Skating Twitter profile, 12 Mar 2023)', 'injuries': \"He was affected by a groin injury at the 2023 World Cup event in Dordrecht, Netherlands. (schaatsen.nl, 09 Mar 2023)In September 2019 he sustained a large cut on his cheek and lost two teeth after a collision with Israeli skater Vladislav Bykanov. Van 't Wout required a metal bolt to be inserted into his cheek and was left with a 10-centimetre scar. (volkskrant.nl, 03 Jan 2021; trouw.nl, 03 Jan 2021)\", 'ambitions': 'To compete at the 2026 Olympic Winter Games in Milan-Cortina. (grootheerenveen.nl, 15 Jun 2021)', 'other_information': 'SHORT TRACK SIBLINGSHis older brother Melle also competes in short track. \"We\\'re always together, from morning to evening, eating together, training together, playing PlayStation together, sharing hotel rooms. If Melle does something, then I do it too. He has a real drive. Even if it doesn\\'t work out, he will keep going. Of course we are competitors on the ice. We want to beat each other, but we also want to help each other. If possible, we try to work together. If Melle wins a medal, I\\'ll train harder to get one too. Because if he has something, I want it too. We often watch videos of our training sessions and races. Then I give him instructions and he does the same thing to me. That way we learn a lot from each other.\" (schaatsen.nl, 09 Mar 2023; helden.media, 28 Jul 2022; teamnl.org, 23 Nov 2021)TO CANADA AND BACKBorn in the Netherlands, he was age two when his family relocated to Bracebridge, ON, Canada. After 10 years the family moved back to Almere, Netherlands. \"I always speak English with my brother and usually with my parents too, although gradually more and more Dutch is added. I also think in English, so for the time being that is the easiest language for me.\" (helden.media, 28 Jul 2022; grootheerenveen.nl, 15 Jun 2021; volkskrant.nl, 03 Jan 2021)ROOKIE MISTAKEHe placed first in the 1500m event at the 2020 International Invitation Cup in Heerenveen, Netherlands. However, he was denied victory after forgetting to put his transponders on. \"I looked at my ankles, saw that I wasn\\'t wearing them and thought, \\'You can\\'t be serious!\\' The ride went really well, but it was a rookie mistake. I was quite nervous for the race and very focused on the skating, but not on the things around it. The transponders were still in my bag. This story will stick around for a while and I have earned it.\" (schaatsen.nl, 08 Dec 2020)', 'reason_for_choosing_this_sport': 'He played ice hockey with his brother while living in Canada, until his parents decided the sport was too dangerous and encouraged them both to take up short track. \"I used to play ice hockey [in Canada]. But when we got into a league that allowed body contact, both my brother and I got concussions so we decided to do things differently. We went into short track instead. And after just six months of short track, we moved back to the Netherlands.\"'}",
-                  "country": "NED",
+                  "country": "NLD",
                   "id": "ff9963a6-23ac-4c1d-ae21-1c5028264d69",
                   "name": "Jens VAN 'T WOUT",
                   "team": "Netherlands"
@@ -3367,7 +3367,7 @@
                 "text": "TODO",
                 "title": "TODO"
               },
-              "NED": {
+              "NLD": {
                 "text": "TODO",
                 "title": "TODO"
               }
@@ -3546,7 +3546,7 @@
                 "text": "TODO",
                 "title": "TODO"
               },
-              "NED": {
+              "NLD": {
                 "text": "TODO",
                 "title": "TODO"
               }
@@ -3729,7 +3729,7 @@
                 "text": "TODO",
                 "title": "TODO"
               },
-              "NED": {
+              "NLD": {
                 "text": "TODO",
                 "title": "TODO"
               }
@@ -3891,7 +3891,7 @@
                 "text": "TODO",
                 "title": "TODO"
               },
-              "NED": {
+              "NLD": {
                 "text": "TODO",
                 "title": "TODO"
               }
@@ -4053,7 +4053,7 @@
                 "text": "TODO",
                 "title": "TODO"
               },
-              "NED": {
+              "NLD": {
                 "text": "TODO",
                 "title": "TODO"
               }
@@ -4236,7 +4236,7 @@
                 "text": "TODO",
                 "title": "TODO"
               },
-              "NED": {
+              "NLD": {
                 "text": "TODO",
                 "title": "TODO"
               }
@@ -4419,7 +4419,7 @@
                 "text": "TODO",
                 "title": "TODO"
               },
-              "NED": {
+              "NLD": {
                 "text": "TODO",
                 "title": "TODO"
               }
@@ -4602,7 +4602,7 @@
                 "text": "TODO",
                 "title": "TODO"
               },
-              "NED": {
+              "NLD": {
                 "text": "TODO",
                 "title": "TODO"
               }
@@ -4791,7 +4791,7 @@
                 "text": "TODO",
                 "title": "TODO"
               },
-              "NED": {
+              "NLD": {
                 "text": "TODO",
                 "title": "TODO"
               }
@@ -4953,7 +4953,7 @@
                 "text": "TODO",
                 "title": "TODO"
               },
-              "NED": {
+              "NLD": {
                 "text": "TODO",
                 "title": "TODO"
               }
@@ -5121,7 +5121,7 @@
                 "text": "TODO",
                 "title": "TODO"
               },
-              "NED": {
+              "NLD": {
                 "text": "TODO",
                 "title": "TODO"
               }
@@ -5196,7 +5196,7 @@
               {
                 "athlete": {
                   "bio": "{'date_of_birth': '13 Jun 1994', 'height': '175 CM', 'profession': 'Artist, Athlete, Designer', 'hometown': 'Leeuwarden', 'place_of_birth': 'Leeuwarden', 'start_skating___club': 'He began skating at age eight at Trias Shorttrack in Leeuwarden, Netherlands. Trias Shorttrack: Leeuwarden, NED', 'hobbies': 'Drawing, painting, music. (Instagram profile, 03 Nov 2020)', 'languages': 'Dutch, English', 'famliy': 'Partner Martha de Jong', 'awards_and_honours': 'He was named the 2020 Male Short Track Athlete of the Year by the Royal Dutch Skating Federation [KNSB]. (lc.nl, 07 Sep 2020)', 'hero__idol': 'US golfer Tiger Woods. (Athlete, 08 Nov 2017)', 'most_influential_person_in_career': 'His father. (Athlete, 08 Nov 2017)', 'injuries': 'He was troubled by an ankle injury during the 2022/23 season. (lc.nl, 19 Oct 2023)He missed the 2022 World Cup event in Montreal, QC, Canada, due to laryngitis. (Instagram profile, 26 Oct 2022; omropfryslan.nl, 26 Oct 2022)He injured his left arm and ribs after colliding with an opponent in the quarterfinals of the 1500m at the 2022 Olympic Winter Games in Beijing. He was taken to hospital for checks but was able to continue competing at the Games. (Instagram profile, 09 Feb 2022; schaatsen.nl, 09 Feb 2022)', 'ambitions': 'To win a gold medal at the Olympic Winter Games. (comebacksports.nl, 28 Jul 2020)', 'other_information': 'EXPERIENCED SKATERHe made his World Cup debut for the Netherlands in 2011, and hopes to continue competing until at least the 2026 Olympic Winter Games in Milan-Cortina. \"I\\'ve been going for a while, I skated my first World Cup when I was 16. That was already 10 years ago [speaking in 2021]. Sometimes I don\\'t realise how long I\\'ve been around. When [Dutch short track skaters] Daan Breeuwsma and Sjinkie Knegt are gone, I will suddenly be the oldest. I still have growth potential. That\\'s why I don\\'t feel like I\\'m getting older. [After the 2026 Olympic Winter Games] I will be 31 and will have had three Games. That would be a good time to stop.\" (lc.nl, 19 Oct 2023; schaatsen.nl, 13 Jan 2023; skatenl.nl, 07 Mar 2021)HELMET DESIGNERHe designs the images on his helmets, often finding inspiration in heavy metal music. \"I have been drawing and being creative since I was little. [In 2015] we learned that we could wear our own helmets during competitions, so I started designing and spraying my helmet. Since the [2018 Olympic Winter] Games I have also been doing it for others. Skating is the main goal, airbrushing is fun to do and if I can earn something with it, fine. I\\'m far from done with short track. For now [speaking in 2022] it is nothing more than a fun hobby. I have some contacts, but I first need to gain some more experience and build up a portfolio.\" (Comeback Business & Sports Instagram profile, 22 May 2023; schaatsen.nl, 13 Jan 2023, 26 Jan 2022, 09 Aug 2018; skatenl.nl, 07 Mar 2021; ad.nl, 06 Mar 2021; frieschdagblad.nl, 25 Feb 2021; Skating ISU YouTube channel, 26 Feb 2021)', 'reason_for_choosing_this_sport': 'He was inspired by other skaters who were showing their skills and doing tricks on ice. \"It looked fun to me.\"'}",
-                  "country": "NED",
+                  "country": "NLD",
                   "id": "29f872c9-cead-450c-9997-3b6d6dacc1e8",
                   "name": "Itzhak DE LAAT",
                   "team": "Netherlands"
@@ -5283,7 +5283,7 @@
                 "text": "TODO",
                 "title": "TODO"
               },
-              "NED": {
+              "NLD": {
                 "text": "TODO",
                 "title": "TODO"
               }
@@ -5325,7 +5325,7 @@
               {
                 "athlete": {
                   "bio": "{'date_of_birth': '06 Oct 2001', 'height': 'N/A', 'profession': 'Athlete', 'hometown': 'Sintjohannesga', 'place_of_birth': 'N/A', 'start_skating___club': 'Trias Shorttrack: Leeuwarden, NED', 'hobbies': 'Playing video games. (sportstories.nl, 09 Feb 2020)', 'languages': 'Dutch, English', 'milestones': 'He was part of the Dutch team that won the first mixed 2000m relay title at the short track world championships when the event made its debut at the tournament in 2023 in Seoul, Republic of Korea. (SportsDeskOnline, 30 Oct 2023; ISU Speed Skating Twitter profile, 12 Mar 2023)', 'injuries': \"He was affected by a groin injury at the 2023 World Cup event in Dordrecht, Netherlands. (schaatsen.nl, 09 Mar 2023)In September 2019 he sustained a large cut on his cheek and lost two teeth after a collision with Israeli skater Vladislav Bykanov. Van 't Wout required a metal bolt to be inserted into his cheek and was left with a 10-centimetre scar. (volkskrant.nl, 03 Jan 2021; trouw.nl, 03 Jan 2021)\", 'ambitions': 'To compete at the 2026 Olympic Winter Games in Milan-Cortina. (grootheerenveen.nl, 15 Jun 2021)', 'other_information': 'SHORT TRACK SIBLINGSHis older brother Melle also competes in short track. \"We\\'re always together, from morning to evening, eating together, training together, playing PlayStation together, sharing hotel rooms. If Melle does something, then I do it too. He has a real drive. Even if it doesn\\'t work out, he will keep going. Of course we are competitors on the ice. We want to beat each other, but we also want to help each other. If possible, we try to work together. If Melle wins a medal, I\\'ll train harder to get one too. Because if he has something, I want it too. We often watch videos of our training sessions and races. Then I give him instructions and he does the same thing to me. That way we learn a lot from each other.\" (schaatsen.nl, 09 Mar 2023; helden.media, 28 Jul 2022; teamnl.org, 23 Nov 2021)TO CANADA AND BACKBorn in the Netherlands, he was age two when his family relocated to Bracebridge, ON, Canada. After 10 years the family moved back to Almere, Netherlands. \"I always speak English with my brother and usually with my parents too, although gradually more and more Dutch is added. I also think in English, so for the time being that is the easiest language for me.\" (helden.media, 28 Jul 2022; grootheerenveen.nl, 15 Jun 2021; volkskrant.nl, 03 Jan 2021)ROOKIE MISTAKEHe placed first in the 1500m event at the 2020 International Invitation Cup in Heerenveen, Netherlands. However, he was denied victory after forgetting to put his transponders on. \"I looked at my ankles, saw that I wasn\\'t wearing them and thought, \\'You can\\'t be serious!\\' The ride went really well, but it was a rookie mistake. I was quite nervous for the race and very focused on the skating, but not on the things around it. The transponders were still in my bag. This story will stick around for a while and I have earned it.\" (schaatsen.nl, 08 Dec 2020)', 'reason_for_choosing_this_sport': 'He played ice hockey with his brother while living in Canada, until his parents decided the sport was too dangerous and encouraged them both to take up short track. \"I used to play ice hockey [in Canada]. But when we got into a league that allowed body contact, both my brother and I got concussions so we decided to do things differently. We went into short track instead. And after just six months of short track, we moved back to the Netherlands.\"'}",
-                  "country": "NED",
+                  "country": "NLD",
                   "id": "ff9963a6-23ac-4c1d-ae21-1c5028264d69",
                   "name": "Jens VAN 'T WOUT",
                   "team": "Netherlands"
@@ -5391,7 +5391,7 @@
               {
                 "athlete": {
                   "bio": "{'date_of_birth': '05 May 2001', 'height': 'N/A', 'profession': 'Student', 'hometown': 'Nijmegen', 'place_of_birth': 'N/A', 'start_skating___club': 'He began skating as a child at the Triavium rink in Nijmegen, Netherlands.', 'hobbies': 'N/A', 'languages': 'Dutch, English', 'injuries': 'He was affected by problems with his tonsils during the 2022/23 season, and had surgery to remove his tonsils in 2023. (schaatsen.nl, 18 Sep 2023)'}",
-                  "country": "NED",
+                  "country": "NLD",
                   "id": "21cc4579-3a1c-4a8a-bf39-5a7475bb319c",
                   "name": "Teun BOER",
                   "team": "Netherlands"
@@ -5458,7 +5458,7 @@
                 "text": "TODO",
                 "title": "TODO"
               },
-              "NED": {
+              "NLD": {
                 "text": "TODO",
                 "title": "TODO"
               }
@@ -5674,7 +5674,7 @@
                 "text": "TODO",
                 "title": "TODO"
               },
-              "NED": {
+              "NLD": {
                 "text": "TODO",
                 "title": "TODO"
               }
@@ -5875,7 +5875,7 @@
                 "text": "TODO",
                 "title": "TODO"
               },
-              "NED": {
+              "NLD": {
                 "text": "TODO",
                 "title": "TODO"
               }
@@ -5983,7 +5983,7 @@
               {
                 "athlete": {
                   "bio": "{'date_of_birth': '06 Oct 2001', 'height': 'N/A', 'profession': 'Athlete', 'hometown': 'Sintjohannesga', 'place_of_birth': 'N/A', 'start_skating___club': 'Trias Shorttrack: Leeuwarden, NED', 'hobbies': 'Playing video games. (sportstories.nl, 09 Feb 2020)', 'languages': 'Dutch, English', 'milestones': 'He was part of the Dutch team that won the first mixed 2000m relay title at the short track world championships when the event made its debut at the tournament in 2023 in Seoul, Republic of Korea. (SportsDeskOnline, 30 Oct 2023; ISU Speed Skating Twitter profile, 12 Mar 2023)', 'injuries': \"He was affected by a groin injury at the 2023 World Cup event in Dordrecht, Netherlands. (schaatsen.nl, 09 Mar 2023)In September 2019 he sustained a large cut on his cheek and lost two teeth after a collision with Israeli skater Vladislav Bykanov. Van 't Wout required a metal bolt to be inserted into his cheek and was left with a 10-centimetre scar. (volkskrant.nl, 03 Jan 2021; trouw.nl, 03 Jan 2021)\", 'ambitions': 'To compete at the 2026 Olympic Winter Games in Milan-Cortina. (grootheerenveen.nl, 15 Jun 2021)', 'other_information': 'SHORT TRACK SIBLINGSHis older brother Melle also competes in short track. \"We\\'re always together, from morning to evening, eating together, training together, playing PlayStation together, sharing hotel rooms. If Melle does something, then I do it too. He has a real drive. Even if it doesn\\'t work out, he will keep going. Of course we are competitors on the ice. We want to beat each other, but we also want to help each other. If possible, we try to work together. If Melle wins a medal, I\\'ll train harder to get one too. Because if he has something, I want it too. We often watch videos of our training sessions and races. Then I give him instructions and he does the same thing to me. That way we learn a lot from each other.\" (schaatsen.nl, 09 Mar 2023; helden.media, 28 Jul 2022; teamnl.org, 23 Nov 2021)TO CANADA AND BACKBorn in the Netherlands, he was age two when his family relocated to Bracebridge, ON, Canada. After 10 years the family moved back to Almere, Netherlands. \"I always speak English with my brother and usually with my parents too, although gradually more and more Dutch is added. I also think in English, so for the time being that is the easiest language for me.\" (helden.media, 28 Jul 2022; grootheerenveen.nl, 15 Jun 2021; volkskrant.nl, 03 Jan 2021)ROOKIE MISTAKEHe placed first in the 1500m event at the 2020 International Invitation Cup in Heerenveen, Netherlands. However, he was denied victory after forgetting to put his transponders on. \"I looked at my ankles, saw that I wasn\\'t wearing them and thought, \\'You can\\'t be serious!\\' The ride went really well, but it was a rookie mistake. I was quite nervous for the race and very focused on the skating, but not on the things around it. The transponders were still in my bag. This story will stick around for a while and I have earned it.\" (schaatsen.nl, 08 Dec 2020)', 'reason_for_choosing_this_sport': 'He played ice hockey with his brother while living in Canada, until his parents decided the sport was too dangerous and encouraged them both to take up short track. \"I used to play ice hockey [in Canada]. But when we got into a league that allowed body contact, both my brother and I got concussions so we decided to do things differently. We went into short track instead. And after just six months of short track, we moved back to the Netherlands.\"'}",
-                  "country": "NED",
+                  "country": "NLD",
                   "id": "ff9963a6-23ac-4c1d-ae21-1c5028264d69",
                   "name": "Jens VAN 'T WOUT",
                   "team": "Netherlands"
@@ -6016,7 +6016,7 @@
               {
                 "athlete": {
                   "bio": "{'date_of_birth': '13 Jun 1994', 'height': '175 CM', 'profession': 'Artist, Athlete, Designer', 'hometown': 'Leeuwarden', 'place_of_birth': 'Leeuwarden', 'start_skating___club': 'He began skating at age eight at Trias Shorttrack in Leeuwarden, Netherlands. Trias Shorttrack: Leeuwarden, NED', 'hobbies': 'Drawing, painting, music. (Instagram profile, 03 Nov 2020)', 'languages': 'Dutch, English', 'famliy': 'Partner Martha de Jong', 'awards_and_honours': 'He was named the 2020 Male Short Track Athlete of the Year by the Royal Dutch Skating Federation [KNSB]. (lc.nl, 07 Sep 2020)', 'hero__idol': 'US golfer Tiger Woods. (Athlete, 08 Nov 2017)', 'most_influential_person_in_career': 'His father. (Athlete, 08 Nov 2017)', 'injuries': 'He was troubled by an ankle injury during the 2022/23 season. (lc.nl, 19 Oct 2023)He missed the 2022 World Cup event in Montreal, QC, Canada, due to laryngitis. (Instagram profile, 26 Oct 2022; omropfryslan.nl, 26 Oct 2022)He injured his left arm and ribs after colliding with an opponent in the quarterfinals of the 1500m at the 2022 Olympic Winter Games in Beijing. He was taken to hospital for checks but was able to continue competing at the Games. (Instagram profile, 09 Feb 2022; schaatsen.nl, 09 Feb 2022)', 'ambitions': 'To win a gold medal at the Olympic Winter Games. (comebacksports.nl, 28 Jul 2020)', 'other_information': 'EXPERIENCED SKATERHe made his World Cup debut for the Netherlands in 2011, and hopes to continue competing until at least the 2026 Olympic Winter Games in Milan-Cortina. \"I\\'ve been going for a while, I skated my first World Cup when I was 16. That was already 10 years ago [speaking in 2021]. Sometimes I don\\'t realise how long I\\'ve been around. When [Dutch short track skaters] Daan Breeuwsma and Sjinkie Knegt are gone, I will suddenly be the oldest. I still have growth potential. That\\'s why I don\\'t feel like I\\'m getting older. [After the 2026 Olympic Winter Games] I will be 31 and will have had three Games. That would be a good time to stop.\" (lc.nl, 19 Oct 2023; schaatsen.nl, 13 Jan 2023; skatenl.nl, 07 Mar 2021)HELMET DESIGNERHe designs the images on his helmets, often finding inspiration in heavy metal music. \"I have been drawing and being creative since I was little. [In 2015] we learned that we could wear our own helmets during competitions, so I started designing and spraying my helmet. Since the [2018 Olympic Winter] Games I have also been doing it for others. Skating is the main goal, airbrushing is fun to do and if I can earn something with it, fine. I\\'m far from done with short track. For now [speaking in 2022] it is nothing more than a fun hobby. I have some contacts, but I first need to gain some more experience and build up a portfolio.\" (Comeback Business & Sports Instagram profile, 22 May 2023; schaatsen.nl, 13 Jan 2023, 26 Jan 2022, 09 Aug 2018; skatenl.nl, 07 Mar 2021; ad.nl, 06 Mar 2021; frieschdagblad.nl, 25 Feb 2021; Skating ISU YouTube channel, 26 Feb 2021)', 'reason_for_choosing_this_sport': 'He was inspired by other skaters who were showing their skills and doing tricks on ice. \"It looked fun to me.\"'}",
-                  "country": "NED",
+                  "country": "NLD",
                   "id": "29f872c9-cead-450c-9997-3b6d6dacc1e8",
                   "name": "Itzhak DE LAAT",
                   "team": "Netherlands"
@@ -6058,7 +6058,7 @@
                 "text": "TODO",
                 "title": "TODO"
               },
-              "NED": {
+              "NLD": {
                 "text": "TODO",
                 "title": "TODO"
               }
@@ -6226,7 +6226,7 @@
                 "text": "TODO",
                 "title": "TODO"
               },
-              "NED": {
+              "NLD": {
                 "text": "TODO",
                 "title": "TODO"
               }
@@ -6409,7 +6409,7 @@
                 "text": "TODO",
                 "title": "TODO"
               },
-              "NED": {
+              "NLD": {
                 "text": "TODO",
                 "title": "TODO"
               }
@@ -6418,7 +6418,7 @@
               {
                 "athlete": {
                   "bio": "{'date_of_birth': '06 Oct 2001', 'height': 'N/A', 'profession': 'Athlete', 'hometown': 'Sintjohannesga', 'place_of_birth': 'N/A', 'start_skating___club': 'Trias Shorttrack: Leeuwarden, NED', 'hobbies': 'Playing video games. (sportstories.nl, 09 Feb 2020)', 'languages': 'Dutch, English', 'milestones': 'He was part of the Dutch team that won the first mixed 2000m relay title at the short track world championships when the event made its debut at the tournament in 2023 in Seoul, Republic of Korea. (SportsDeskOnline, 30 Oct 2023; ISU Speed Skating Twitter profile, 12 Mar 2023)', 'injuries': \"He was affected by a groin injury at the 2023 World Cup event in Dordrecht, Netherlands. (schaatsen.nl, 09 Mar 2023)In September 2019 he sustained a large cut on his cheek and lost two teeth after a collision with Israeli skater Vladislav Bykanov. Van 't Wout required a metal bolt to be inserted into his cheek and was left with a 10-centimetre scar. (volkskrant.nl, 03 Jan 2021; trouw.nl, 03 Jan 2021)\", 'ambitions': 'To compete at the 2026 Olympic Winter Games in Milan-Cortina. (grootheerenveen.nl, 15 Jun 2021)', 'other_information': 'SHORT TRACK SIBLINGSHis older brother Melle also competes in short track. \"We\\'re always together, from morning to evening, eating together, training together, playing PlayStation together, sharing hotel rooms. If Melle does something, then I do it too. He has a real drive. Even if it doesn\\'t work out, he will keep going. Of course we are competitors on the ice. We want to beat each other, but we also want to help each other. If possible, we try to work together. If Melle wins a medal, I\\'ll train harder to get one too. Because if he has something, I want it too. We often watch videos of our training sessions and races. Then I give him instructions and he does the same thing to me. That way we learn a lot from each other.\" (schaatsen.nl, 09 Mar 2023; helden.media, 28 Jul 2022; teamnl.org, 23 Nov 2021)TO CANADA AND BACKBorn in the Netherlands, he was age two when his family relocated to Bracebridge, ON, Canada. After 10 years the family moved back to Almere, Netherlands. \"I always speak English with my brother and usually with my parents too, although gradually more and more Dutch is added. I also think in English, so for the time being that is the easiest language for me.\" (helden.media, 28 Jul 2022; grootheerenveen.nl, 15 Jun 2021; volkskrant.nl, 03 Jan 2021)ROOKIE MISTAKEHe placed first in the 1500m event at the 2020 International Invitation Cup in Heerenveen, Netherlands. However, he was denied victory after forgetting to put his transponders on. \"I looked at my ankles, saw that I wasn\\'t wearing them and thought, \\'You can\\'t be serious!\\' The ride went really well, but it was a rookie mistake. I was quite nervous for the race and very focused on the skating, but not on the things around it. The transponders were still in my bag. This story will stick around for a while and I have earned it.\" (schaatsen.nl, 08 Dec 2020)', 'reason_for_choosing_this_sport': 'He played ice hockey with his brother while living in Canada, until his parents decided the sport was too dangerous and encouraged them both to take up short track. \"I used to play ice hockey [in Canada]. But when we got into a league that allowed body contact, both my brother and I got concussions so we decided to do things differently. We went into short track instead. And after just six months of short track, we moved back to the Netherlands.\"'}",
-                  "country": "NED",
+                  "country": "NLD",
                   "id": "ff9963a6-23ac-4c1d-ae21-1c5028264d69",
                   "name": "Jens VAN 'T WOUT",
                   "team": "Netherlands"
@@ -6451,7 +6451,7 @@
               {
                 "athlete": {
                   "bio": "{'date_of_birth': '13 Jun 1994', 'height': '175 CM', 'profession': 'Artist, Athlete, Designer', 'hometown': 'Leeuwarden', 'place_of_birth': 'Leeuwarden', 'start_skating___club': 'He began skating at age eight at Trias Shorttrack in Leeuwarden, Netherlands. Trias Shorttrack: Leeuwarden, NED', 'hobbies': 'Drawing, painting, music. (Instagram profile, 03 Nov 2020)', 'languages': 'Dutch, English', 'famliy': 'Partner Martha de Jong', 'awards_and_honours': 'He was named the 2020 Male Short Track Athlete of the Year by the Royal Dutch Skating Federation [KNSB]. (lc.nl, 07 Sep 2020)', 'hero__idol': 'US golfer Tiger Woods. (Athlete, 08 Nov 2017)', 'most_influential_person_in_career': 'His father. (Athlete, 08 Nov 2017)', 'injuries': 'He was troubled by an ankle injury during the 2022/23 season. (lc.nl, 19 Oct 2023)He missed the 2022 World Cup event in Montreal, QC, Canada, due to laryngitis. (Instagram profile, 26 Oct 2022; omropfryslan.nl, 26 Oct 2022)He injured his left arm and ribs after colliding with an opponent in the quarterfinals of the 1500m at the 2022 Olympic Winter Games in Beijing. He was taken to hospital for checks but was able to continue competing at the Games. (Instagram profile, 09 Feb 2022; schaatsen.nl, 09 Feb 2022)', 'ambitions': 'To win a gold medal at the Olympic Winter Games. (comebacksports.nl, 28 Jul 2020)', 'other_information': 'EXPERIENCED SKATERHe made his World Cup debut for the Netherlands in 2011, and hopes to continue competing until at least the 2026 Olympic Winter Games in Milan-Cortina. \"I\\'ve been going for a while, I skated my first World Cup when I was 16. That was already 10 years ago [speaking in 2021]. Sometimes I don\\'t realise how long I\\'ve been around. When [Dutch short track skaters] Daan Breeuwsma and Sjinkie Knegt are gone, I will suddenly be the oldest. I still have growth potential. That\\'s why I don\\'t feel like I\\'m getting older. [After the 2026 Olympic Winter Games] I will be 31 and will have had three Games. That would be a good time to stop.\" (lc.nl, 19 Oct 2023; schaatsen.nl, 13 Jan 2023; skatenl.nl, 07 Mar 2021)HELMET DESIGNERHe designs the images on his helmets, often finding inspiration in heavy metal music. \"I have been drawing and being creative since I was little. [In 2015] we learned that we could wear our own helmets during competitions, so I started designing and spraying my helmet. Since the [2018 Olympic Winter] Games I have also been doing it for others. Skating is the main goal, airbrushing is fun to do and if I can earn something with it, fine. I\\'m far from done with short track. For now [speaking in 2022] it is nothing more than a fun hobby. I have some contacts, but I first need to gain some more experience and build up a portfolio.\" (Comeback Business & Sports Instagram profile, 22 May 2023; schaatsen.nl, 13 Jan 2023, 26 Jan 2022, 09 Aug 2018; skatenl.nl, 07 Mar 2021; ad.nl, 06 Mar 2021; frieschdagblad.nl, 25 Feb 2021; Skating ISU YouTube channel, 26 Feb 2021)', 'reason_for_choosing_this_sport': 'He was inspired by other skaters who were showing their skills and doing tricks on ice. \"It looked fun to me.\"'}",
-                  "country": "NED",
+                  "country": "NLD",
                   "id": "29f872c9-cead-450c-9997-3b6d6dacc1e8",
                   "name": "Itzhak DE LAAT",
                   "team": "Netherlands"
@@ -6537,7 +6537,7 @@
   },
   "supported_teams": [
     {
-      "key": "NED",
+      "key": "NLD",
       "name": "Netherlands"
     },
     {

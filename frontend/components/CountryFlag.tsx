@@ -3,7 +3,7 @@ import React from 'react';
 const countryToFlagMap: { [key: string]: string } = {
   KOR: '🇰🇷',
   USA: '🇺🇸',
-  NED: '🇳🇱',
+  NLD: '🇳🇱',
   BEL: '🇧🇪',
   BUL: '🇧🇬',
   CAN: '🇨🇦',

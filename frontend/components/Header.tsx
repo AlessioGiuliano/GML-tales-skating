@@ -5,10 +5,9 @@ const Header: React.FC<HeaderProps> = ({ selectedTeam, onSwitchTeam, onGoToSched
     return (
         <header className="max-w-7xl w-full mx-auto flex justify-between items-center py-4 px-4 sm:p-8 flex-shrink-0">
             {/* Left side — Title */}
-            {/* TODO IMPLEMENT SWITCHING BETWEEN SEASONS */}
             <button
                 onClick={onGoToSchedule}
-                disabled={true}
+                disabled={false}
                 className="disabled:cursor-default group"
                 aria-label="Go to season schedule"
             >
