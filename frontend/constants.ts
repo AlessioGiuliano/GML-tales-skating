@@ -3,7 +3,7 @@ import { Team, Competition } from './types';
 export const TEAMS: Team[] = [
     { id: 1, name: 'Korean White Tigers', nameParts: ['Korean', 'White Tigers'], country: 'South Korea', iso_name: 'KOR', bgColor: '#EAEAEA', textColor: '#001F60', photo_url: '/team-photos/south_korea.png' },
     { id: 2, name: 'USA Eagles', nameParts: ['USA', 'Eagles'], country: 'USA', iso_name: 'USA', bgColor: '#002868', textColor: '#FFFFFF', photo_url: '/team-photos/united_states.png' },
-    { id: 3, name: 'Dutch Lions', nameParts: ['Dutch', 'Lions'], country: 'Netherlands', iso_name: 'NLD', bgColor: '#F47920', textColor: '#FFFFFF', photo_url: '/team-photos/netherlands.png' },
+    { id: 3, name: 'Dutch Lions', nameParts: ['Dutch', 'Lions'], country: 'Netherlands', iso_name: 'NED', bgColor: '#F47920', textColor: '#FFFFFF', photo_url: '/team-photos/netherlands.png' },
     { id: 4, name: 'Belgium Ice Bears', nameParts: ['Belgium', 'Ice Bears'], country: 'Belgium', iso_name: 'BEL', bgColor: '#F0F0F0', textColor: '#000000', photo_url: '/team-photos/belgium.png' },
     { id: 5, name: 'Canadian Ice Maples', nameParts: ['Canadian', 'Ice Maples'], country: 'Canada', iso_name: 'CAN', bgColor: '#1A1A1A', textColor: '#FF0000', photo_url: '/team-photos/canada.png' },
     { id: 6, name: 'Chinese Loongs', nameParts: ['Chinese', 'Loongs'], country: 'China', iso_name: 'CHN', bgColor: '#EE1C25', textColor: '#FFFF00', photo_url: '/team-photos/china.png' },

@@ -44,8 +44,12 @@ const CompetitionDetail: React.FC<CompetitionDetailProps> = ({ selectedTeam, yea
                 dates={competition.dates}
                 season={competition.season}
             />
-            <BracketTournamentView competition={competition} />
+
             <CompetitionSummary summary={personalizedSummary} />
+
+            <div className="my-12 border-t border-white/20"></div>
+
+            <BracketTournamentView competition={competition} />
 
             <div className="my-12 border-t border-white/20"></div>
 

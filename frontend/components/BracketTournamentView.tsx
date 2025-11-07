@@ -43,7 +43,7 @@ const BracketTournamentView: React.FC<BracketTournamentViewProps> = ({ competiti
         hype?: number;
     }) => {
         const isFinal = color === "yellow";
-        hype = Math.random() * 10;
+        hype = Math.random() * 10; //TODO use real hype score
 
         // Dynamic gradient based on hype intensity
         const hypeColor =
