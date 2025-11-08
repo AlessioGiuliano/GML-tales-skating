@@ -32,6 +32,16 @@ def generate_description(model, race_data, discipline_name, round_name, heat_nam
     race_description = model.invoke(messages).text
     return race_description
 
+def generate_race_title(model, description_text: str) -> str:
+    messages = [
+        (
+            "system",
+            "You are a headline writer for high-energy short track recaps. Produce a catchy title (max 8 words), no colons or punctuation at the end.",
+        ),
+        ("human", description_text),
+    ]
+    return model.invoke(messages).text.strip()
+
 def get_race_descriptions(competition_data, model):
     discipline_name = competition_data["Data"]["DisciplineName"]
     result = {discipline_name : []}

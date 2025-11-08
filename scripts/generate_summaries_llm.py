@@ -3,7 +3,7 @@ import json
 import logging
 from copy import deepcopy
 from pathlib import Path
-from typing import Dict, List, Sequence
+from typing import Any, Dict, List, Sequence
 
 from langchain_openai import ChatOpenAI
 
@@ -107,13 +107,23 @@ def generate_competition_summaries(
         model,
         team_codes,
     )
-    return {
-        team: {
-            "title": f"{team} Highlights",
+    result: Dict[str, Dict[str, str]] = {}
+    for team in team_codes:
+        entry = summaries.get(team)
+        if not entry:
+            logging.warning("No competition summary generated for %s, using fallback.", team)
+            result[team] = {
+                "title": f"{team} Highlights",
+                "text": "",
+            }
+            continue
+        title = entry.get("title") or f"{team} Highlights"
+        text = entry.get("text", "")
+        result[team] = {
+            "title": title,
             "text": text,
         }
-        for team, text in summaries.items()
-    }
+    return result
 
 
 def generate_race_summaries(
@@ -146,8 +156,11 @@ def generate_race_summaries(
                     round_name=round_name,
                     heat_name=descriptive_heat_name,
                 )
+                title = race_summary.generate_race_title(model, text)
+                if not title:
+                    title = f"{round_name} · {heat_name} ({team_code})"
                 team_entries[team_code] = {
-                    "title": f"{round_name} · {heat_name} ({team_code})",
+                    "title": title,
                     "text": text,
                 }
 

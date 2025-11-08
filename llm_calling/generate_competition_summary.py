@@ -20,11 +20,25 @@ def generate_summary(model, competition_data, nationality_code):
     competition_summary = model.invoke(messages).text
     return competition_summary
 
+def generate_summary_title(model, summary_text: str) -> str:
+    messages = [
+        (
+            "system",
+            "You write concise, energetic sports headlines (max 8 words) for the provided summary. Avoid quotation marks and end punctuation.",
+        ),
+        ("human", summary_text),
+    ]
+    return model.invoke(messages).text.strip()
+
 def get_competition_summaries(competition_data, model, nationality_codes):
     result = {}
     for nationality_code in nationality_codes:
         summary = generate_summary(model, competition_data, nationality_code)
-        result[nationality_code] = summary
+        title = generate_summary_title(model, summary)
+        result[nationality_code] = {
+            "title": title,
+            "text": summary,
+        }
     return result
 
 def dict_to_json_file(dict, filepath):
