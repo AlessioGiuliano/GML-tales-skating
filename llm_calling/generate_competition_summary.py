@@ -2,17 +2,28 @@ import os
 import json
 from langchain_openai import ChatOpenAI
 
+STYLE_PRESETS = [
+    "pulse-pounding play-by-play with verbs like slingshot, thread, dive",
+    "strategic analyst tone highlighting pacing, lane choices, coach adjustments",
+    "cinematic storytelling spotlighting rivalries and comebacks",
+    "stat-driven radio call with lap splits and historical nods",
+]
+
+
+def select_style(seed: str, presets: list[str]) -> str:
+    return presets[hash(seed) % len(presets)]
+
 def load_competition_data(filepath):
     with open(filepath, "r", encoding="utf-8") as f:
         data = json.load(f)
     return data
 
-def generate_summary(model, competition_payload, nationality_code):
+def generate_summary(model, competition_payload, nationality_code, style_hint: str):
     payload_json = json.dumps(competition_payload, indent=2)
     messages = [
         (
             "system",
-            f"You are an enthusiastic yet insightful short-track commentator covering team '{nationality_code}'. The provided JSON contains the full event data plus quick bios/results for each {nationality_code} athlete. Craft 4-7 punchy sentences that: (1) spotlight decisive moments (overtakes, penalties, mechanical issues), (2) weave in at least one biographical nugget or trend per highlighted skater, and (3) explain how the result shapes upcoming rounds or the season narrative. Keep it energetic, no bullet lists.",
+            f"You are an enthusiastic yet insightful short-track commentator covering team '{nationality_code}'. Adopt this style: {style_hint}. The provided JSON contains trimmed event data plus quick bios/results for each {nationality_code} athlete. Craft 4-7 sentences that: (1) spotlight decisive moments (overtakes, penalties, mechanical issues) using varied sentence openers, (2) weave in at least one biographical nugget or trend per highlighted skater, (3) cite a stat or lap detail, and (4) explain how the result shapes upcoming rounds or the broader tour narrative. Avoid repeating stock phrases across outputs; keep it energetic, no bullet lists.",
         ),
         ("human", payload_json),
     ]
@@ -36,7 +47,8 @@ def get_competition_summaries(competition_data, model, nationality_codes, team_p
             "competition": competition_data,
             "team_profiles": team_profiles.get(nationality_code, []),
         }
-        summary = generate_summary(model, payload, nationality_code)
+        style_hint = select_style(nationality_code, STYLE_PRESETS)
+        summary = generate_summary(model, payload, nationality_code, style_hint)
         title = generate_summary_title(model, summary)
         result[nationality_code] = {
             "title": title,

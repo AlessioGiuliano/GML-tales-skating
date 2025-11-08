@@ -4,6 +4,18 @@ from typing import Dict, List, Optional
 
 from langchain_openai import ChatOpenAI
 
+RACE_STYLE_PRESETS = [
+    "high-tempo lap-by-lap thriller packed with verbs like slingshot, dive, rocket",
+    "tactical analyst tone focused on positioning, lane craft, and penalties",
+    "character-driven mini-story highlighting rivalries and resilience arcs",
+    "stat-focused radio call citing lap splits, gaps, and season context",
+]
+
+
+def select_style(seed: str) -> str:
+    return RACE_STYLE_PRESETS[hash(seed) % len(RACE_STYLE_PRESETS)]
+
+
 def load_races_data(filepath):
     with open(filepath, "r", encoding="utf-8") as f:
         data = json.load(f)
@@ -40,7 +52,7 @@ def _build_competitor_profiles(race_data: dict, athlete_profiles: Optional[Dict[
         )
     return profiles
 
-def generate_description(model, race_data, discipline_name, round_name, heat_name, athlete_profiles: Optional[Dict[str, str]] = None):
+def generate_description(model, race_data, discipline_name, round_name, heat_name, athlete_profiles: Optional[Dict[str, str]] = None, style_hint: Optional[str] = None):
     payload = {
         "race": race_data,
         "competitor_profiles": _build_competitor_profiles(race_data, athlete_profiles),
@@ -49,42 +61,47 @@ def generate_description(model, race_data, discipline_name, round_name, heat_nam
     messages = [
         (
             "system",
-            f"You are a rink-side commentator covering the {discipline_name} • {round_name} • {heat_name} heat. Deliver 5-7 vivid sentences summarizing decisive passes, lap-to-lap momentum, penalties, and any clutch saves. Thread in nuggets from the provided athlete bios to explain WHY results mattered (career arcs, styles, nicknames). Open with the race's key inflection point, keep it raw text (no numbering), and close with takeaway stakes for the next round.",
+            f"You are a rink-side commentator covering the {discipline_name} • {round_name} • {heat_name} heat. Adopt this tone: {style_hint or 'balanced play-by-play with emotional color'}. Deliver 5-7 vivid sentences summarizing decisive passes, lap momentum, penalties, and clutch saves. Thread in nuggets from the provided bios/performance snippets to explain WHY results mattered. Vary sentence openings, avoid overused cliches, open with the inflection point, and close with the stakes for the next round.",
         ),
         ("human", competition_json_str),
     ]
     race_description = model.invoke(messages).text
     return race_description
 
+
 def generate_race_title(model, description_text: str) -> str:
     messages = [
         (
             "system",
-            "Produce a thrilling short-track headline (≤8 words) that captures the drama of the recap. Favor action verbs, no punctuation at the end.",
+            "Produce a thrilling short-track headline (≤8 words) capturing the recap's drama. Favor action verbs, no punctuation at the end, and avoid repeating past headline phrasing.",
         ),
         ("human", description_text),
     ]
     return model.invoke(messages).text.strip()
 
+
 def get_race_descriptions(competition_data, model, athlete_profiles: Optional[Dict[str, str]] = None):
     discipline_name = competition_data["Data"]["DisciplineName"]
-    result = {discipline_name : []}
+    result = {discipline_name: []}
     for round in competition_data["Data"]["Rounds"]:
         round_name = round["Name"]
         round_entry = {round_name: []}
         for heat in round["Heats"]:
             heat_name = heat["Name"]
-            description = generate_description(model, heat, discipline_name, round_name, heat_name, athlete_profiles)
-            round_entry[round_name].append({heat_name : description})
-            break # TODO : remove break to have description for all races
+            style_hint = select_style(f"{round_name}-{heat_name}")
+            description = generate_description(model, heat, discipline_name, round_name, heat_name, athlete_profiles, style_hint)
+            round_entry[round_name].append({heat_name: description})
+            break  # TODO: remove break to have description for all races
         result[discipline_name].append(round_entry)
     return result
 
+
 def dict_to_json_file(dict, filepath):
     js = json.dumps(dict)
-    fp = open(filepath, 'w')
+    fp = open(filepath, "w")
     fp.write(js)
     fp.close()
+
 
 if __name__ == "__main__":
     DATA_PATHS = ["./competition_seoul_men.json"]
@@ -97,7 +114,6 @@ if __name__ == "__main__":
     for datapath in DATA_PATHS:
         competition_name = datapath.split("/")[-1].split(".")[0]
         data = load_races_data(datapath)
-        data = improve_competition_data(data) # otherwise llm calls the skater with his bib number
+        data = improve_competition_data(data)
         result = get_race_descriptions(data, model)
-        # FIXME : un fichier par competition ou un fichier avec toutes les competitions (option 1 pour le moment) ?
-        dict_to_json_file(result,f"../{competition_name}_race_descriptions.json")
+        dict_to_json_file(result, f"../{competition_name}_race_descriptions.json")

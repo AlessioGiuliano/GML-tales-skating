@@ -223,6 +223,7 @@ def generate_race_summaries(
             for team_code in team_codes:
                 descriptive_heat_name = f"{heat_name} - focus on team {team_code}"
                 logging.info("Generating summary for %s", descriptive_heat_name)
+                style_hint = race_summary.select_style(f"{team_code}-{heat.get('Id')}")
                 text = race_summary.generate_description(
                     model=model,
                     race_data=heat,
@@ -230,6 +231,7 @@ def generate_race_summaries(
                     round_name=round_name,
                     heat_name=descriptive_heat_name,
                     athlete_profiles=athlete_biographies,
+                    style_hint=style_hint,
                 )
                 title = race_summary.generate_race_title(model, text)
                 if not title:
