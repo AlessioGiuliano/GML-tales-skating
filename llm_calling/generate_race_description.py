@@ -57,7 +57,11 @@ def generate_description(model, race_data, discipline_name, round_name, heat_nam
         "race": race_data,
         "competitor_profiles": _build_competitor_profiles(race_data, athlete_profiles),
     }
-    competition_json_str = json.dumps(payload, indent=2)
+    competition_json_str = json.dumps(
+        payload,
+        ensure_ascii=False,
+        separators=(",", ":"),
+    )
     messages = [
         (
             "system",

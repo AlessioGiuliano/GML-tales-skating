@@ -19,7 +19,11 @@ def load_competition_data(filepath):
     return data
 
 def generate_summary(model, competition_payload, nationality_code, style_hint: str):
-    payload_json = json.dumps(competition_payload, indent=2)
+    payload_json = json.dumps(
+        competition_payload,
+        ensure_ascii=False,
+        separators=(",", ":"),
+    )
     messages = [
         (
             "system",

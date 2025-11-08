@@ -16,7 +16,11 @@ def load_skaters_data(datapath, useful_columns):
     return data
 
 def generate_biography(model, skater_data):
-    skater_json_str = json.dumps(skater_data, indent=2)
+    skater_json_str = json.dumps(
+        skater_data,
+        ensure_ascii=False,
+        separators=(",", ":"),
+    )
     messages = [
         (
             "system",
