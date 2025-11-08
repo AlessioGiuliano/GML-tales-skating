@@ -155,13 +155,14 @@ def competitor_to_athlete(competitor: dict, athlete_biographies: Dict[str, str])
 
 def extract_supported_teams(athletes: List[Athlete], selected_codes: List[str]) -> List[SupportedTeam]:
     filtered_codes = set(selected_codes)
+    allow_all = len(filtered_codes) == 0
     included = set()
     teams: List[SupportedTeam] = []
 
     for athlete in athletes:
         if athlete["country"] in included:
             continue
-        if athlete["country"] not in filtered_codes:
+        if not allow_all and athlete["country"] not in filtered_codes:
             continue
         included.add(athlete["country"])
         teams.append(
@@ -178,7 +179,11 @@ def convert_race_to_dataframe(heat: dict, round_data: dict, competition_data: di
     rows = []
 
     for competitor in heat.get("Competitors", []):
-        time_value = float(competitor.get("FinalResult", 0))
+        final_result = competitor.get("FinalResult", 0)
+        try:
+            time_value = float(final_result) if final_result else 0.0
+        except (ValueError, TypeError):
+            time_value = 0.0
 
         row = {
             "Season": competition_data.get("Start", {}).get("Year", 2024),
@@ -198,9 +203,23 @@ def convert_race_to_dataframe(heat: dict, round_data: dict, competition_data: di
         }
 
         for lap in competitor.get("Laps", []):
-            lap_num = int(lap.get("LapNumber", ""))
-            lap_time_value = float(lap.get("LapTime", 0))
-            rank_value = int(lap.get("Rank", 0))
+            lap_num = lap.get("LapNumber", "")
+            try:
+                lap_num = int(lap_num)
+            except (ValueError, TypeError):
+                continue
+
+            lap_time = lap.get("LapTime", 0)
+            try:
+                lap_time_value = float(lap_time) if lap_time else 0.0
+            except (ValueError, TypeError):
+                lap_time_value = 0.0
+
+            rank = lap.get("Rank", 0)
+            try:
+                rank_value = int(rank) if rank else 0
+            except (ValueError, TypeError):
+                rank_value = 0
 
             row[f"time_lap{lap_num}"] = lap_time_value
             row[f"rank_lap{lap_num}"] = rank_value
