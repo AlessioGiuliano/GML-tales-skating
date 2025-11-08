@@ -30,7 +30,12 @@ def parse_args():
         help=f"The output directory where the resulting CSV file will be stored. Default={cwd}",
     )
 
-    return parser.parse_args()
+    args = parser.parse_args()
+
+    args.input_dir = os.path.abspath(args.input_dir)
+    args.output_dir = os.path.abspath(args.output_dir)
+
+    return args
 
 
 def extract_frames(video_path, video_width, video_height, base_fps, total_frames, interval_seconds=8):
@@ -83,6 +88,7 @@ if __name__ == "__main__":
     for file in os.listdir(args.input_dir):
         ext = os.path.splitext(file)[1]
         if not ext in VIDEO_EXTENSIONS:
+            print(f"Skipping {file}")
             continue
         video_path = os.path.join(args.input_dir, file)
 
