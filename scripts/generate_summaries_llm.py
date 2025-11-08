@@ -138,6 +138,7 @@ def generate_race_summaries(
 
             for team_code in team_codes:
                 descriptive_heat_name = f"{heat_name} - focus on team {team_code}"
+                logging.info("Generating summary for %s", descriptive_heat_name)
                 text = race_summary.generate_description(
                     model=model,
                     race_data=heat,
@@ -188,6 +189,7 @@ def generate_athlete_biographies(
         if not skater_data:
             raise KeyError(f"Could not find skater data for competitor {competitor_id} (api_id={api_id})")
 
+        logging.info("Generating athlete biographies for %s", competitor_id)
         biography_text = biography_module.generate_biography(model, skater_data)
         biographies[competitor_id] = biography_text
 
