@@ -100,12 +100,14 @@ def generate_competition_summaries(
     competition_data: dict,
     model: Any,
     team_codes: List[str],
+    team_profiles: Dict[str, List[dict]],
 ) -> Dict[str, Dict[str, str]]:
     logging.info("Generating competition summaries for %s", team_codes)
     summaries = competition_summary.get_competition_summaries(
         competition_data,
         model,
         team_codes,
+        team_profiles,
     )
     result: Dict[str, Dict[str, str]] = {}
     for team in team_codes:
@@ -211,6 +213,30 @@ def generate_athlete_biographies(
     return biographies
 
 
+def build_team_profiles(
+    competition_data: dict,
+    athlete_biographies: Dict[str, str],
+) -> Dict[str, List[dict]]:
+    teams: Dict[str, List[dict]] = {}
+    for competitor in competition_data.get("Competitors", []):
+        competitor_info = competitor.get("Competitor", {})
+        team_code = competitor_info.get("StartedForNfCode")
+        if not team_code:
+            continue
+        comp_id = competitor.get("Id")
+        name = " ".join(
+            part for part in (competitor_info.get("FirstName"), competitor_info.get("LastName")) if part
+        ).strip() or competitor_info.get("Person", {}).get("Id", "")
+        entry = {
+            "id": comp_id,
+            "name": name,
+            "country": team_code,
+            "bio": athlete_biographies.get(comp_id, ""),
+        }
+        teams.setdefault(team_code, []).append(entry)
+    return teams
+
+
 def write_output(output_path: Path, payload: dict) -> None:
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with output_path.open("w", encoding="utf-8") as f:
@@ -230,14 +256,16 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     model = create_model(args.api_key)
 
+    athlete_biographies = generate_athlete_biographies(
+        competition_data=competition_data,
+        model=model,
+    )
+    team_profiles = build_team_profiles(competition_data, athlete_biographies)
     competition_summaries = generate_competition_summaries(
         competition_data=competition_data,
         model=model,
         team_codes=team_codes,
-    )
-    athlete_biographies = generate_athlete_biographies(
-        competition_data=competition_data,
-        model=model,
+        team_profiles=team_profiles,
     )
     race_summaries = generate_race_summaries(
         competition_data=competition_data,
