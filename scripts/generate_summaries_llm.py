@@ -107,6 +107,15 @@ def prepare_skater_prompt(skater: dict) -> dict:
     return prepared
 
 
+def _sanitize_llm_text(text: str) -> str:
+    if not isinstance(text, str):
+        return text
+    stripped = text.lstrip()
+    if stripped.startswith("#"):
+        stripped = stripped.lstrip("#").lstrip()
+    return stripped
+
+
 def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Generate personalized competition and race summaries using an LLM.",
@@ -191,7 +200,7 @@ def generate_competition_summaries(
             }
             continue
         title = entry.get("title") or f"{team} Highlights"
-        text = entry.get("text", "")
+        text = _sanitize_llm_text(entry.get("text", ""))
         result[team] = {
             "title": title,
             "text": text,
@@ -233,6 +242,7 @@ def generate_race_summaries(
                     athlete_profiles=athlete_biographies,
                     style_hint=style_hint,
                 )
+                text = _sanitize_llm_text(text)
                 title = race_summary.generate_race_title(model, text)
                 if not title:
                     title = f"{round_name} · {heat_name} ({team_code})"
@@ -282,7 +292,7 @@ def generate_athlete_biographies(
         logging.info("Generating athlete biographies for %s", competitor_id)
         prepared_profile = prepare_skater_prompt(skater_data)
         biography_text = biography_module.generate_biography(model, prepared_profile)
-        biographies[competitor_id] = biography_text
+        biographies[competitor_id] = _sanitize_llm_text(biography_text)
 
     return biographies
 
