@@ -98,7 +98,7 @@ def determine_team_codes(competition_data: dict, selected_codes: List[str]) -> L
 
 def generate_competition_summaries(
     competition_data: dict,
-    model: ChatOpenAI,
+    model: Any,
     team_codes: List[str],
 ) -> Dict[str, Dict[str, str]]:
     logging.info("Generating competition summaries for %s", team_codes)
@@ -128,8 +128,9 @@ def generate_competition_summaries(
 
 def generate_race_summaries(
     competition_data: dict,
-    model: ChatOpenAI,
+    model: Any,
     team_codes: List[str],
+    athlete_biographies: Dict[str, str],
 ) -> Dict[str, Dict[str, Dict[str, str]]]:
     logging.info("Generating race summaries")
     competition_copy = {"Data": deepcopy(competition_data)}
@@ -155,6 +156,7 @@ def generate_race_summaries(
                     discipline_name=discipline,
                     round_name=round_name,
                     heat_name=descriptive_heat_name,
+                    athlete_profiles=athlete_biographies,
                 )
                 title = race_summary.generate_race_title(model, text)
                 if not title:
@@ -187,7 +189,7 @@ def build_skaters_index() -> Dict[str, dict]:
 
 def generate_athlete_biographies(
     competition_data: dict,
-    model: ChatOpenAI,
+    model: Any,
 ) -> Dict[str, str]:
     skaters_index = build_skaters_index()
     biographies: Dict[str, str] = {}
@@ -233,14 +235,15 @@ def main(argv: Sequence[str] | None = None) -> int:
         model=model,
         team_codes=team_codes,
     )
+    athlete_biographies = generate_athlete_biographies(
+        competition_data=competition_data,
+        model=model,
+    )
     race_summaries = generate_race_summaries(
         competition_data=competition_data,
         model=model,
         team_codes=team_codes,
-    )
-    athlete_biographies = generate_athlete_biographies(
-        competition_data=competition_data,
-        model=model,
+        athlete_biographies=athlete_biographies,
     )
 
     payload = {

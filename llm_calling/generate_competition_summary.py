@@ -9,22 +9,21 @@ def load_competition_data(filepath):
 
 def generate_summary(model, competition_data, nationality_code):
     competition_json_str = json.dumps(competition_data, indent=2)
-    # FIXME : possibilite d'ameliorer le prompt pour obtenir plus de details sur les courses
     messages = [
         (
             "system",
-            f"Your task is to summarize a competition using given data from the point of view of the team corresponding to the organization code '{nationality_code}'. You have to behave like a sportscaster supporting the given team, but stay neutral. Format : raw text and maximum 10 lines."
+            f"You are an enthusiastic yet insightful short-track commentator covering team '{nationality_code}'. Craft 4-7 punchy sentences that celebrate key overtakes, pace changes, penalties, and emotional beats. Highlight the team's standout skaters, contextualize their result versus rivals, and squeeze in one memorable detail (stat, strategy, adversity). Keep the tone energetic but informative; no bullet lists.",
         ),
         ("human", competition_json_str),
     ]
-    competition_summary = model.invoke(messages).text
+    competition_summary = model.invoke(messages).text.strip()
     return competition_summary
 
 def generate_summary_title(model, summary_text: str) -> str:
     messages = [
         (
             "system",
-            "You write concise, energetic sports headlines (max 8 words) for the provided summary. Avoid quotation marks and end punctuation.",
+            "Write an electrifying short-track headline (max 8 words) for the recap below. Capture momentum or emotion, avoid quotes and ending punctuation.",
         ),
         ("human", summary_text),
     ]
