@@ -30,10 +30,81 @@ SKATERS_USEFUL_COLUMNS = [
     "results",
     "details",
 ]
+RESULT_HIGHLIGHT_LIMIT = 5
 
 
 def parse_selected_teams(value: str) -> List[str]:
     return [team.strip() for team in value.split(",") if team.strip()]
+
+
+def _normalize_rank(value: Any) -> int | None:
+    if value is None:
+        return None
+    try:
+        return int(value)
+    except (ValueError, TypeError):
+        return None
+
+
+def _summarize_results(results: Any) -> dict:
+    summary = {
+        "events_competed": 0,
+        "wins": 0,
+        "podiums": 0,
+        "top10_finishes": 0,
+        "highlights": [],
+    }
+    if not isinstance(results, list):
+        return summary
+
+    condensed: List[dict] = []
+    for result in results:
+        if not isinstance(result, dict):
+            continue
+        summary["events_competed"] += 1
+        rank = _normalize_rank(result.get("rank"))
+        if rank is None:
+            continue
+        if rank == 1:
+            summary["wins"] += 1
+        if rank in (1, 2, 3):
+            summary["podiums"] += 1
+        if rank <= 10:
+            summary["top10_finishes"] += 1
+        condensed.append(
+            {
+                "event": result.get("event_name"),
+                "category": result.get("category"),
+                "rank": rank,
+                "location": result.get("country"),
+                "date": result.get("date") or result.get("year"),
+            }
+        )
+
+    condensed.sort(key=lambda item: item["rank"] if item["rank"] is not None else 9999)
+    summary["highlights"] = condensed[:RESULT_HIGHLIGHT_LIMIT]
+    return summary
+
+
+def prepare_skater_prompt(skater: dict) -> dict:
+    prepared = {
+        "skater_id": skater.get("api_id"),
+        "first_name": skater.get("first_name"),
+        "last_name": skater.get("last_name"),
+        "gender": skater.get("gender"),
+        "nationality_code": skater.get("nationality_code"),
+        "organization_code": skater.get("organization_code"),
+        "discipline": skater.get("discipline_title") or skater.get("discipline", {}).get("title"),
+        "status": skater.get("status"),
+        "created_at": skater.get("created_at"),
+        "updated_at": skater.get("updated_at"),
+        "details": skater.get("details")
+    }
+
+    summary = _summarize_results(skater.get("results"))
+    prepared["career_summary"] = summary
+
+    return prepared
 
 
 def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
@@ -207,7 +278,8 @@ def generate_athlete_biographies(
             raise KeyError(f"Could not find skater data for competitor {competitor_id} (api_id={api_id})")
 
         logging.info("Generating athlete biographies for %s", competitor_id)
-        biography_text = biography_module.generate_biography(model, skater_data)
+        prepared_profile = prepare_skater_prompt(skater_data)
+        biography_text = biography_module.generate_biography(model, prepared_profile)
         biographies[competitor_id] = biography_text
 
     return biographies
