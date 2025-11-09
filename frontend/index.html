@@ -75,37 +75,35 @@
         scrollbar-color: rgba(0, 179, 255, 0.6) rgba(0, 0, 0, 0.2);
       }
 
-      /* Scrollable area fade effect */
-      .scroll-fade-container {
-        position: relative;
+      /* === Add this in your global.css or tailwind.css ===
+         to make the high-hype scores pulse subtly */
+      @keyframes pulse-glow {
+        0%, 100% { box-shadow: 0 0 6px 2px rgba(255, 125, 0, 0.4); }
+        50% { box-shadow: 0 0 10px 5px rgba(255, 90, 0, 0.7); }
       }
-      .scroll-fade-container::before,
-      .scroll-fade-container::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        right: 0;
-        z-index: 2; /* Above scrolling content */
-        pointer-events: none;
-        transition: opacity 0.3s ease-in-out;
-        opacity: 0;
+      .animate-pulse-glow {
+        animation: pulse-glow 1.5s infinite;
       }
-      .scroll-fade-container::before {
-        top: 0;
-        height: 3rem; /* 48px */
-        background: linear-gradient(to bottom, #16216a 10%, rgba(22, 33, 106, 0) 100%);
+
+      @keyframes glowHighlight {
+        0% {
+          box-shadow: 0 0 0px 0 rgba(56, 189, 248, 0.6);
+          transform: scale(1);
+        }
+        50% {
+          box-shadow: 0 0 25px 5px rgba(56, 189, 248, 0.8);
+          transform: scale(1.03);
+        }
+        100% {
+          box-shadow: 0 0 0px 0 rgba(56, 189, 248, 0);
+          transform: scale(1);
+        }
       }
-      .scroll-fade-container::after {
-        bottom: 0;
-        height: 3rem; /* 48px */
-        background: linear-gradient(to top, #16216a 10%, rgba(22, 33, 106, 0) 100%);
+      .animate-glow-highlight {
+        animation: glowHighlight 1.2s ease-in-out;
       }
-      .scroll-fade-container.fade-top::before {
-        opacity: 1;
-      }
-      .scroll-fade-container.fade-bottom::after {
-        opacity: 1;
-      }
+
+
     </style>
   <script type="importmap">
 {

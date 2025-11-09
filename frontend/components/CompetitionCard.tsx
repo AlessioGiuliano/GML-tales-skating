@@ -5,7 +5,7 @@ const CompetitionCard: React.FC<CompetitionCardProps> = ({ competition, index, o
   return (
     <button
       onClick={() => onViewCompetition(competition)}
-      className="rounded-xl p-6 flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 text-left w-full"
+      className="rounded-xl p-6 flex flex-col text-center justify-between transition-transform duration-300 hover:-translate-y-2 text-left w-full"
       style={{ 
         backgroundColor: 'rgba(0, 0, 0, 0.15)',
         backdropFilter: 'blur(10px)',

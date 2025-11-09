@@ -1,34 +1,57 @@
-import React, { useState, useEffect } from 'react';
-import { Team, Competition } from './types';
-import { TEAMS } from './constants';
+import React, {useEffect, useState} from 'react';
+import {Competition, Team} from './types';
+import {TEAMS} from './constants';
 import IntroScreen from './components/IntroScreen';
 import TeamSelection from './components/TeamSelection';
 import MainContent from './components/MainContent';
 import CompetitionDetail from './components/CompetitionDetail';
 import Header from './components/Header';
+import TheEdge from './components/TheEdge';
 
 const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [selectedTeam, setSelectedTeam] = useState<Team | null>(null);
   const [hoveredTeam, setHoveredTeam] = useState<Team | null>(null);
   const [viewedCompetition, setViewedCompetition] = useState<Competition | null>(null);
+  const [overlayColor, setOverlayColor] = useState<string | null>(null);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const teamParam = params.get('team');
+    if (teamParam) {
+      const foundTeam = TEAMS.find(
+          (t) => t.name.toLowerCase() === teamParam.toLowerCase()
+      );
+      if (foundTeam) {
+        setSelectedTeam(foundTeam);
+        setOverlayColor(foundTeam.bgColor);
+      }
+    }
+  }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 3800); // Duration should be slightly less than the animation
-
+    }, 1000);
     return () => clearTimeout(timer);
   }, []);
 
   const handleSelectTeam = (team: Team) => {
     setSelectedTeam(team);
-    setHoveredTeam(null); // Clear hover when team is selected
+    setHoveredTeam(null);
+    setOverlayColor(team.bgColor);
+
+    const params = new URLSearchParams(window.location.search);
+    params.set('team', team.name.toLowerCase());
+    window.history.replaceState({}, '', `${window.location.pathname}?${params}`);
   };
 
   const handleSwitchTeam = () => {
     setSelectedTeam(null);
     setViewedCompetition(null);
+    const params = new URLSearchParams(window.location.search);
+    params.delete('team');
+    window.history.replaceState({}, '', `${window.location.pathname}?${params}`);
   };
 
   const handleViewCompetition = (competition: Competition) => {
@@ -38,36 +61,35 @@ const App: React.FC = () => {
   const handleBackToSchedule = () => {
     setViewedCompetition(null);
   };
-  
-  const overlayColor = selectedTeam?.bgColor || hoveredTeam?.bgColor;
-  
+
   const isTeamSelectionView = !selectedTeam;
 
   const renderContent = () => {
     if (!selectedTeam) {
       return (
-        <TeamSelection 
-          teams={TEAMS} 
-          onSelectTeam={handleSelectTeam} 
-          hoveredTeam={hoveredTeam}
-          onHoverTeam={setHoveredTeam}
-        />
+          <TeamSelection
+              teams={TEAMS}
+              onSelectTeam={handleSelectTeam}
+              hoveredTeam={hoveredTeam}
+              onHoverTeam={setHoveredTeam}
+          />
       );
     }
     if (viewedCompetition) {
       return (
-        <CompetitionDetail
-          competition={viewedCompetition}
-          selectedTeam={selectedTeam}
-          onBack={handleBackToSchedule}
-        />
+          <CompetitionDetail
+              selectedTeam={selectedTeam.iso_name}
+              year="2024"
+              location="seoul"
+              category="500m-men"
+          />
       );
     }
     return (
-      <MainContent 
-        selectedTeam={selectedTeam} 
-        onViewCompetition={handleViewCompetition}
-      />
+        <MainContent
+            selectedTeam={selectedTeam}
+            onViewCompetition={handleViewCompetition}
+        />
     );
   };
 
@@ -76,28 +98,37 @@ const App: React.FC = () => {
   }
 
   return (
-    <div 
-      className={`relative w-full font-sans ${isTeamSelectionView ? 'h-screen overflow-hidden' : 'min-h-screen'}`}
-    >
       <div
-        className="absolute inset-0 w-full h-full transition-all duration-500 ease-in-out"
-        style={{
-          backgroundColor: overlayColor || 'transparent',
-          opacity: overlayColor ? 0.2 : 0,
-          zIndex: 0,
-        }}
-      />
-      <div className={`relative z-10 flex flex-col ${isTeamSelectionView ? 'h-full' : 'min-h-screen'}`}>
-        <Header 
-          selectedTeam={selectedTeam}
-          onSwitchTeam={handleSwitchTeam}
-          onGoToSchedule={handleBackToSchedule}
+          className={`relative w-full font-sans ${
+              isTeamSelectionView ? 'h-screen overflow-hidden' : 'min-h-screen'
+          }`}
+      >
+        <div
+            className="absolute inset-0 w-full h-full transition-[background-color,opacity] duration-500 ease-in-out"
+            style={{
+              backgroundColor: hoveredTeam?.bgColor
+                  ? `${hoveredTeam.bgColor}B3`
+                  : 'transparent',
+              zIndex: 0,
+            }}
         />
-        <main className={`flex-grow ${isTeamSelectionView ? 'relative' : 'flex flex-col'}`}>
-          {renderContent()}
-        </main>
+        <div
+            className={`relative z-10 flex flex-col ${
+                isTeamSelectionView ? 'h-full' : 'min-h-screen'
+            }`}
+        >
+          <Header
+              selectedTeam={selectedTeam}
+              onSwitchTeam={handleSwitchTeam}
+              onGoToSchedule={handleBackToSchedule}
+          />
+          <main className={`flex-grow ${isTeamSelectionView ? 'relative' : 'flex flex-col'}`}>
+            {renderContent()}
+          </main>
+        </div>
+
+        <TheEdge color={hoveredTeam?.bgColor ? `${hoveredTeam?.bgColor}B3` : '#0e3be1'} />
       </div>
-    </div>
   );
 };
 
