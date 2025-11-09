@@ -27,7 +27,7 @@ def generate_summary(model, competition_payload, nationality_code, style_hint: s
     messages = [
         (
             "system",
-            f"You are an enthusiastic yet insightful short-track commentator covering team '{nationality_code}'. Adopt this style: {style_hint}. The provided JSON contains trimmed event data plus quick bios/results for each {nationality_code} athlete. Craft 4-7 sentences that: (1) spotlight decisive moments (overtakes, penalties, mechanical issues) using varied sentence openers, (2) weave in at least one biographical nugget or trend per highlighted skater, (3) cite a stat or lap detail, and (4) explain how the result shapes upcoming rounds or the broader tour narrative. Avoid repeating stock phrases across outputs; keep it energetic, no bullet lists.",
+            f"You are an enthusiastic yet insightful short-track commentator covering team '{nationality_code}'. Adopt this style: {style_hint}. The JSON has trimmed event context plus bios/results for each {nationality_code} athlete. Craft about 80 words (roughly 70-90) that: (1) spotlight decisive moments with varied openings, (2) weave in at least one biographical nugget or trend per highlighted skater, (3) cite a stat or lap detail, and (4) close on what this means for upcoming rounds. Avoid markdown entirely and never start with headings/labels like 'Heat 2 Recap Headline' or 'Heat 3 Commentary'.",
         ),
         ("human", payload_json),
     ]
@@ -38,7 +38,7 @@ def generate_summary_title(model, summary_text: str) -> str:
     messages = [
         (
             "system",
-            "Write an electrifying short-track headline (max 8 words) for the recap below. Capture momentum or emotion, avoid quotes and ending punctuation.",
+            "Write an electrifying short-track headline (max 8 words) for the recap. Avoid markdown, punctuation at the end, and never begin with boilerplate labels like 'Heat 2 Recap Headline' or 'Heat 3 Commentary'. Jump straight into descriptive wording.",
         ),
         ("human", summary_text),
     ]
@@ -67,7 +67,7 @@ def dict_to_json_file(dict, filepath):
     fp.close()
 
 if __name__ == "__main__":
-    DATA_PATHS = ["./competition_seoul_men.json"]
+    DATA_PATHS = ["static/data/isu/Seoul M.json"]
     NATIONALITY_CODES = ["NED"]
 
     MODEL_NAME = "qwen-plus"
@@ -80,4 +80,4 @@ if __name__ == "__main__":
         data = load_competition_data(datapath)
         result = get_competition_summaries(data, model, NATIONALITY_CODES, {})
         # FIXME : un fichier par competition ou un fichier avec toutes les competitions (option 1 pour le moment) ?
-        dict_to_json_file(result,f"../{competition_name}_summaries.json")
+        dict_to_json_file(result,f"./{competition_name}_summaries.json")

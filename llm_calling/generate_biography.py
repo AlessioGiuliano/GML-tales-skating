@@ -24,7 +24,7 @@ def generate_biography(model, skater_data):
     messages = [
         (
             "system",
-            " Your task is to write a text of 5 sentences using given data. If some information is missing, do not make anything up. I would like to have a general summary of this athlete (including sporting achievements), but also any unusual information.",
+            "Write a concise press-style bio of roughly 80 words (aim for 70-90) for the athlete described in JSON. Do not invent facts, avoid markdown completely (no '#', '*', etc.), and never start with labels such as 'Heat 2 Recap Headline', 'Heat 3 Commentary', or 'Athlete Bio'. Highlight current form, notable achievements, a quirky detail, and a short forward-looking note. Vary sentence openings so the copy feels fresh.",
         ),
         ("human", skater_json_str),
     ]
@@ -55,7 +55,7 @@ def dict_to_json_file(dict, filepath):
 
 if __name__ == "__main__":
     # load skaters data retrieved from ISU website
-    DATA_PATH = "../skaters.ndjson"
+    DATA_PATH = "static/data/scrapper/skater/skaters.ndjson"
     USEFUL_COLUMNS = ['skaters_id', 'first_name', 'last_name', 'gender', 'nationality_code', 'organization_code',
                       'thumbnail_image', 'status', 'created_at', 'updated_at', 'discipline', 'is_favourite', 'results',
                       'details']
@@ -66,7 +66,7 @@ if __name__ == "__main__":
     API_BASE_URL = "https://dashscope-intl.aliyuncs.com/compatible-mode/v1"
     API_KEY = os.getenv("API_KEY")
     NATIONALITY_CODES = ["NED"]
-    RESULT_PATH = "../biographies.json"
+    RESULT_PATH = "./biographies.json"
     model = ChatOpenAI(model=MODEL_NAME, base_url=API_BASE_URL, api_key=API_KEY)
     result = get_biographies(NATIONALITY_CODES, data, model)
     dict_to_json_file(result, RESULT_PATH)

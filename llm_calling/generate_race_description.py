@@ -65,7 +65,7 @@ def generate_description(model, race_data, discipline_name, round_name, heat_nam
     messages = [
         (
             "system",
-            f"You are a rink-side commentator covering the {discipline_name} • {round_name} • {heat_name} heat. Adopt this tone: {style_hint or 'balanced play-by-play with emotional color'}. Deliver 5-7 vivid sentences summarizing decisive passes, lap momentum, penalties, and clutch saves. Thread in nuggets from the provided bios/performance snippets to explain WHY results mattered. Vary sentence openings, avoid overused cliches, open with the inflection point, and close with the stakes for the next round.",
+            f"You are a rink-side commentator covering the {discipline_name} • {round_name} • {heat_name} heat. Adopt this tone: {style_hint or 'balanced play-by-play with emotional color'}. Deliver ~80 words (aim 70-90, no markdown) summarizing decisive passes, lap momentum, penalties, and clutch saves. Thread in nuggets from the provided bios/performance snippets to explain WHY results mattered, vary sentence openings, and never start with labels like 'Heat 2 Recap Headline' or 'Heat 3 Commentary'. Open with the inflection point and close on the stakes for the next round.",
         ),
         ("human", competition_json_str),
     ]
@@ -77,7 +77,7 @@ def generate_race_title(model, description_text: str) -> str:
     messages = [
         (
             "system",
-            "Produce a thrilling short-track headline (≤8 words) capturing the recap's drama. Favor action verbs, no punctuation at the end, and avoid repeating past headline phrasing.",
+            "Produce a thrilling short-track headline (≤8 words) capturing the recap's drama. Avoid markdown, punctuation at the end, and never open with boilerplate like 'Heat 2 Recap Headline' or 'Heat 3 Commentary'. Jump straight into descriptive language.",
         ),
         ("human", description_text),
     ]
@@ -108,7 +108,7 @@ def dict_to_json_file(dict, filepath):
 
 
 if __name__ == "__main__":
-    DATA_PATHS = ["./competition_seoul_men.json"]
+    DATA_PATHS = ["static/data/isu/Seoul M.json"]
 
     MODEL_NAME = "qwen-plus"
     API_BASE_URL = "https://dashscope-intl.aliyuncs.com/compatible-mode/v1"
@@ -120,4 +120,4 @@ if __name__ == "__main__":
         data = load_races_data(datapath)
         data = improve_competition_data(data)
         result = get_race_descriptions(data, model)
-        dict_to_json_file(result, f"../{competition_name}_race_descriptions.json")
+        dict_to_json_file(result, f"./{competition_name}_race_descriptions.json")
