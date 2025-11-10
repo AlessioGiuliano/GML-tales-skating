@@ -62,7 +62,7 @@ const CompetitionDetail: React.FC<CompetitionDetailProps> = ({ selectedTeam, yea
                 season={competition.season}
             />
 
-            <CompetitionSummary summary={personalizedSummary} />
+            <CompetitionSummary summary={personalizedSummary} supportedTeam={selectedTeam} />
 
             <div className="my-12 border-t border-white/20"></div>
 

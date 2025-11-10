@@ -180,7 +180,7 @@ const BracketTournamentView: React.FC<BracketTournamentViewProps> = ({
             {/* === Intro Section === */}
             <div className="px-6 mb-10 text-center max-w-3xl mx-auto animate-fadeIn">
                 <h2 className="text-2xl md:text-3xl font-extrabold mb-4 bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent">
-                    Race Overview
+                    Competition Breakdown
                 </h2>
                 <p className="text-white/80 leading-relaxed text-sm md:text-base">
                     This section displays the <span className="text-cyan-300 font-semibold">list of races</span> grouped by competition phase.
