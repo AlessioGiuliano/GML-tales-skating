@@ -73,8 +73,13 @@ const PhaseList: React.FC<PhaseListProps> = ({ phases, selectedTeam }) => {
                                     <div
                                         key={race.id}
                                         id={raceAnchor}
-                                        className="mb-10 p-4 sm:p-6 rounded-lg bg-white/5 hover:bg-white/10 transition-colors duration-300"
+                                        className={`mb-10 p-4 sm:p-6 rounded-lg transition-all duration-500
+                                            ${race.hype_score > 7
+                                            ? "bg-gradient-to-br from-orange-500/10 to-red-500/10 border border-orange-400/40 shadow-lg shadow-orange-500/30 hover:shadow-orange-400/50 animate-pulse-glow"
+                                            : "bg-white/5 hover:bg-white/10 border border-transparent"
+                                        }`}
                                     >
+
                                         <div className="flex items-center gap-3 mb-4">
                                             <h3 className="text-xl sm:text-2xl font-bold text-cyan-300">
                                                 {race.title}

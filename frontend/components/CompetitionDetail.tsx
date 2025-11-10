@@ -33,7 +33,24 @@ const CompetitionDetail: React.FC<CompetitionDetailProps> = ({ selectedTeam, yea
     if (error) return <div className="text-center p-12 text-xl text-red-400">{error}</div>;
     if (!data) return <div className="text-center p-12">No data available.</div>;
 
-    const { competition } = data;
+    let { competition } = data;
+    // TODO Remove when hype score is gaussianned
+    competition = {
+        ...competition,
+        phases: competition.phases.map(phase => ({
+            ...phase,
+            races: phase.races.map(race => {
+                const mu = 1.6;
+                const sigma = 0.8;
+                const gaussian = Math.exp(-Math.pow(race.hype_score - mu, 2) / (2 * sigma * sigma));
+                return {
+                    ...race,
+                    hype_score: 10 * gaussian
+                };
+            })
+        })),
+    };
+
     const personalizedSummary = competition.personalized_summaries[selectedTeam];
 
     return (
