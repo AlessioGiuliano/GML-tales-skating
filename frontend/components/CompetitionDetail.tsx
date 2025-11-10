@@ -66,7 +66,7 @@ const CompetitionDetail: React.FC<CompetitionDetailProps> = ({ selectedTeam, yea
 
             <div className="my-12 border-t border-white/20"></div>
 
-            <BracketTournamentView competition={competition} />
+            <BracketTournamentView competition={competition} supportedTeam={selectedTeam} />
 
             <div className="my-12 border-t border-white/20"></div>
 

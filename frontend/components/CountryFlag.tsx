@@ -1,6 +1,6 @@
 import React from 'react';
 
-const countryToFlagMap: { [key: string]: string } = {
+export const countryToFlagMap: { [key: string]: string } = {
   KOR: '🇰🇷',
   USA: '🇺🇸',
   NED: '🇳🇱',
