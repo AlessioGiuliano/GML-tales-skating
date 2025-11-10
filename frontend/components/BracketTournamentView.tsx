@@ -1,7 +1,7 @@
 import React from "react";
 import { Competition, SupportedTeam, Race } from "@/types";
-import countryFlag, {countryToFlagMap} from "./CountryFlag";
-import {TEAMS} from "../constants";
+import countryFlag, { countryToFlagMap } from "./CountryFlag";
+import { TEAMS } from "../constants";
 
 interface BracketTournamentViewProps {
     competition: Competition;
@@ -83,9 +83,7 @@ const BracketTournamentView: React.FC<BracketTournamentViewProps> = ({
             : null;
 
         const foundTeam = TEAMS.find((t) => t.iso_name === supportedTeam);
-
         const teamColor = hasSupportedTeam ? foundTeam?.bgColor : null;
-        console.log(teamColor)
 
         const anchorId = `${phaseName.toLowerCase().replace(/\s+/g, "-")}-${raceId}`;
 
@@ -118,11 +116,12 @@ const BracketTournamentView: React.FC<BracketTournamentViewProps> = ({
         return (
             <a href={`#${anchorId}`} onClick={handleClick}>
                 <div className="relative group">
+                    {/* === Highlight border if supported team participates === */}
                     {hasSupportedTeam && teamColor && (
                         <div
                             className={`absolute -inset-[2px] rounded-lg border-2 bg-gradient-to-br ${hypeColor}
-                        ${isHot ? "animate-pulse-glow shadow-orange-500/50" : "shadow-md"}
-                        pointer-events-none`}
+                            ${isHot ? "animate-pulse-glow shadow-orange-500/50" : "shadow-md"}
+                            pointer-events-none`}
                             style={{
                                 borderColor: teamColor,
                             }}
@@ -131,7 +130,7 @@ const BracketTournamentView: React.FC<BracketTournamentViewProps> = ({
 
                     <div
                         className={`relative px-3 py-3 rounded-md cursor-pointer font-semibold shadow-md transition-all duration-200 z-10
-                    ${
+                        ${
                             isFinal
                                 ? "bg-gradient-to-br from-yellow-300 to-amber-400 text-blue-900 shadow-yellow-300/30 hover:scale-105"
                                 : "bg-white/95 text-blue-900 hover:bg-white hover:shadow-xl hover:-translate-y-[2px]"
@@ -143,8 +142,8 @@ const BracketTournamentView: React.FC<BracketTournamentViewProps> = ({
                         {hype !== undefined && (
                             <div
                                 className={`absolute -top-2 -right-2 text-[10px] font-bold text-white 
-                            bg-gradient-to-br ${hypeColor} rounded-full px-[6px] py-[2px] shadow-md
-                            border border-white/40 ${
+                                bg-gradient-to-br ${hypeColor} rounded-full px-[6px] py-[2px] shadow-md
+                                border border-white/40 ${
                                     isHot ? "animate-pulse-glow shadow-orange-500/50" : ""
                                 }`}
                             >
@@ -155,7 +154,7 @@ const BracketTournamentView: React.FC<BracketTournamentViewProps> = ({
                         {/* === Supported team flag === */}
                         {hasSupportedTeam && flagEmoji && (
                             <div
-                                className={"absolute -bottom-2 -left-2 w-6 h-6 rounded-full bg-white shadow-md flex items-center justify-center text-lg"}
+                                className="absolute -bottom-2 -left-2 w-6 h-6 rounded-full bg-white shadow-md flex items-center justify-center text-lg"
                                 title={supportedTeam?.name}
                             >
                                 {flagEmoji}
@@ -167,7 +166,6 @@ const BracketTournamentView: React.FC<BracketTournamentViewProps> = ({
         );
     };
 
-
     const Divider = () => (
         <div className="relative mt-8 mb-4">
             <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-white/40 to-transparent blur-[0.5px]" />
@@ -178,6 +176,23 @@ const BracketTournamentView: React.FC<BracketTournamentViewProps> = ({
         <div className="relative w-full py-12 bg-gradient-to-b from-blue-950 via-blue-900 to-blue-700 text-white rounded-3xl shadow-2xl overflow-hidden">
             {/* Decorative glow */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[70%] h-[150px] bg-gradient-to-r from-cyan-400/30 via-blue-500/30 to-cyan-400/30 blur-3xl rounded-full opacity-50 pointer-events-none" />
+
+            {/* === Intro Section === */}
+            <div className="px-6 mb-10 text-center max-w-3xl mx-auto animate-fadeIn">
+                <h2 className="text-2xl md:text-3xl font-extrabold mb-4 bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent">
+                    Race Overview
+                </h2>
+                <p className="text-white/80 leading-relaxed text-sm md:text-base">
+                    This section displays the <span className="text-cyan-300 font-semibold">list of races</span> grouped by competition phase.
+                    Each card represents an individual race. In the top right corner, you will find the
+                    <span className="text-pink-400 font-semibold"> hype score</span>, which measures how exciting and entertaining the race was.
+                </p>
+                <p className="text-white/80 leading-relaxed text-sm md:text-base mt-3">
+                    Races containing athletes from your <span className="text-orange-400 font-semibold">supported team</span> are highlighted.
+                    By clicking on a race, you will be taken directly to its
+                    <span className="text-cyan-300 font-semibold"> replay</span> with full description and precise timings.
+                </p>
+            </div>
 
             {/* ===== MOBILE VIEW ===== */}
             <div className="block xl:hidden px-6">
