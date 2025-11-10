@@ -53,7 +53,6 @@ const BracketTournamentView: React.FC<BracketTournamentViewProps> = ({
         raceId: string;
     }) => {
         const isFinal = color === "yellow";
-        hype = Math.random() * 10; // TODO: use real hype score
 
         const hypeColor =
             hype !== undefined

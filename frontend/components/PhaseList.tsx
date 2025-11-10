@@ -75,9 +75,31 @@ const PhaseList: React.FC<PhaseListProps> = ({ phases, selectedTeam }) => {
                                         id={raceAnchor}
                                         className="mb-10 p-4 sm:p-6 rounded-lg bg-white/5 hover:bg-white/10 transition-colors duration-300"
                                     >
-                                        <h3 className="text-xl sm:text-2xl font-bold mb-4 text-cyan-300">
-                                            {race.title}
-                                        </h3>
+                                        <div className="flex items-center gap-3 mb-4">
+                                            <h3 className="text-xl sm:text-2xl font-bold text-cyan-300">
+                                                {race.title}
+                                            </h3>
+
+                                            {race.hype_score !== undefined && (
+                                                <div className={"flex flex-row gap-2 ml-auto items-center"}>
+                                                    <div>
+                                                        Hype score
+                                                    </div>
+                                                    <div
+                                                        className={`text-[16px] font-bold text-white bg-gradient-to-br rounded-full px-[12px] py-[2px] shadow-md border border-white/40 ${
+                                                            race.hype_score < 4
+                                                                ? "from-blue-400 to-cyan-300"
+                                                                : race.hype_score < 7
+                                                                    ? "from-violet-400 to-pink-400"
+                                                                    : "from-orange-400 to-red-500 animate-pulse-glow shadow-orange-500/50"
+                                                        }`}
+                                                    >
+                                                        {race.hype_score.toFixed(1)}
+                                                    </div>
+                                                </div>
+                                            )}
+                                        </div>
+
 
                                         {summary && (
                                             <div className="mb-6 p-4 rounded-md text-sm bg-black/30">
