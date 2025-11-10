@@ -16,12 +16,16 @@ from hype_score.enrichCsv import (
 )
 
 
+SKATERS_DATA_PATH = Path("static/data/scrapper/skater/skaters.ndjson")
+
+
 class Athlete(TypedDict):
     id: str
     name: str
     country: str
     team: str
     bio: str
+    thumbnail_image: str
 
 
 class Dates(TypedDict):
@@ -123,6 +127,29 @@ def load_llm_output(summaries_path: Path) -> dict:
     return payload
 
 
+def load_thumbnail_index(skater_data_path: Path = SKATERS_DATA_PATH) -> Dict[str, str]:
+    thumbnails: Dict[str, str] = {}
+    if not skater_data_path.exists():
+        logging.warning("Skater data path %s not found; athlete thumbnails will be empty.", skater_data_path)
+        return thumbnails
+
+    with skater_data_path.open(encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                record = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            api_id = record.get("api_id")
+            if not api_id:
+                continue
+            thumb = record.get("thumbnail_image") or record.get("image") or ""
+            thumbnails[str(api_id)] = thumb
+    return thumbnails
+
+
 def competition_data_to_competition(location: str, competition: dict) -> Competition:
     return {
         "id": competition["Id"],
@@ -137,12 +164,17 @@ def competition_data_to_competition(location: str, competition: dict) -> Competi
     }
 
 
-def competitor_to_athlete(competitor: dict, athlete_biographies: Dict[str, str]) -> Athlete:
+def competitor_to_athlete(
+    competitor: dict,
+    athlete_biographies: Dict[str, str],
+    thumbnails: Dict[str, str],
+) -> Athlete:
     competitor_id = competitor["Id"]
     try:
         biography = athlete_biographies[competitor_id]
     except KeyError as exc:
         raise KeyError(f"Missing biography for competitor {competitor_id}") from exc
+    person_id = str(competitor["Competitor"]["Person"]["Id"])
 
     return {
         "id": competitor_id,
@@ -150,6 +182,7 @@ def competitor_to_athlete(competitor: dict, athlete_biographies: Dict[str, str])
         "country": competitor["Competitor"]["StartedForNfCode"],
         "team": competitor["Competitor"]["StartedForNfCountryName"],
         "bio": biography,
+        "thumbnail_image": thumbnails.get(person_id, ""),
     }
 
 
@@ -358,6 +391,7 @@ def generate_static_api_content(
 ) -> Root:
     competition_raw = load_competition_data(competition_path)
     llm_payload = load_llm_output(summaries_path)
+    thumbnails = load_thumbnail_index()
 
     location = extract_location_from_path(competition_path)
     competition = competition_data_to_competition(location, competition_raw)
@@ -366,7 +400,7 @@ def generate_static_api_content(
 
     logging.info("Generating skater data")
     athletes = [
-        competitor_to_athlete(competitor, athlete_biographies)
+        competitor_to_athlete(competitor, athlete_biographies, thumbnails)
         for competitor in competition_raw["Competitors"]
     ]
     logging.debug("Generated %d athletes", len(athletes))
