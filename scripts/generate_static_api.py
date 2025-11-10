@@ -1,6 +1,7 @@
 import argparse
 import json
 import logging
+from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Sequence, TypedDict
 
@@ -150,15 +151,40 @@ def load_thumbnail_index(skater_data_path: Path = SKATERS_DATA_PATH) -> Dict[str
     return thumbnails
 
 
+def compute_competition_end_date(competition: dict) -> str:
+    latest: datetime | None = None
+    for round_data in competition.get("Rounds", []):
+        for heat in round_data.get("Heats", []):
+            start_info = heat.get("Start", {})
+            ts = start_info.get("Date")
+            if not ts:
+                continue
+            normalized = ts.replace("Z", "+00:00")
+            try:
+                dt = datetime.fromisoformat(normalized)
+            except ValueError:
+                continue
+            if latest is None or dt > latest:
+                latest = dt
+
+    if latest is not None:
+        return latest.date().isoformat()
+
+    # fallback
+    return competition.get("Start", {}).get("Date", "").split("T")[0]
+
+
 def competition_data_to_competition(location: str, competition: dict) -> Competition:
+    start_date = competition["Start"]["Date"].split("T")[0]
+    end_date = compute_competition_end_date(competition)
     return {
         "id": competition["Id"],
         "name": f"{competition['EventName']} - {location} {competition['Start']['Year']}",
         "season": f"{competition['Start']['Year']}/{competition['Start']['Year'] + 1}",
         "location": location,
         "dates": {
-            "start": competition["Start"]["Date"].split("T")[0],
-            "end": competition["Start"]["Date"].split("T")[0],  # TODO replace with real end date
+            "start": start_date,
+            "end": end_date,
         },
         "category": competition["DisciplineName"],
     }
