@@ -42,7 +42,22 @@ const CompetitionHeader: React.FC<CompetitionHeaderProps> = ({
                 className="absolute inset-0 bg-cover bg-center"
                 style={{ backgroundImage: `url(${imagePath})` }}
             />
+
             <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/70" />
+
+            <div
+                className="absolute inset-0 rounded-3xl pointer-events-none"
+                style={{
+                    padding: "2px",
+                    background:
+                        "linear-gradient(130deg, #0e3be1, #00d7ff, #0e3be1, #00d7ff)",
+                    backgroundSize: "400% 400%",
+                    animation: "glow-border 6s linear infinite",
+                    mask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                    maskComposite: "exclude",
+                    WebkitMaskComposite: "xor",
+                }}
+            />
 
             <div className="relative z-10 py-16 px-6">
                 <h1 className="text-4xl sm:text-5xl font-display font-extrabold uppercase tracking-wider bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent drop-shadow-lg">
@@ -52,6 +67,20 @@ const CompetitionHeader: React.FC<CompetitionHeaderProps> = ({
                     {formatDateRange(dates.start, dates.end)}
                 </p>
             </div>
+
+            <style jsx>{`
+                @keyframes glow-border {
+                    0% {
+                        background-position: 0% 50%;
+                    }
+                    50% {
+                        background-position: 100% 50%;
+                    }
+                    100% {
+                        background-position: 0% 50%;
+                    }
+                }
+            `}</style>
         </header>
     );
 };
