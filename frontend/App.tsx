@@ -1,6 +1,13 @@
-import React, {useEffect, useState} from 'react';
-import {Competition, Team} from './types';
-import {TEAMS} from './constants';
+import React, { useEffect, useState } from 'react';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useNavigate,
+  useLocation,
+} from 'react-router-dom';
+import { Competition, Team } from './types';
+import { TEAMS } from './constants';
 import IntroScreen from './components/IntroScreen';
 import TeamSelection from './components/TeamSelection';
 import MainContent from './components/MainContent';
@@ -8,15 +15,17 @@ import CompetitionDetail from './components/CompetitionDetail';
 import Header from './components/Header';
 import TheEdge from './components/TheEdge';
 
-const App: React.FC = () => {
+const AppContent: React.FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [selectedTeam, setSelectedTeam] = useState<Team | null>(null);
   const [hoveredTeam, setHoveredTeam] = useState<Team | null>(null);
-  const [viewedCompetition, setViewedCompetition] = useState<Competition | null>(null);
   const [overlayColor, setOverlayColor] = useState<string | null>(null);
 
+  const navigate = useNavigate();
+  const location = useLocation();
+
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
+    const params = new URLSearchParams(location.search);
     const teamParam = params.get('team');
     if (teamParam) {
       const foundTeam = TEAMS.find(
@@ -27,12 +36,10 @@ const App: React.FC = () => {
         setOverlayColor(foundTeam.bgColor);
       }
     }
-  }, []);
+  }, [location.search]);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
+    const timer = setTimeout(() => setIsLoading(false), 1000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -41,30 +48,26 @@ const App: React.FC = () => {
     setHoveredTeam(null);
     setOverlayColor(team.bgColor);
 
-    const params = new URLSearchParams(window.location.search);
+    const params = new URLSearchParams(location.search);
     params.set('team', team.name.toLowerCase());
-    window.history.replaceState({}, '', `${window.location.pathname}?${params}`);
+    navigate({ pathname: '/', search: params.toString() }, { replace: true });
   };
 
   const handleSwitchTeam = () => {
     setSelectedTeam(null);
-    setViewedCompetition(null);
-    const params = new URLSearchParams(window.location.search);
+    const params = new URLSearchParams(location.search);
     params.delete('team');
-    window.history.replaceState({}, '', `${window.location.pathname}?${params}`);
+    navigate({ pathname: '/', search: params.toString() }, { replace: true });
   };
 
   const handleViewCompetition = (competition: Competition) => {
-    setViewedCompetition(competition);
-  };
-
-  const handleBackToSchedule = () => {
-    setViewedCompetition(null);
+    // Navigate to /seoul when user selects a competition
+    navigate('/seoul');
   };
 
   const isTeamSelectionView = !selectedTeam;
 
-  const renderContent = () => {
+  const renderMainContent = () => {
     if (!selectedTeam) {
       return (
           <TeamSelection
@@ -72,16 +75,6 @@ const App: React.FC = () => {
               onSelectTeam={handleSelectTeam}
               hoveredTeam={hoveredTeam}
               onHoverTeam={setHoveredTeam}
-          />
-      );
-    }
-    if (viewedCompetition) {
-      return (
-          <CompetitionDetail
-              selectedTeam={selectedTeam.iso_name}
-              year="2024"
-              location="seoul"
-              category="500m-men"
           />
       );
     }
@@ -93,9 +86,7 @@ const App: React.FC = () => {
     );
   };
 
-  if (isLoading) {
-    return <IntroScreen />;
-  }
+  if (isLoading) return <IntroScreen />;
 
   return (
       <div
@@ -120,10 +111,35 @@ const App: React.FC = () => {
           <Header
               selectedTeam={selectedTeam}
               onSwitchTeam={handleSwitchTeam}
-              onGoToSchedule={handleBackToSchedule}
+              onGoToSchedule={() => navigate('/')}
           />
-          <main className={`flex-grow ${isTeamSelectionView ? 'relative' : 'flex flex-col'}`}>
-            {renderContent()}
+          <main
+              className={`flex-grow ${
+                  isTeamSelectionView ? 'relative' : 'flex flex-col'
+              }`}
+          >
+            <Routes>
+              <Route path="/" element={renderMainContent()} />
+              <Route
+                  path="/seoul"
+                  element={
+                    selectedTeam ? (
+                        <CompetitionDetail
+                            selectedTeam={selectedTeam.iso_name}
+                            year="2024"
+                            location="seoul"
+                            category="500m-men"
+                        />
+                    ) : (
+                        <div className="p-8 text-center">
+                          <p className="text-xl">
+                            Please select a team first to view competition details.
+                          </p>
+                        </div>
+                    )
+                  }
+              />
+            </Routes>
           </main>
         </div>
 
@@ -131,5 +147,11 @@ const App: React.FC = () => {
       </div>
   );
 };
+
+const App: React.FC = () => (
+    <Router>
+      <AppContent />
+    </Router>
+);
 
 export default App;
