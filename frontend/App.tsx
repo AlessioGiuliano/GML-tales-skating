@@ -14,6 +14,8 @@ import MainContent from './components/MainContent';
 import CompetitionDetail from './components/CompetitionDetail';
 import Header from './components/Header';
 import TheEdge from './components/TheEdge';
+import SeoulV2Page from "./src/pages/SeoulV2Page";
+import SeoulExperiencePage from "./components/SeoulExperiencePage";
 
 const AppContent: React.FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -26,7 +28,7 @@ const AppContent: React.FC = () => {
 
   useEffect(() => {
     const params = new URLSearchParams(location.search);
-    const teamParam = params.get('team');
+    const teamParam = 'dutch lions'; // ?? params.get('team');
     if (teamParam) {
       const foundTeam = TEAMS.find(
           (t) => t.name.toLowerCase() === teamParam.toLowerCase()
@@ -120,7 +122,8 @@ const AppContent: React.FC = () => {
           >
             <Routes>
               <Route path="/" element={renderMainContent()} />
-              <Route
+                <Route path="/seoul-v2" element={<SeoulExperiencePage />} />
+                <Route
                   path="/seoul"
                   element={
                     selectedTeam ? (
