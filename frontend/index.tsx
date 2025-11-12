@@ -10,6 +10,7 @@ if (!rootElement) {
 const root = ReactDOM.createRoot(rootElement);
 root.render(
   <React.StrictMode>
+    {/*<SkaterCursor/>*/}
     <App />
   </React.StrictMode>
 );

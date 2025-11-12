@@ -24,7 +24,7 @@ const HypeSection: React.FC<HypeSectionProps> = ({ competition }) => {
                             animation: `fadeInUp 0.5s ease-out ${index * 0.1 + 0.3}s both`,
                         }}>
                             <img
-                                src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
+                                src={`/thumbnails/top${index + 1}.png`}
                                 alt={race.title}
                                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                             />
