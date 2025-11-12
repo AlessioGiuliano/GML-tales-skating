@@ -72,8 +72,6 @@ if __name__ == "__main__":
 
                         race_duration = k(race_duration)
 
-                        # Add margin
-                        race_duration += relativedelta(seconds=30)
                         races[event_name][round_name][
                             heat_name
                         ].duration = race_duration
@@ -92,9 +90,13 @@ if __name__ == "__main__":
         path = os.path.join(args.input_dir, file)
         video_id = file[: file.find("_")]
 
+        markers = dict()
+
         pattern = r"(?P<event>(men|women)(.)*)(\s*)-(\s*)(?P<info_type>(start list|result))(\s*)-(\s*)(?P<round>([a-z0-9])*)([\s-])*(?P<heat>((heat [0-9]*)|(.)*))"
+        pattern_minimal = r"(?P<info_type>(start list|result))"
 
         regex = re.compile(pattern)
+        regex_minimal = re.compile(pattern_minimal)
         with open(path, "r") as file:
             reader = csv.DictReader(file)
 
@@ -106,24 +108,28 @@ if __name__ == "__main__":
 
                 text = line["text"].lower()
                 match = regex.search(text)
+                match_minimal = regex_minimal.search(text)
 
-                if match is not None:
-                    event_name = match.group("event").strip()
-                    round_name = match.group("round").strip()
-                    heat_name = match.group("heat").strip()
+                if match_minimal is not None:
+                    markers[timestamp] = match_minimal.group("info_type")
+                    if match is not None:
+                        event_name = match.group("event").strip()
+                        round_name = match.group("round").strip()
+                        heat_name = match.group("heat").strip()
 
-                    # Rename finals
-                    if round_name == "final":
-                        round_name = "finals"
-                        heat_name = "final " + heat_name
+                        # Rename finals
+                        if round_name == "final":
+                            round_name = "finals"
+                            heat_name = "final " + heat_name
 
-                    if round_name not in races[event_name]:
-                        races[event_name][round_name] = defaultdict(Race)
+                        if round_name not in races[event_name]:
+                            races[event_name][round_name] = defaultdict(Race)
 
-                    if match.group("info_type") == "start list":
-                        races[event_name][round_name][heat_name].start = timestamp
-                    else:
-                        races[event_name][round_name][heat_name].end = timestamp
+                        race = races[event_name][round_name][heat_name]
+                        if match.group("info_type") == "start list":
+                            race.start = timestamp
+                        else:
+                            race.end = timestamp
 
         result = dict()
 
@@ -133,10 +139,19 @@ if __name__ == "__main__":
                     if not heat.id or ((not heat.start) and (not heat.end)):
                         print(f"Ignoring {heat}")
                         continue
-                    if heat.duration is None and (
-                        heat.start is None or heat.end is None
-                    ):
-                        continue
+
+                    markers_list = list(markers.keys())
+
+                    if heat.start is None and heat.end is not None and markers.get(heat.end):
+                        i = markers_list.index(heat.end)
+                        for j in range(1, 2):
+                            if markers[markers_list[i-j]] == "result":
+                                heat.start = markers_list[i-j]
+                    if heat.end is None and heat.start is not None and markers.get(heat.start):
+                        i = markers_list.index(heat.start)
+                        for j in range(1, 2):
+                            if markers[markers_list[i+j]] == "result":
+                                heat.end = markers_list[i+j]
 
                     duration = 0
                     if heat.duration is not None:
@@ -146,7 +161,13 @@ if __name__ == "__main__":
                     end = heat.end or heat.start + duration
 
                     url = f"https://www.youtube.com/embed/{video_id}?start={int(start)}&end={int(end)}&autoplay=1"
-                    result[heat.id] = url
+
+
+                    margin = 15
+                    result[heat.id] = {
+                        "start": start - margin,
+                        "end": end + margin,
+                    }
 
         path = os.path.join(args.output_dir, f"{video_id}_output_races.json")
         with open(path, "w") as file:
