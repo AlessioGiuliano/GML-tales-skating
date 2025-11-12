@@ -1,7 +1,29 @@
 import React, { useEffect, useState } from "react";
 import { PhaseListProps } from "../types";
-import RaceVideo from "./RaceVideo";
 import RaceResults from "./RaceResults";
+
+const RaceVideo: React.FC<{ title: string }> = ({ title }) => {
+    const [videoSrc, setVideoSrc] = useState<string>("");
+
+    useEffect(() => {
+        const randomIndex = Math.floor(Math.random() * 3) + 1;
+        setVideoSrc(`/videos/video_${randomIndex}.webm`);
+    }, []);
+
+    return (
+        <video
+            key={videoSrc}
+            controls
+            autoPlay
+            loop
+            muted
+            className="w-full rounded-lg border border-blue-500/30 shadow-md"
+        >
+            <source src={videoSrc} type="video/webm" />
+            Your browser does not support the video tag.
+        </video>
+    );
+};
 
 const PhaseList: React.FC<PhaseListProps> = ({ phases, selectedTeam }) => {
     const [openPhases, setOpenPhases] = useState<Record<string, boolean>>({});
@@ -10,7 +32,6 @@ const PhaseList: React.FC<PhaseListProps> = ({ phases, selectedTeam }) => {
         setOpenPhases((prev) => ({ ...prev, [name]: !prev[name] }));
     };
 
-    // Listen for custom event from bracket cards
     useEffect(() => {
         const handleOpen = (e: Event) => {
             const { phaseName } = (e as CustomEvent).detail;
@@ -42,7 +63,6 @@ const PhaseList: React.FC<PhaseListProps> = ({ phases, selectedTeam }) => {
                         id={anchorId}
                         className="mb-10 border-b border-blue-500/30 pb-2"
                     >
-                        {/* Collapsible Header */}
                         <button
                             onClick={() => togglePhase(phase.name)}
                             className="w-full flex items-center justify-between text-left group transition-all duration-200"
@@ -55,11 +75,10 @@ const PhaseList: React.FC<PhaseListProps> = ({ phases, selectedTeam }) => {
                                     isOpen ? "rotate-180" : "rotate-0"
                                 }`}
                             >
-                            ▼
-                          </span>
+                                ▼
+                            </span>
                         </button>
 
-                        {/* Collapsible Content */}
                         <div
                             className={`transition-all duration-1000 ${
                                 isOpen ? "opacity-100 mt-4" : "hidden opacity-0"
@@ -74,22 +93,20 @@ const PhaseList: React.FC<PhaseListProps> = ({ phases, selectedTeam }) => {
                                         key={race.id}
                                         id={raceAnchor}
                                         className={`mb-10 p-4 sm:p-6 rounded-lg transition-all duration-500
-                                            ${race.hype_score > 7
-                                            ? "bg-gradient-to-br from-orange-500/10 to-red-500/10 border border-orange-400/40 shadow-lg shadow-orange-500/30 hover:shadow-orange-400/50 animate-pulse-glow"
-                                            : "bg-white/5 hover:bg-white/10 border border-transparent"
+                                            ${
+                                            race.hype_score > 7
+                                                ? "bg-gradient-to-br from-orange-500/10 to-red-500/10 border border-orange-400/40 shadow-lg shadow-orange-500/30 hover:shadow-orange-400/50 animate-pulse-glow"
+                                                : "bg-white/5 hover:bg-white/10 border border-transparent"
                                         }`}
                                     >
-
                                         <div className="flex items-center gap-3 mb-4">
                                             <h3 className="text-xl sm:text-2xl font-bold text-cyan-300">
                                                 {race.title}
                                             </h3>
 
                                             {race.hype_score !== undefined && (
-                                                <div className={"flex flex-row gap-2 ml-auto items-center"}>
-                                                    <div>
-                                                        Hype score
-                                                    </div>
+                                                <div className="flex flex-row gap-2 ml-auto items-center">
+                                                    <div>Hype score</div>
                                                     <div
                                                         className={`text-[16px] font-bold text-white bg-gradient-to-br rounded-full px-[12px] py-[2px] shadow-md border border-white/40 ${
                                                             race.hype_score < 4
@@ -105,7 +122,6 @@ const PhaseList: React.FC<PhaseListProps> = ({ phases, selectedTeam }) => {
                                             )}
                                         </div>
 
-
                                         {summary && (
                                             <div className="mb-6 p-4 rounded-md text-sm bg-black/30">
                                                 <h4 className="font-bold text-base text-white/90">
@@ -120,7 +136,7 @@ const PhaseList: React.FC<PhaseListProps> = ({ phases, selectedTeam }) => {
                                                 <h4 className="text-lg font-semibold mb-3 text-blue-300">
                                                     Race Video
                                                 </h4>
-                                                <RaceVideo url={"https://www.youtube.com/embed/GEsS5ZBIQN0?start=5825&end=5896"} title={race.title} />
+                                                <RaceVideo title={race.title} />
                                             </div>
                                             <div>
                                                 <h4 className="text-lg font-semibold mb-3 text-blue-300">
