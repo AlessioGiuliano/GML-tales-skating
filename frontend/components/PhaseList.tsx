@@ -6,7 +6,7 @@ const RaceVideo: React.FC<{ title: string }> = ({ title }) => {
     const [videoSrc, setVideoSrc] = useState<string>("");
 
     useEffect(() => {
-        const randomIndex = Math.floor(Math.random() * 3) + 1;
+        const randomIndex = Math.floor(Math.random() * 9) + 1;
         setVideoSrc(`/videos/video_${randomIndex}.webm`);
     }, []);
 
