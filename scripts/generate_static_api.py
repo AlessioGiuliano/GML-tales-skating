@@ -1,6 +1,7 @@
 import argparse
 import json
 import logging
+from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Sequence, TypedDict
 
@@ -16,12 +17,16 @@ from hype_score.enrichCsv import (
 )
 
 
+SKATERS_DATA_PATH = Path("static/data/scrapper/skater/skaters.ndjson")
+
+
 class Athlete(TypedDict):
     id: str
     name: str
     country: str
     team: str
     bio: str
+    thumbnail_image: str
 
 
 class Dates(TypedDict):
@@ -123,26 +128,79 @@ def load_llm_output(summaries_path: Path) -> dict:
     return payload
 
 
+def load_thumbnail_index(skater_data_path: Path = SKATERS_DATA_PATH) -> Dict[str, str]:
+    thumbnails: Dict[str, str] = {}
+    if not skater_data_path.exists():
+        logging.warning("Skater data path %s not found; athlete thumbnails will be empty.", skater_data_path)
+        return thumbnails
+
+    with skater_data_path.open(encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                record = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            api_id = record.get("api_id")
+            if not api_id:
+                continue
+            thumb = record.get("thumbnail_image") or record.get("image") or ""
+            thumbnails[str(api_id)] = thumb
+    return thumbnails
+
+
+def compute_competition_end_date(competition: dict) -> str:
+    latest: datetime | None = None
+    for round_data in competition.get("Rounds", []):
+        for heat in round_data.get("Heats", []):
+            start_info = heat.get("Start", {})
+            ts = start_info.get("Date")
+            if not ts:
+                continue
+            normalized = ts.replace("Z", "+00:00")
+            try:
+                dt = datetime.fromisoformat(normalized)
+            except ValueError:
+                continue
+            if latest is None or dt > latest:
+                latest = dt
+
+    if latest is not None:
+        return latest.date().isoformat()
+
+    # fallback
+    return competition.get("Start", {}).get("Date", "").split("T")[0]
+
+
 def competition_data_to_competition(location: str, competition: dict) -> Competition:
+    start_date = competition["Start"]["Date"].split("T")[0]
+    end_date = compute_competition_end_date(competition)
     return {
         "id": competition["Id"],
         "name": f"{competition['EventName']} - {location} {competition['Start']['Year']}",
         "season": f"{competition['Start']['Year']}/{competition['Start']['Year'] + 1}",
         "location": location,
         "dates": {
-            "start": competition["Start"]["Date"].split("T")[0],
-            "end": competition["Start"]["Date"].split("T")[0],  # TODO replace with real end date
+            "start": start_date,
+            "end": end_date,
         },
         "category": competition["DisciplineName"],
     }
 
 
-def competitor_to_athlete(competitor: dict, athlete_biographies: Dict[str, str]) -> Athlete:
+def competitor_to_athlete(
+    competitor: dict,
+    athlete_biographies: Dict[str, str],
+    thumbnails: Dict[str, str],
+) -> Athlete:
     competitor_id = competitor["Id"]
     try:
         biography = athlete_biographies[competitor_id]
     except KeyError as exc:
         raise KeyError(f"Missing biography for competitor {competitor_id}") from exc
+    person_id = str(competitor["Competitor"]["Person"]["Id"])
 
     return {
         "id": competitor_id,
@@ -150,6 +208,7 @@ def competitor_to_athlete(competitor: dict, athlete_biographies: Dict[str, str])
         "country": competitor["Competitor"]["StartedForNfCode"],
         "team": competitor["Competitor"]["StartedForNfCountryName"],
         "bio": biography,
+        "thumbnail_image": thumbnails.get(person_id, ""),
     }
 
 
@@ -293,7 +352,7 @@ def build_race(
     race: Race = {
         "id": heat["Id"],
         "title": heat["Name"],
-        "video_url": "TODO",
+        "video_url": f"https://gml-hackathon-isu.oss-eu-central-1.aliyuncs.com/videos/{competition_data["Id"]}/{heat_id}.webm",
         "hype_score": hype_score,
         "personalized_summaries": summaries,
         "results": [],
@@ -358,6 +417,7 @@ def generate_static_api_content(
 ) -> Root:
     competition_raw = load_competition_data(competition_path)
     llm_payload = load_llm_output(summaries_path)
+    thumbnails = load_thumbnail_index()
 
     location = extract_location_from_path(competition_path)
     competition = competition_data_to_competition(location, competition_raw)
@@ -366,7 +426,7 @@ def generate_static_api_content(
 
     logging.info("Generating skater data")
     athletes = [
-        competitor_to_athlete(competitor, athlete_biographies)
+        competitor_to_athlete(competitor, athlete_biographies, thumbnails)
         for competitor in competition_raw["Competitors"]
     ]
     logging.debug("Generated %d athletes", len(athletes))

@@ -2,12 +2,12 @@
   "competition": {
     "category": "Men 500 m",
     "dates": {
-      "end": "2024-12-13",
+      "end": "2024-12-14",
       "start": "2024-12-13"
     },
     "id": "fca24ec1-f917-47f3-9fca-1d21e68d5f8a",
     "location": "Seoul",
-    "name": "ISU Short Track World Tour - Seoul 2024",
+    "name": "World Cup 4",
     "personalized_summaries": {
       "NED": {
         "text": "Jens van 't Wout launched his 500m campaign with a controlled heat win, leveraging his inside lane to maintain clean lines and clock the fastest qualifying time at 40.808. His split times reveal a steady pace—never overcommitting, always conserving energy for the final push. Teun Boer followed suit in his heat, finishing fourth but advancing via repechage, showing resilience after recent surgery. Itzhak de Laat, ever the veteran, used strategic positioning to qualify despite a slower 41.041, drawing on years of experience to avoid traffic. With all three NED men through to later rounds, their pacing suggests strong medal contention if execution holds under pressure.",
@@ -35,7 +35,8 @@
                   "country": "POL",
                   "id": "a9d7de7a-d561-43e7-9d2b-a25f5b720ea8",
                   "name": "Lukasz KUCZYNSKI",
-                  "team": "Poland"
+                  "team": "Poland",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/lukasz-kuczynski.jpg"
                 },
                 "rank": 1,
                 "splits": [
@@ -68,7 +69,8 @@
                   "country": "UKR",
                   "id": "6966756c-063a-4dad-8481-de3a5060fba8",
                   "name": "Rostyslav LEONTENKO",
-                  "team": "Ukraine"
+                  "team": "Ukraine",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/rostyslav-leontenko.jpg"
                 },
                 "rank": 2,
                 "splits": [
@@ -101,7 +103,8 @@
                   "country": "GBR",
                   "id": "aec5d4c4-5b9a-49a6-9803-d76affd5bdae",
                   "name": "Jonathan MOODY",
-                  "team": "Great Britain"
+                  "team": "Great Britain",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/jonathan-moody.jpg"
                 },
                 "rank": 3,
                 "splits": [
@@ -134,7 +137,8 @@
                   "country": "JPN",
                   "id": "dc80c9c3-094f-4762-a72d-5dc47a1b9d47",
                   "name": "Kosei HAYASHI",
-                  "team": "Japan"
+                  "team": "Japan",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/kosei-hayashi.jpg"
                 },
                 "rank": 4,
                 "splits": [
@@ -167,7 +171,8 @@
                   "country": "SGP",
                   "id": "69ff363e-e62c-408d-934a-8315964a100d",
                   "name": "Brandon Yan Kai POK",
-                  "team": "Singapore"
+                  "team": "Singapore",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/brandon-yan-kai-pok.jpg"
                 },
                 "rank": 5,
                 "splits": [
@@ -196,7 +201,7 @@
               }
             ],
             "title": "Heat 1",
-            "video_url": "TODO"
+            "video_url": "https://gml-hackathon-isu.oss-eu-central-1.aliyuncs.com/videos/fca24ec1-f917-47f3-9fca-1d21e68d5f8a/c7094c79-ab1a-427c-8c72-fea4f13ddbdb.webm"
           },
           {
             "hype_score": 2.5,
@@ -214,7 +219,8 @@
                   "country": "NED",
                   "id": "29f872c9-cead-450c-9997-3b6d6dacc1e8",
                   "name": "Itzhak DE LAAT",
-                  "team": "Netherlands"
+                  "team": "Netherlands",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/itzhak-de-laat.jpg"
                 },
                 "rank": 1,
                 "splits": [
@@ -247,7 +253,8 @@
                   "country": "POL",
                   "id": "17cf500c-d597-4fd2-ac27-62e8aabe6d11",
                   "name": "Diane SELLIER",
-                  "team": "Poland"
+                  "team": "Poland",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/diane-sellier-5.jpg"
                 },
                 "rank": 2,
                 "splits": [
@@ -280,7 +287,8 @@
                   "country": "ITA",
                   "id": "996efec1-974c-4d9d-8e24-17babe3ddf17",
                   "name": "Lorenzo PREVITALI",
-                  "team": "Italy"
+                  "team": "Italy",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/lorenzo-previtali.jpg"
                 },
                 "rank": 3,
                 "splits": [
@@ -313,7 +321,8 @@
                   "country": "BUL",
                   "id": "e8c2bb25-db3d-416c-a9d4-49f1721c7e1e",
                   "name": "Stefan-Alexander KUMURDJIEV",
-                  "team": "Bulgaria"
+                  "team": "Bulgaria",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/stefan-alexander-kumurdjiev.jpg"
                 },
                 "rank": 4,
                 "splits": [
@@ -346,7 +355,8 @@
                   "country": "LUX",
                   "id": "684d77eb-e2b4-4b0f-b5aa-7a32a1cc99ac",
                   "name": "Peter MURPHY",
-                  "team": "Luxembourg"
+                  "team": "Luxembourg",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/peter-murphy.jpg"
                 },
                 "rank": 5,
                 "splits": [
@@ -375,7 +385,7 @@
               }
             ],
             "title": "Heat 2",
-            "video_url": "TODO"
+            "video_url": "https://gml-hackathon-isu.oss-eu-central-1.aliyuncs.com/videos/fca24ec1-f917-47f3-9fca-1d21e68d5f8a/af201b61-57e2-4cb7-a185-6bfc53d8f0cd.webm"
           },
           {
             "hype_score": 4.0,
@@ -393,7 +403,8 @@
                   "country": "AUS",
                   "id": "1f32c0f8-b7d1-4442-a6a5-ab8763ab06d1",
                   "name": "Lucas WAREHAM",
-                  "team": "Australia"
+                  "team": "Australia",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/lucas-wareham.jpg"
                 },
                 "rank": 1,
                 "splits": [
@@ -426,7 +437,8 @@
                   "country": "GBR",
                   "id": "c7b3a7a6-7d73-4870-81c0-983009b1a7df",
                   "name": "Westley YATES",
-                  "team": "Great Britain"
+                  "team": "Great Britain",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/westley-yates.jpg"
                 },
                 "rank": 2,
                 "splits": [
@@ -459,7 +471,8 @@
                   "country": "THA",
                   "id": "035de887-d22a-4161-8f98-03ffbea1fec1",
                   "name": "Chonlachart TAPROM",
-                  "team": "Thailand"
+                  "team": "Thailand",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/chonlachart-taprom.jpg"
                 },
                 "rank": 3,
                 "splits": [
@@ -492,7 +505,8 @@
                   "country": "USA",
                   "id": "398f4d0a-6c05-40de-b3f1-8866b6ff5158",
                   "name": "Marcus HOWARD",
-                  "team": "United States of America"
+                  "team": "United States of America",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/marcus-howard.jpg"
                 },
                 "rank": 4,
                 "splits": [
@@ -521,7 +535,8 @@
                   "country": "TUR",
                   "id": "4f8a2b6d-729e-436f-b348-b1d227e2d2e1",
                   "name": "Murat TAHTACI",
-                  "team": "Turkiye"
+                  "team": "Turkiye",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/murat-tahtaci.jpg"
                 },
                 "rank": null,
                 "splits": [],
@@ -529,7 +544,7 @@
               }
             ],
             "title": "Heat 3",
-            "video_url": "TODO"
+            "video_url": "https://gml-hackathon-isu.oss-eu-central-1.aliyuncs.com/videos/fca24ec1-f917-47f3-9fca-1d21e68d5f8a/4b767742-7b21-45bf-9bc7-dac58bf37958.webm"
           },
           {
             "hype_score": 1.0,
@@ -547,7 +562,8 @@
                   "country": "UKR",
                   "id": "af71dca0-c9fb-4f77-be3a-8ff047e99c39",
                   "name": "Oleh HANDEI",
-                  "team": "Ukraine"
+                  "team": "Ukraine",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/oleh-handei.jpg"
                 },
                 "rank": 1,
                 "splits": [
@@ -580,7 +596,8 @@
                   "country": "IRL",
                   "id": "c7c8d6cd-9ad1-4028-8411-a2d2f121c8be",
                   "name": "Sean MCANUFF",
-                  "team": "Ireland"
+                  "team": "Ireland",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/sean-mcanuff.jpg"
                 },
                 "rank": 2,
                 "splits": [
@@ -613,7 +630,8 @@
                   "country": "HKG",
                   "id": "4c36e64c-a635-45b3-8947-7b41a9430ecb",
                   "name": "Zhanshuo LOU",
-                  "team": "Hong Kong, China"
+                  "team": "Hong Kong, China",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/zhanshuo-lou.jpg"
                 },
                 "rank": 3,
                 "splits": [
@@ -646,7 +664,8 @@
                   "country": "GER",
                   "id": "dc16e0b5-a168-4cc2-84a8-26828fa2373c",
                   "name": "Robin BENDIG",
-                  "team": "Germany"
+                  "team": "Germany",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/robin-bendig.jpg"
                 },
                 "rank": 4,
                 "splits": [
@@ -679,7 +698,8 @@
                   "country": "NOR",
                   "id": "abe82db9-af4f-44cc-a51a-04967c7e4a5c",
                   "name": "Miika KLEVSTUEN",
-                  "team": "Norway"
+                  "team": "Norway",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/miika-klevstuen.jpg"
                 },
                 "rank": 5,
                 "splits": [
@@ -704,7 +724,7 @@
               }
             ],
             "title": "Heat 4",
-            "video_url": "TODO"
+            "video_url": "https://gml-hackathon-isu.oss-eu-central-1.aliyuncs.com/videos/fca24ec1-f917-47f3-9fca-1d21e68d5f8a/8f94c91d-93f1-42af-8e86-ee44622e6970.webm"
           },
           {
             "hype_score": 3.5,
@@ -722,7 +742,8 @@
                   "country": "TUR",
                   "id": "e37b1fad-a1c9-4a79-94fe-15626c82d058",
                   "name": "Furkan AKAR",
-                  "team": "Turkiye"
+                  "team": "Turkiye",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/furkan-akar.jpg"
                 },
                 "rank": 1,
                 "splits": [
@@ -755,7 +776,8 @@
                   "country": "AUS",
                   "id": "41802b7a-0a0c-48f4-9fe8-3776c419dcc6",
                   "name": "Brendan COREY",
-                  "team": "Australia"
+                  "team": "Australia",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/brendan-corey.jpg"
                 },
                 "rank": 2,
                 "splits": [
@@ -788,7 +810,8 @@
                   "country": "UKR",
                   "id": "12d00681-72a5-4a5e-8b7f-888307030a79",
                   "name": "Yaroslav MOROZOV",
-                  "team": "Ukraine"
+                  "team": "Ukraine",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/yaroslav-morozov.jpg"
                 },
                 "rank": 3,
                 "splits": [
@@ -821,7 +844,8 @@
                   "country": "SGP",
                   "id": "803fa954-f0ae-4120-bf37-af6a795a1341",
                   "name": "Ong RYO",
-                  "team": "Singapore"
+                  "team": "Singapore",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/ong-ryo.jpg"
                 },
                 "rank": 4,
                 "splits": [
@@ -854,7 +878,8 @@
                   "country": "THA",
                   "id": "d3f94799-45ef-483d-98a4-ca33cfbd22d1",
                   "name": "Phooripat CHANGMAI",
-                  "team": "Thailand"
+                  "team": "Thailand",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/phooripat-changmai.jpg"
                 },
                 "rank": 5,
                 "splits": [
@@ -883,7 +908,7 @@
               }
             ],
             "title": "Heat 5",
-            "video_url": "TODO"
+            "video_url": "https://gml-hackathon-isu.oss-eu-central-1.aliyuncs.com/videos/fca24ec1-f917-47f3-9fca-1d21e68d5f8a/4841c03d-0409-47e4-ba40-0451b0624192.webm"
           },
           {
             "hype_score": 2.5,
@@ -901,7 +926,8 @@
                   "country": "CHN",
                   "id": "ec754c8a-dada-4421-bb64-e64926e6b4c4",
                   "name": "Shaolin LIU",
-                  "team": "China"
+                  "team": "China",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/shaolin-liu-2.jpg"
                 },
                 "rank": 1,
                 "splits": [
@@ -934,7 +960,8 @@
                   "country": "CRO",
                   "id": "86308f5c-9f44-4b71-89bc-ff577fcd76a0",
                   "name": "Ivan MARTINIC",
-                  "team": "Croatia"
+                  "team": "Croatia",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/ivan-martinic.jpg"
                 },
                 "rank": 2,
                 "splits": [
@@ -967,7 +994,8 @@
                   "country": "TPE",
                   "id": "5f994194-cdf8-41f6-b03a-f7de5326b09a",
                   "name": "Huan-Chen LAI TSAI",
-                  "team": "Chinese Taipei"
+                  "team": "Chinese Taipei",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/huan-chen-lai-tsai.jpg"
                 },
                 "rank": 3,
                 "splits": [
@@ -1000,7 +1028,8 @@
                   "country": "TUR",
                   "id": "7241404a-ad95-48e4-828b-a639b7b2cf9f",
                   "name": "Muhammed BOZDAG",
-                  "team": "Turkiye"
+                  "team": "Turkiye",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/muhammed-bozdag.jpg"
                 },
                 "rank": 4,
                 "splits": [
@@ -1029,7 +1058,8 @@
                   "country": "BUL",
                   "id": "8c4b0fed-35c0-4465-8de1-146367c4af73",
                   "name": "Ivan DONCHEV",
-                  "team": "Bulgaria"
+                  "team": "Bulgaria",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/ivan-donchev.jpg"
                 },
                 "rank": null,
                 "splits": [],
@@ -1037,7 +1067,7 @@
               }
             ],
             "title": "Heat 6",
-            "video_url": "TODO"
+            "video_url": "https://gml-hackathon-isu.oss-eu-central-1.aliyuncs.com/videos/fca24ec1-f917-47f3-9fca-1d21e68d5f8a/88de5ae5-289e-4340-a9b4-4190065dfcc2.webm"
           },
           {
             "hype_score": 6.5,
@@ -1055,7 +1085,8 @@
                   "country": "KAZ",
                   "id": "5445c3b6-260c-4627-aff7-5c87accb1e3c",
                   "name": "Adil GALIAKHMETOV",
-                  "team": "Kazakhstan"
+                  "team": "Kazakhstan",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/adil-galiakhmetov.jpg"
                 },
                 "rank": 1,
                 "splits": [
@@ -1088,7 +1119,8 @@
                   "country": "GER",
                   "id": "01e4dcbf-164f-4a97-aef5-3587d81e1998",
                   "name": "Yanghun Ben JUNG",
-                  "team": "Germany"
+                  "team": "Germany",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/yanghun-ben-jung.jpg"
                 },
                 "rank": 2,
                 "splits": [
@@ -1121,7 +1153,8 @@
                   "country": "CZE",
                   "id": "07b07e7b-b516-4d77-a204-91e3c504c294",
                   "name": "Radek FAJKUS",
-                  "team": "Czechia"
+                  "team": "Czechia",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/radek-fajkus.jpg"
                 },
                 "rank": 3,
                 "splits": [
@@ -1154,7 +1187,8 @@
                   "country": "IRL",
                   "id": "2e32c658-7255-4a74-aa1e-3555a22db580",
                   "name": "Liam O BRIEN",
-                  "team": "Ireland"
+                  "team": "Ireland",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/liam-o-brien.jpg"
                 },
                 "rank": 4,
                 "splits": [
@@ -1187,7 +1221,8 @@
                   "country": "BEL",
                   "id": "a069c448-0fa1-471c-b30b-4f87ba4fa44d",
                   "name": "Warre VAN DAMME",
-                  "team": "Belgium"
+                  "team": "Belgium",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/warre-van-damme.jpg"
                 },
                 "rank": 5,
                 "splits": [
@@ -1216,7 +1251,7 @@
               }
             ],
             "title": "Heat 7",
-            "video_url": "TODO"
+            "video_url": "https://gml-hackathon-isu.oss-eu-central-1.aliyuncs.com/videos/fca24ec1-f917-47f3-9fca-1d21e68d5f8a/f2811794-4016-4e42-aefb-fb55f427c33e.webm"
           },
           {
             "hype_score": 3.5,
@@ -1234,7 +1269,8 @@
                   "country": "LAT",
                   "id": "8d006479-00dc-4baa-82af-354a2f3f26b3",
                   "name": "Reinis BERZINS",
-                  "team": "Latvia"
+                  "team": "Latvia",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/reinis-berzins.jpg"
                 },
                 "rank": 1,
                 "splits": [
@@ -1267,7 +1303,8 @@
                   "country": "HUN",
                   "id": "4db2541f-8c53-49cb-af7d-ff587761fd00",
                   "name": "Peter JASZAPATI",
-                  "team": "Hungary"
+                  "team": "Hungary",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/peter-jaszapati.jpg"
                 },
                 "rank": 2,
                 "splits": [
@@ -1300,7 +1337,8 @@
                   "country": "BEL",
                   "id": "d39dfaf3-6fb7-43e7-ae32-cddce46b22e4",
                   "name": "Warre NOIRON",
-                  "team": "Belgium"
+                  "team": "Belgium",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/warre-noiron.jpg"
                 },
                 "rank": 3,
                 "splits": [
@@ -1333,7 +1371,8 @@
                   "country": "BRA",
                   "id": "b510697a-fcd6-4c6b-9740-3cc6dbf57105",
                   "name": "Lucas Henry KOO",
-                  "team": "Brazil"
+                  "team": "Brazil",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/lucas-henry-koo.jpg"
                 },
                 "rank": 4,
                 "splits": [
@@ -1366,7 +1405,8 @@
                   "country": "MGL",
                   "id": "6ee4046c-f05f-4895-b0fe-77c5dc78f644",
                   "name": "Munkh-Erdene ERDENEBILEG",
-                  "team": "Mongolia"
+                  "team": "Mongolia",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/munkh-erdene-erdenebileg.jpg"
                 },
                 "rank": 5,
                 "splits": [
@@ -1395,7 +1435,7 @@
               }
             ],
             "title": "Heat 8",
-            "video_url": "TODO"
+            "video_url": "https://gml-hackathon-isu.oss-eu-central-1.aliyuncs.com/videos/fca24ec1-f917-47f3-9fca-1d21e68d5f8a/d213a244-f6be-4a12-a620-65f0854e7439.webm"
           },
           {
             "hype_score": 0.0,
@@ -1413,7 +1453,8 @@
                   "country": "CRO",
                   "id": "29659c64-b0e6-4e52-8121-665fcca355d7",
                   "name": "Martin KOLENC",
-                  "team": "Croatia"
+                  "team": "Croatia",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/martin-kolenc.jpg"
                 },
                 "rank": 1,
                 "splits": [
@@ -1446,7 +1487,8 @@
                   "country": "NZL",
                   "id": "d0aa76b3-ea67-499e-84fb-50b0420310e6",
                   "name": "Lukas MACDONALD",
-                  "team": "New Zealand"
+                  "team": "New Zealand",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/lukas-macdonald.jpg"
                 },
                 "rank": 2,
                 "splits": [
@@ -1479,7 +1521,8 @@
                   "country": "JPN",
                   "id": "4ddfb510-ee35-4c1b-a0c1-f7ba7a228594",
                   "name": "Yui MATSUBAYASHI",
-                  "team": "Japan"
+                  "team": "Japan",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/yui-matsubayashi.jpg"
                 },
                 "rank": 3,
                 "splits": [
@@ -1512,7 +1555,8 @@
                   "country": "HUN",
                   "id": "50258917-cf59-4b67-8059-e8a94708cf33",
                   "name": "Adam GRANASZTOI",
-                  "team": "Hungary"
+                  "team": "Hungary",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/adam-granasztoi.jpg"
                 },
                 "rank": 4,
                 "splits": [
@@ -1545,7 +1589,8 @@
                   "country": "CZE",
                   "id": "b970ce3d-6bfd-4007-a836-19d13fca9c9d",
                   "name": "Zdenek SEJPAL",
-                  "team": "Czechia"
+                  "team": "Czechia",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/zdenek-sejpal.jpg"
                 },
                 "rank": 5,
                 "splits": [
@@ -1566,7 +1611,7 @@
               }
             ],
             "title": "Heat 9",
-            "video_url": "TODO"
+            "video_url": "https://gml-hackathon-isu.oss-eu-central-1.aliyuncs.com/videos/fca24ec1-f917-47f3-9fca-1d21e68d5f8a/4b48e988-a6df-4bed-8168-8e027e1c2d8f.webm"
           },
           {
             "hype_score": 1.0,
@@ -1584,7 +1629,8 @@
                   "country": "GBR",
                   "id": "db9e00f8-3eb5-458a-b8d1-21582b6838a9",
                   "name": "Niall TREACY",
-                  "team": "Great Britain"
+                  "team": "Great Britain",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/niall-treacy.jpg"
                 },
                 "rank": 1,
                 "splits": [
@@ -1617,7 +1663,8 @@
                   "country": "NOR",
                   "id": "28a5fc1f-30c5-4a95-b82b-6c6fe56c6b70",
                   "name": "Fredrik PEDERSEN",
-                  "team": "Norway"
+                  "team": "Norway",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/fredrik-pedersen-2.jpg"
                 },
                 "rank": 2,
                 "splits": [
@@ -1650,7 +1697,8 @@
                   "country": "AUT",
                   "id": "bd75d3d0-bab6-4daa-90ea-0f246ac1dd2f",
                   "name": "Tobias WOLF",
-                  "team": "Austria"
+                  "team": "Austria",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/tobias-wolf.jpg"
                 },
                 "rank": 3,
                 "splits": [
@@ -1683,7 +1731,8 @@
                   "country": "GER",
                   "id": "b175d978-795a-464a-b6ba-68e8d3edec0a",
                   "name": "Jonas HAMMERMULLER",
-                  "team": "Germany"
+                  "team": "Germany",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/jonas-hammermuller.jpg"
                 },
                 "rank": 4,
                 "splits": [
@@ -1716,7 +1765,8 @@
                   "country": "IND",
                   "id": "530dda22-2d58-4a73-8a5f-be5ed4d3c203",
                   "name": "Eklavya JAGAL",
-                  "team": "India"
+                  "team": "India",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/eklavya-jagal.jpg"
                 },
                 "rank": 5,
                 "splits": [
@@ -1745,7 +1795,7 @@
               }
             ],
             "title": "Heat 10",
-            "video_url": "TODO"
+            "video_url": "https://gml-hackathon-isu.oss-eu-central-1.aliyuncs.com/videos/fca24ec1-f917-47f3-9fca-1d21e68d5f8a/a3c5d5a3-fcfe-4f60-bdb7-4f37c69ec820.webm"
           },
           {
             "hype_score": 0.0,
@@ -1763,7 +1813,8 @@
                   "country": "AUT",
                   "id": "7b9d12ae-44ce-4fb8-8e3e-b2bb8ee3c63c",
                   "name": "Nico ANDERMANN",
-                  "team": "Austria"
+                  "team": "Austria",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/nico-andermann.jpg"
                 },
                 "rank": 1,
                 "splits": [
@@ -1796,7 +1847,8 @@
                   "country": "BUL",
                   "id": "05c24d5b-7213-468e-ac28-c431740f44ff",
                   "name": "Maxim MAXIMOV",
-                  "team": "Bulgaria"
+                  "team": "Bulgaria",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/maxim-maximov.jpg"
                 },
                 "rank": 2,
                 "splits": [
@@ -1829,7 +1881,8 @@
                   "country": "NZL",
                   "id": "270ef03a-79ea-488d-8444-5d8af2e4c06c",
                   "name": "Joshua KAH",
-                  "team": "New Zealand"
+                  "team": "New Zealand",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/joshua-kah.jpg"
                 },
                 "rank": 3,
                 "splits": [
@@ -1862,7 +1915,8 @@
                   "country": "HUN",
                   "id": "4a9f8b2e-e3fa-4305-b1f6-df066c32d3c2",
                   "name": "Mark CSIZMADIA",
-                  "team": "Hungary"
+                  "team": "Hungary",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/mark-csizmadia.jpg"
                 },
                 "rank": 4,
                 "splits": [
@@ -1883,7 +1937,7 @@
               }
             ],
             "title": "Heat 11",
-            "video_url": "TODO"
+            "video_url": "https://gml-hackathon-isu.oss-eu-central-1.aliyuncs.com/videos/fca24ec1-f917-47f3-9fca-1d21e68d5f8a/18e0d66c-9543-47d5-9d2d-9d53132ae31d.webm"
           }
         ]
       },
@@ -1907,7 +1961,8 @@
                   "country": "CAN",
                   "id": "f75b0c0f-107d-4474-bb47-45b2926ff298",
                   "name": "Steven DUBOIS",
-                  "team": "Canada"
+                  "team": "Canada",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/steven-dubois.jpg"
                 },
                 "rank": 1,
                 "splits": [
@@ -1940,7 +1995,8 @@
                   "country": "USA",
                   "id": "2560bda6-2a9e-4b0c-8adf-a91b273d71b2",
                   "name": "Brandon KIM",
-                  "team": "United States of America"
+                  "team": "United States of America",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/brandon-kim.jpg"
                 },
                 "rank": 2,
                 "splits": [
@@ -1973,7 +2029,8 @@
                   "country": "ITA",
                   "id": "694b1f62-3ad8-4d0d-bcde-31fe41f01f8c",
                   "name": "Thomas NADALINI",
-                  "team": "Italy"
+                  "team": "Italy",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/thomas-nadalini.jpg"
                 },
                 "rank": 3,
                 "splits": [
@@ -2006,7 +2063,8 @@
                   "country": "POL",
                   "id": "17cf500c-d597-4fd2-ac27-62e8aabe6d11",
                   "name": "Diane SELLIER",
-                  "team": "Poland"
+                  "team": "Poland",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/diane-sellier-5.jpg"
                 },
                 "rank": 4,
                 "splits": [
@@ -2039,7 +2097,8 @@
                   "country": "HUN",
                   "id": "4db2541f-8c53-49cb-af7d-ff587761fd00",
                   "name": "Peter JASZAPATI",
-                  "team": "Hungary"
+                  "team": "Hungary",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/peter-jaszapati.jpg"
                 },
                 "rank": 5,
                 "splits": [
@@ -2068,7 +2127,7 @@
               }
             ],
             "title": "Heat 1",
-            "video_url": "TODO"
+            "video_url": "https://gml-hackathon-isu.oss-eu-central-1.aliyuncs.com/videos/fca24ec1-f917-47f3-9fca-1d21e68d5f8a/71c5b8c3-7f2b-4c52-b3a6-77206b1dfbfe.webm"
           },
           {
             "hype_score": 3.5,
@@ -2086,7 +2145,8 @@
                   "country": "JPN",
                   "id": "a15aaec4-779d-4ca4-916a-6589b7678c2f",
                   "name": "Shogo MIYATA",
-                  "team": "Japan"
+                  "team": "Japan",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/shogo-miyata.jpg"
                 },
                 "rank": 1,
                 "splits": [
@@ -2119,7 +2179,8 @@
                   "country": "LAT",
                   "id": "013f54e5-d12a-4970-84bb-e2e40a383950",
                   "name": "Roberts KRUZBERGS",
-                  "team": "Latvia"
+                  "team": "Latvia",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/roberts-kruzbergs.jpg"
                 },
                 "rank": 2,
                 "splits": [
@@ -2152,7 +2213,8 @@
                   "country": "KAZ",
                   "id": "89ebc323-0aef-4373-bc5c-6694f0b76935",
                   "name": "Denis NIKISHA",
-                  "team": "Kazakhstan"
+                  "team": "Kazakhstan",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/denis-nikisha.jpg"
                 },
                 "rank": 3,
                 "splits": [
@@ -2185,7 +2247,8 @@
                   "country": "AUT",
                   "id": "7b9d12ae-44ce-4fb8-8e3e-b2bb8ee3c63c",
                   "name": "Nico ANDERMANN",
-                  "team": "Austria"
+                  "team": "Austria",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/nico-andermann.jpg"
                 },
                 "rank": 4,
                 "splits": [
@@ -2218,7 +2281,8 @@
                   "country": "UKR",
                   "id": "6966756c-063a-4dad-8481-de3a5060fba8",
                   "name": "Rostyslav LEONTENKO",
-                  "team": "Ukraine"
+                  "team": "Ukraine",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/rostyslav-leontenko.jpg"
                 },
                 "rank": 5,
                 "splits": [
@@ -2247,7 +2311,7 @@
               }
             ],
             "title": "Heat 2",
-            "video_url": "TODO"
+            "video_url": "https://gml-hackathon-isu.oss-eu-central-1.aliyuncs.com/videos/fca24ec1-f917-47f3-9fca-1d21e68d5f8a/d56e7ac6-c963-4672-9d1f-a2058f23fd9a.webm"
           },
           {
             "hype_score": 5.0,
@@ -2265,7 +2329,8 @@
                   "country": "KOR",
                   "id": "af470988-b4c5-4d6a-b176-82176f4743e7",
                   "name": "Jiwon PARK",
-                  "team": "Republic of Korea"
+                  "team": "Republic of Korea",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/ji-won-park.jpg"
                 },
                 "rank": 1,
                 "splits": [
@@ -2298,7 +2363,8 @@
                   "country": "CAN",
                   "id": "f7bdc857-3997-4abc-bfc9-80ee330f8563",
                   "name": "William DANDJINOU",
-                  "team": "Canada"
+                  "team": "Canada",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/william-dandjinou.jpg"
                 },
                 "rank": 2,
                 "splits": [
@@ -2331,7 +2397,8 @@
                   "country": "KAZ",
                   "id": "843abd46-cc28-4728-be4c-a887965aa21d",
                   "name": "Abzal AZHGALIYEV",
-                  "team": "Kazakhstan"
+                  "team": "Kazakhstan",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/abzal-azhgaliyev.jpg"
                 },
                 "rank": 3,
                 "splits": [
@@ -2364,7 +2431,8 @@
                   "country": "CHN",
                   "id": "ec754c8a-dada-4421-bb64-e64926e6b4c4",
                   "name": "Shaolin LIU",
-                  "team": "China"
+                  "team": "China",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/shaolin-liu-2.jpg"
                 },
                 "rank": 4,
                 "splits": [
@@ -2397,7 +2465,8 @@
                   "country": "NZL",
                   "id": "d0aa76b3-ea67-499e-84fb-50b0420310e6",
                   "name": "Lukas MACDONALD",
-                  "team": "New Zealand"
+                  "team": "New Zealand",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/lukas-macdonald.jpg"
                 },
                 "rank": 5,
                 "splits": [
@@ -2426,7 +2495,7 @@
               }
             ],
             "title": "Heat 3",
-            "video_url": "TODO"
+            "video_url": "https://gml-hackathon-isu.oss-eu-central-1.aliyuncs.com/videos/fca24ec1-f917-47f3-9fca-1d21e68d5f8a/f9c03e3c-fa0d-481d-9714-652c34821ddc.webm"
           },
           {
             "hype_score": 3.5,
@@ -2444,7 +2513,8 @@
                   "country": "CAN",
                   "id": "c4b9df64-f59a-4f18-b837-0de23875f136",
                   "name": "Jordan PIERRE-GILLES",
-                  "team": "Canada"
+                  "team": "Canada",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/jordan-pierre-gilles.jpg"
                 },
                 "rank": 1,
                 "splits": [
@@ -2477,7 +2547,8 @@
                   "country": "KOR",
                   "id": "46283c04-b51a-47f3-ac99-fe66e7dd778d",
                   "name": "Janghyuk PARK",
-                  "team": "Republic of Korea"
+                  "team": "Republic of Korea",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/jang-hyuk-park.jpg"
                 },
                 "rank": 2,
                 "splits": [
@@ -2510,7 +2581,8 @@
                   "country": "CHN",
                   "id": "2dea1d2c-3ff7-49de-b8b5-a98466f53d69",
                   "name": "Long SUN",
-                  "team": "China"
+                  "team": "China",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/long-sun.jpg"
                 },
                 "rank": 3,
                 "splits": [
@@ -2543,7 +2615,8 @@
                   "country": "TUR",
                   "id": "e37b1fad-a1c9-4a79-94fe-15626c82d058",
                   "name": "Furkan AKAR",
-                  "team": "Turkiye"
+                  "team": "Turkiye",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/furkan-akar.jpg"
                 },
                 "rank": 4,
                 "splits": [
@@ -2576,7 +2649,8 @@
                   "country": "IRL",
                   "id": "c7c8d6cd-9ad1-4028-8411-a2d2f121c8be",
                   "name": "Sean MCANUFF",
-                  "team": "Ireland"
+                  "team": "Ireland",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/sean-mcanuff.jpg"
                 },
                 "rank": 5,
                 "splits": [
@@ -2605,7 +2679,7 @@
               }
             ],
             "title": "Heat 4",
-            "video_url": "TODO"
+            "video_url": "https://gml-hackathon-isu.oss-eu-central-1.aliyuncs.com/videos/fca24ec1-f917-47f3-9fca-1d21e68d5f8a/d03ad47e-c5ad-41b6-93a1-06a28fd3983b.webm"
           },
           {
             "hype_score": 5.0,
@@ -2623,7 +2697,8 @@
                   "country": "NED",
                   "id": "29f872c9-cead-450c-9997-3b6d6dacc1e8",
                   "name": "Itzhak DE LAAT",
-                  "team": "Netherlands"
+                  "team": "Netherlands",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/itzhak-de-laat.jpg"
                 },
                 "rank": 1,
                 "splits": [
@@ -2656,7 +2731,8 @@
                   "country": "BEL",
                   "id": "5dc025c0-4553-4107-b42f-a7a6794f8495",
                   "name": "Stijn DESMET",
-                  "team": "Belgium"
+                  "team": "Belgium",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/stijn-desmet.jpg"
                 },
                 "rank": 2,
                 "splits": [
@@ -2689,7 +2765,8 @@
                   "country": "POL",
                   "id": "b04d2e6d-b92c-4548-ac22-e5930ca27da4",
                   "name": "Michal NIEWINSKI",
-                  "team": "Poland"
+                  "team": "Poland",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/michal-niewinski.jpg"
                 },
                 "rank": 3,
                 "splits": [
@@ -2722,7 +2799,8 @@
                   "country": "GER",
                   "id": "01e4dcbf-164f-4a97-aef5-3587d81e1998",
                   "name": "Yanghun Ben JUNG",
-                  "team": "Germany"
+                  "team": "Germany",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/yanghun-ben-jung.jpg"
                 },
                 "rank": 4,
                 "splits": [
@@ -2755,7 +2833,8 @@
                   "country": "AUS",
                   "id": "1f32c0f8-b7d1-4442-a6a5-ab8763ab06d1",
                   "name": "Lucas WAREHAM",
-                  "team": "Australia"
+                  "team": "Australia",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/lucas-wareham.jpg"
                 },
                 "rank": 5,
                 "splits": [
@@ -2784,7 +2863,7 @@
               }
             ],
             "title": "Heat 5",
-            "video_url": "TODO"
+            "video_url": "https://gml-hackathon-isu.oss-eu-central-1.aliyuncs.com/videos/fca24ec1-f917-47f3-9fca-1d21e68d5f8a/b5eeba18-c38c-438c-a270-742f37405284.webm"
           },
           {
             "hype_score": 4.0,
@@ -2802,7 +2881,8 @@
                   "country": "NED",
                   "id": "21cc4579-3a1c-4a8a-bf39-5a7475bb319c",
                   "name": "Teun BOER",
-                  "team": "Netherlands"
+                  "team": "Netherlands",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/teun-boer.jpg"
                 },
                 "rank": 1,
                 "splits": [
@@ -2835,7 +2915,8 @@
                   "country": "USA",
                   "id": "50ac7787-2631-46d7-8d95-edc0c560a7ff",
                   "name": "Andrew HEO",
-                  "team": "United States of America"
+                  "team": "United States of America",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/andrew-heo.jpg"
                 },
                 "rank": 2,
                 "splits": [
@@ -2868,7 +2949,8 @@
                   "country": "AUS",
                   "id": "41802b7a-0a0c-48f4-9fe8-3776c419dcc6",
                   "name": "Brendan COREY",
-                  "team": "Australia"
+                  "team": "Australia",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/brendan-corey.jpg"
                 },
                 "rank": 3,
                 "splits": [
@@ -2901,7 +2983,8 @@
                   "country": "KAZ",
                   "id": "5445c3b6-260c-4627-aff7-5c87accb1e3c",
                   "name": "Adil GALIAKHMETOV",
-                  "team": "Kazakhstan"
+                  "team": "Kazakhstan",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/adil-galiakhmetov.jpg"
                 },
                 "rank": 4,
                 "splits": [
@@ -2926,7 +3009,8 @@
                   "country": "LAT",
                   "id": "8d006479-00dc-4baa-82af-354a2f3f26b3",
                   "name": "Reinis BERZINS",
-                  "team": "Latvia"
+                  "team": "Latvia",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/reinis-berzins.jpg"
                 },
                 "rank": null,
                 "splits": [],
@@ -2934,7 +3018,7 @@
               }
             ],
             "title": "Heat 6",
-            "video_url": "TODO"
+            "video_url": "https://gml-hackathon-isu.oss-eu-central-1.aliyuncs.com/videos/fca24ec1-f917-47f3-9fca-1d21e68d5f8a/0e0b6e54-9153-42b7-93e9-e8db96a89a8b.webm"
           },
           {
             "hype_score": 1.0,
@@ -2952,7 +3036,8 @@
                   "country": "KOR",
                   "id": "1109e535-8491-4985-857e-610f26178f4c",
                   "name": "Tae Sung KIM",
-                  "team": "Republic of Korea"
+                  "team": "Republic of Korea",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/tae-sung-kim.jpg"
                 },
                 "rank": 1,
                 "splits": [
@@ -2985,7 +3070,8 @@
                   "country": "UKR",
                   "id": "af71dca0-c9fb-4f77-be3a-8ff047e99c39",
                   "name": "Oleh HANDEI",
-                  "team": "Ukraine"
+                  "team": "Ukraine",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/oleh-handei.jpg"
                 },
                 "rank": 2,
                 "splits": [
@@ -3018,7 +3104,8 @@
                   "country": "CRO",
                   "id": "29659c64-b0e6-4e52-8121-665fcca355d7",
                   "name": "Martin KOLENC",
-                  "team": "Croatia"
+                  "team": "Croatia",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/martin-kolenc.jpg"
                 },
                 "rank": 3,
                 "splits": [
@@ -3051,7 +3138,8 @@
                   "country": "USA",
                   "id": "398f4d0a-6c05-40de-b3f1-8866b6ff5158",
                   "name": "Marcus HOWARD",
-                  "team": "United States of America"
+                  "team": "United States of America",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/marcus-howard.jpg"
                 },
                 "rank": 4,
                 "splits": [
@@ -3084,7 +3172,8 @@
                   "country": "ITA",
                   "id": "9cdf9c33-93b3-4bd7-a4d0-fb00ba6ebcd3",
                   "name": "Pietro SIGHEL",
-                  "team": "Italy"
+                  "team": "Italy",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/pietro-sighel.jpg"
                 },
                 "rank": null,
                 "splits": [],
@@ -3092,7 +3181,7 @@
               }
             ],
             "title": "Heat 7",
-            "video_url": "TODO"
+            "video_url": "https://gml-hackathon-isu.oss-eu-central-1.aliyuncs.com/videos/fca24ec1-f917-47f3-9fca-1d21e68d5f8a/a0125825-c262-4504-8192-949dadfb6e9e.webm"
           },
           {
             "hype_score": 3.5,
@@ -3110,7 +3199,8 @@
                   "country": "NED",
                   "id": "ff9963a6-23ac-4c1d-ae21-1c5028264d69",
                   "name": "Jens VAN 'T WOUT",
-                  "team": "Netherlands"
+                  "team": "Netherlands",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/jens-van-t-wout.jpg"
                 },
                 "rank": 1,
                 "splits": [
@@ -3143,7 +3233,8 @@
                   "country": "CHN",
                   "id": "59ae22e1-2772-412d-8714-8ac113571053",
                   "name": "Shaoang LIU",
-                  "team": "China"
+                  "team": "China",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/shaoang-liu-2.jpg"
                 },
                 "rank": 2,
                 "splits": [
@@ -3176,7 +3267,8 @@
                   "country": "GBR",
                   "id": "db9e00f8-3eb5-458a-b8d1-21582b6838a9",
                   "name": "Niall TREACY",
-                  "team": "Great Britain"
+                  "team": "Great Britain",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/niall-treacy.jpg"
                 },
                 "rank": 3,
                 "splits": [
@@ -3209,7 +3301,8 @@
                   "country": "POL",
                   "id": "a9d7de7a-d561-43e7-9d2b-a25f5b720ea8",
                   "name": "Lukasz KUCZYNSKI",
-                  "team": "Poland"
+                  "team": "Poland",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/lukasz-kuczynski.jpg"
                 },
                 "rank": 4,
                 "splits": [
@@ -3242,7 +3335,8 @@
                   "country": "TUR",
                   "id": "7241404a-ad95-48e4-828b-a639b7b2cf9f",
                   "name": "Muhammed BOZDAG",
-                  "team": "Turkiye"
+                  "team": "Turkiye",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/muhammed-bozdag.jpg"
                 },
                 "rank": 5,
                 "splits": [
@@ -3271,7 +3365,7 @@
               }
             ],
             "title": "Heat 8",
-            "video_url": "TODO"
+            "video_url": "https://gml-hackathon-isu.oss-eu-central-1.aliyuncs.com/videos/fca24ec1-f917-47f3-9fca-1d21e68d5f8a/beea6adf-c5f7-4c9a-b0d6-f318d787e162.webm"
           }
         ]
       },
@@ -3295,7 +3389,8 @@
                   "country": "KAZ",
                   "id": "843abd46-cc28-4728-be4c-a887965aa21d",
                   "name": "Abzal AZHGALIYEV",
-                  "team": "Kazakhstan"
+                  "team": "Kazakhstan",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/abzal-azhgaliyev.jpg"
                 },
                 "rank": 1,
                 "splits": [
@@ -3328,7 +3423,8 @@
                   "country": "HUN",
                   "id": "4db2541f-8c53-49cb-af7d-ff587761fd00",
                   "name": "Peter JASZAPATI",
-                  "team": "Hungary"
+                  "team": "Hungary",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/peter-jaszapati.jpg"
                 },
                 "rank": 2,
                 "splits": [
@@ -3361,7 +3457,8 @@
                   "country": "UKR",
                   "id": "6966756c-063a-4dad-8481-de3a5060fba8",
                   "name": "Rostyslav LEONTENKO",
-                  "team": "Ukraine"
+                  "team": "Ukraine",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/rostyslav-leontenko.jpg"
                 },
                 "rank": 3,
                 "splits": [
@@ -3394,7 +3491,8 @@
                   "country": "THA",
                   "id": "035de887-d22a-4161-8f98-03ffbea1fec1",
                   "name": "Chonlachart TAPROM",
-                  "team": "Thailand"
+                  "team": "Thailand",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/chonlachart-taprom.jpg"
                 },
                 "rank": 4,
                 "splits": [
@@ -3427,7 +3525,8 @@
                   "country": "TPE",
                   "id": "5f994194-cdf8-41f6-b03a-f7de5326b09a",
                   "name": "Huan-Chen LAI TSAI",
-                  "team": "Chinese Taipei"
+                  "team": "Chinese Taipei",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/huan-chen-lai-tsai.jpg"
                 },
                 "rank": 5,
                 "splits": [
@@ -3452,7 +3551,7 @@
               }
             ],
             "title": "Heat 1",
-            "video_url": "TODO"
+            "video_url": "https://gml-hackathon-isu.oss-eu-central-1.aliyuncs.com/videos/fca24ec1-f917-47f3-9fca-1d21e68d5f8a/f62ef0f7-d7f1-4ee5-8944-3bb40312d296.webm"
           },
           {
             "hype_score": 1.0,
@@ -3470,7 +3569,8 @@
                   "country": "CHN",
                   "id": "2dea1d2c-3ff7-49de-b8b5-a98466f53d69",
                   "name": "Long SUN",
-                  "team": "China"
+                  "team": "China",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/long-sun.jpg"
                 },
                 "rank": 1,
                 "splits": [
@@ -3503,7 +3603,8 @@
                   "country": "IRL",
                   "id": "c7c8d6cd-9ad1-4028-8411-a2d2f121c8be",
                   "name": "Sean MCANUFF",
-                  "team": "Ireland"
+                  "team": "Ireland",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/sean-mcanuff.jpg"
                 },
                 "rank": 2,
                 "splits": [
@@ -3536,7 +3637,8 @@
                   "country": "JPN",
                   "id": "4ddfb510-ee35-4c1b-a0c1-f7ba7a228594",
                   "name": "Yui MATSUBAYASHI",
-                  "team": "Japan"
+                  "team": "Japan",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/yui-matsubayashi.jpg"
                 },
                 "rank": 3,
                 "splits": [
@@ -3569,7 +3671,8 @@
                   "country": "NZL",
                   "id": "270ef03a-79ea-488d-8444-5d8af2e4c06c",
                   "name": "Joshua KAH",
-                  "team": "New Zealand"
+                  "team": "New Zealand",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/joshua-kah.jpg"
                 },
                 "rank": 4,
                 "splits": [
@@ -3602,7 +3705,8 @@
                   "country": "AUS",
                   "id": "1f32c0f8-b7d1-4442-a6a5-ab8763ab06d1",
                   "name": "Lucas WAREHAM",
-                  "team": "Australia"
+                  "team": "Australia",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/lucas-wareham.jpg"
                 },
                 "rank": 5,
                 "splits": [
@@ -3631,7 +3735,7 @@
               }
             ],
             "title": "Heat 2",
-            "video_url": "TODO"
+            "video_url": "https://gml-hackathon-isu.oss-eu-central-1.aliyuncs.com/videos/fca24ec1-f917-47f3-9fca-1d21e68d5f8a/db5d239e-8f4b-4831-a664-c2ac5df49667.webm"
           },
           {
             "hype_score": 1.0,
@@ -3649,7 +3753,8 @@
                   "country": "POL",
                   "id": "b04d2e6d-b92c-4548-ac22-e5930ca27da4",
                   "name": "Michal NIEWINSKI",
-                  "team": "Poland"
+                  "team": "Poland",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/michal-niewinski.jpg"
                 },
                 "rank": 1,
                 "splits": [
@@ -3682,7 +3787,8 @@
                   "country": "NZL",
                   "id": "d0aa76b3-ea67-499e-84fb-50b0420310e6",
                   "name": "Lukas MACDONALD",
-                  "team": "New Zealand"
+                  "team": "New Zealand",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/lukas-macdonald.jpg"
                 },
                 "rank": 2,
                 "splits": [
@@ -3715,7 +3821,8 @@
                   "country": "AUT",
                   "id": "bd75d3d0-bab6-4daa-90ea-0f246ac1dd2f",
                   "name": "Tobias WOLF",
-                  "team": "Austria"
+                  "team": "Austria",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/tobias-wolf.jpg"
                 },
                 "rank": 3,
                 "splits": [
@@ -3748,7 +3855,8 @@
                   "country": "UKR",
                   "id": "12d00681-72a5-4a5e-8b7f-888307030a79",
                   "name": "Yaroslav MOROZOV",
-                  "team": "Ukraine"
+                  "team": "Ukraine",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/yaroslav-morozov.jpg"
                 },
                 "rank": 4,
                 "splits": [
@@ -3781,7 +3889,8 @@
                   "country": "USA",
                   "id": "398f4d0a-6c05-40de-b3f1-8866b6ff5158",
                   "name": "Marcus HOWARD",
-                  "team": "United States of America"
+                  "team": "United States of America",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/marcus-howard.jpg"
                 },
                 "rank": null,
                 "splits": [],
@@ -3789,7 +3898,7 @@
               }
             ],
             "title": "Heat 3",
-            "video_url": "TODO"
+            "video_url": "https://gml-hackathon-isu.oss-eu-central-1.aliyuncs.com/videos/fca24ec1-f917-47f3-9fca-1d21e68d5f8a/b8193a1b-4b72-458e-a340-27522d0bd8e8.webm"
           },
           {
             "hype_score": 2.5,
@@ -3807,7 +3916,8 @@
                   "country": "HKG",
                   "id": "4c36e64c-a635-45b3-8947-7b41a9430ecb",
                   "name": "Zhanshuo LOU",
-                  "team": "Hong Kong, China"
+                  "team": "Hong Kong, China",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/zhanshuo-lou.jpg"
                 },
                 "rank": 1,
                 "splits": [
@@ -3840,7 +3950,8 @@
                   "country": "TUR",
                   "id": "7241404a-ad95-48e4-828b-a639b7b2cf9f",
                   "name": "Muhammed BOZDAG",
-                  "team": "Turkiye"
+                  "team": "Turkiye",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/muhammed-bozdag.jpg"
                 },
                 "rank": 2,
                 "splits": [
@@ -3873,7 +3984,8 @@
                   "country": "JPN",
                   "id": "dc80c9c3-094f-4762-a72d-5dc47a1b9d47",
                   "name": "Kosei HAYASHI",
-                  "team": "Japan"
+                  "team": "Japan",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/kosei-hayashi.jpg"
                 },
                 "rank": 3,
                 "splits": [
@@ -3906,7 +4018,8 @@
                   "country": "GBR",
                   "id": "db9e00f8-3eb5-458a-b8d1-21582b6838a9",
                   "name": "Niall TREACY",
-                  "team": "Great Britain"
+                  "team": "Great Britain",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/niall-treacy.jpg"
                 },
                 "rank": 4,
                 "splits": [
@@ -3939,7 +4052,8 @@
                   "country": "GER",
                   "id": "01e4dcbf-164f-4a97-aef5-3587d81e1998",
                   "name": "Yanghun Ben JUNG",
-                  "team": "Germany"
+                  "team": "Germany",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/yanghun-ben-jung.jpg"
                 },
                 "rank": null,
                 "splits": [],
@@ -3947,7 +4061,7 @@
               }
             ],
             "title": "Heat 4",
-            "video_url": "TODO"
+            "video_url": "https://gml-hackathon-isu.oss-eu-central-1.aliyuncs.com/videos/fca24ec1-f917-47f3-9fca-1d21e68d5f8a/701a6468-fb42-45e2-b504-94745b186277.webm"
           },
           {
             "hype_score": 2.5,
@@ -3965,7 +4079,8 @@
                   "country": "CRO",
                   "id": "29659c64-b0e6-4e52-8121-665fcca355d7",
                   "name": "Martin KOLENC",
-                  "team": "Croatia"
+                  "team": "Croatia",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/martin-kolenc.jpg"
                 },
                 "rank": 1,
                 "splits": [
@@ -3998,7 +4113,8 @@
                   "country": "POL",
                   "id": "17cf500c-d597-4fd2-ac27-62e8aabe6d11",
                   "name": "Diane SELLIER",
-                  "team": "Poland"
+                  "team": "Poland",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/diane-sellier-5.jpg"
                 },
                 "rank": 2,
                 "splits": [
@@ -4031,7 +4147,8 @@
                   "country": "CZE",
                   "id": "07b07e7b-b516-4d77-a204-91e3c504c294",
                   "name": "Radek FAJKUS",
-                  "team": "Czechia"
+                  "team": "Czechia",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/radek-fajkus.jpg"
                 },
                 "rank": 3,
                 "splits": [
@@ -4064,7 +4181,8 @@
                   "country": "BUL",
                   "id": "e8c2bb25-db3d-416c-a9d4-49f1721c7e1e",
                   "name": "Stefan-Alexander KUMURDJIEV",
-                  "team": "Bulgaria"
+                  "team": "Bulgaria",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/stefan-alexander-kumurdjiev.jpg"
                 },
                 "rank": 4,
                 "splits": [
@@ -4097,7 +4215,8 @@
                   "country": "GBR",
                   "id": "c7b3a7a6-7d73-4870-81c0-983009b1a7df",
                   "name": "Westley YATES",
-                  "team": "Great Britain"
+                  "team": "Great Britain",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/westley-yates.jpg"
                 },
                 "rank": 5,
                 "splits": [
@@ -4126,7 +4245,7 @@
               }
             ],
             "title": "Heat 5",
-            "video_url": "TODO"
+            "video_url": "https://gml-hackathon-isu.oss-eu-central-1.aliyuncs.com/videos/fca24ec1-f917-47f3-9fca-1d21e68d5f8a/012e0947-8230-483d-83f5-ad0b2cb77488.webm"
           },
           {
             "hype_score": 2.5,
@@ -4144,7 +4263,8 @@
                   "country": "AUS",
                   "id": "41802b7a-0a0c-48f4-9fe8-3776c419dcc6",
                   "name": "Brendan COREY",
-                  "team": "Australia"
+                  "team": "Australia",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/brendan-corey.jpg"
                 },
                 "rank": 1,
                 "splits": [
@@ -4177,7 +4297,8 @@
                   "country": "KAZ",
                   "id": "5445c3b6-260c-4627-aff7-5c87accb1e3c",
                   "name": "Adil GALIAKHMETOV",
-                  "team": "Kazakhstan"
+                  "team": "Kazakhstan",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/adil-galiakhmetov.jpg"
                 },
                 "rank": 2,
                 "splits": [
@@ -4210,7 +4331,8 @@
                   "country": "CRO",
                   "id": "86308f5c-9f44-4b71-89bc-ff577fcd76a0",
                   "name": "Ivan MARTINIC",
-                  "team": "Croatia"
+                  "team": "Croatia",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/ivan-martinic.jpg"
                 },
                 "rank": 3,
                 "splits": [
@@ -4243,7 +4365,8 @@
                   "country": "GBR",
                   "id": "aec5d4c4-5b9a-49a6-9803-d76affd5bdae",
                   "name": "Jonathan MOODY",
-                  "team": "Great Britain"
+                  "team": "Great Britain",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/jonathan-moody.jpg"
                 },
                 "rank": 4,
                 "splits": [
@@ -4276,7 +4399,8 @@
                   "country": "IRL",
                   "id": "2e32c658-7255-4a74-aa1e-3555a22db580",
                   "name": "Liam O BRIEN",
-                  "team": "Ireland"
+                  "team": "Ireland",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/liam-o-brien.jpg"
                 },
                 "rank": 5,
                 "splits": [
@@ -4305,7 +4429,7 @@
               }
             ],
             "title": "Heat 6",
-            "video_url": "TODO"
+            "video_url": "https://gml-hackathon-isu.oss-eu-central-1.aliyuncs.com/videos/fca24ec1-f917-47f3-9fca-1d21e68d5f8a/1f992add-396d-4b0f-ab0d-17decd7e5956.webm"
           },
           {
             "hype_score": 5.0,
@@ -4323,7 +4447,8 @@
                   "country": "CHN",
                   "id": "ec754c8a-dada-4421-bb64-e64926e6b4c4",
                   "name": "Shaolin LIU",
-                  "team": "China"
+                  "team": "China",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/shaolin-liu-2.jpg"
                 },
                 "rank": 1,
                 "splits": [
@@ -4356,7 +4481,8 @@
                   "country": "TUR",
                   "id": "e37b1fad-a1c9-4a79-94fe-15626c82d058",
                   "name": "Furkan AKAR",
-                  "team": "Turkiye"
+                  "team": "Turkiye",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/furkan-akar.jpg"
                 },
                 "rank": 2,
                 "splits": [
@@ -4389,7 +4515,8 @@
                   "country": "BEL",
                   "id": "d39dfaf3-6fb7-43e7-ae32-cddce46b22e4",
                   "name": "Warre NOIRON",
-                  "team": "Belgium"
+                  "team": "Belgium",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/warre-noiron.jpg"
                 },
                 "rank": 3,
                 "splits": [
@@ -4422,7 +4549,8 @@
                   "country": "NOR",
                   "id": "28a5fc1f-30c5-4a95-b82b-6c6fe56c6b70",
                   "name": "Fredrik PEDERSEN",
-                  "team": "Norway"
+                  "team": "Norway",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/fredrik-pedersen-2.jpg"
                 },
                 "rank": 4,
                 "splits": [
@@ -4455,7 +4583,8 @@
                   "country": "GER",
                   "id": "dc16e0b5-a168-4cc2-84a8-26828fa2373c",
                   "name": "Robin BENDIG",
-                  "team": "Germany"
+                  "team": "Germany",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/robin-bendig.jpg"
                 },
                 "rank": 5,
                 "splits": [
@@ -4484,7 +4613,7 @@
               }
             ],
             "title": "Heat 7",
-            "video_url": "TODO"
+            "video_url": "https://gml-hackathon-isu.oss-eu-central-1.aliyuncs.com/videos/fca24ec1-f917-47f3-9fca-1d21e68d5f8a/09813cb6-b619-4653-a2de-960aae7f6af1.webm"
           },
           {
             "hype_score": 2.5,
@@ -4502,7 +4631,8 @@
                   "country": "ITA",
                   "id": "996efec1-974c-4d9d-8e24-17babe3ddf17",
                   "name": "Lorenzo PREVITALI",
-                  "team": "Italy"
+                  "team": "Italy",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/lorenzo-previtali.jpg"
                 },
                 "rank": 1,
                 "splits": [
@@ -4535,7 +4665,8 @@
                   "country": "AUT",
                   "id": "7b9d12ae-44ce-4fb8-8e3e-b2bb8ee3c63c",
                   "name": "Nico ANDERMANN",
-                  "team": "Austria"
+                  "team": "Austria",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/nico-andermann.jpg"
                 },
                 "rank": 2,
                 "splits": [
@@ -4568,7 +4699,8 @@
                   "country": "BRA",
                   "id": "b510697a-fcd6-4c6b-9740-3cc6dbf57105",
                   "name": "Lucas Henry KOO",
-                  "team": "Brazil"
+                  "team": "Brazil",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/lucas-henry-koo.jpg"
                 },
                 "rank": 3,
                 "splits": [
@@ -4601,7 +4733,8 @@
                   "country": "BUL",
                   "id": "05c24d5b-7213-468e-ac28-c431740f44ff",
                   "name": "Maxim MAXIMOV",
-                  "team": "Bulgaria"
+                  "team": "Bulgaria",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/maxim-maximov.jpg"
                 },
                 "rank": 4,
                 "splits": [
@@ -4634,7 +4767,8 @@
                   "country": "POL",
                   "id": "a9d7de7a-d561-43e7-9d2b-a25f5b720ea8",
                   "name": "Lukasz KUCZYNSKI",
-                  "team": "Poland"
+                  "team": "Poland",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/lukasz-kuczynski.jpg"
                 },
                 "rank": 5,
                 "splits": [
@@ -4663,7 +4797,7 @@
               }
             ],
             "title": "Heat 8",
-            "video_url": "TODO"
+            "video_url": "https://gml-hackathon-isu.oss-eu-central-1.aliyuncs.com/videos/fca24ec1-f917-47f3-9fca-1d21e68d5f8a/fc0a7b60-4436-4ee7-bd86-54b841394c19.webm"
           }
         ]
       },
@@ -4687,7 +4821,8 @@
                   "country": "HUN",
                   "id": "4db2541f-8c53-49cb-af7d-ff587761fd00",
                   "name": "Peter JASZAPATI",
-                  "team": "Hungary"
+                  "team": "Hungary",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/peter-jaszapati.jpg"
                 },
                 "rank": 1,
                 "splits": [
@@ -4720,7 +4855,8 @@
                   "country": "AUS",
                   "id": "41802b7a-0a0c-48f4-9fe8-3776c419dcc6",
                   "name": "Brendan COREY",
-                  "team": "Australia"
+                  "team": "Australia",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/brendan-corey.jpg"
                 },
                 "rank": 2,
                 "splits": [
@@ -4753,7 +4889,8 @@
                   "country": "HKG",
                   "id": "4c36e64c-a635-45b3-8947-7b41a9430ecb",
                   "name": "Zhanshuo LOU",
-                  "team": "Hong Kong, China"
+                  "team": "Hong Kong, China",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/zhanshuo-lou.jpg"
                 },
                 "rank": 3,
                 "splits": [
@@ -4786,7 +4923,8 @@
                   "country": "CRO",
                   "id": "29659c64-b0e6-4e52-8121-665fcca355d7",
                   "name": "Martin KOLENC",
-                  "team": "Croatia"
+                  "team": "Croatia",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/martin-kolenc.jpg"
                 },
                 "rank": 4,
                 "splits": [
@@ -4819,7 +4957,8 @@
                   "country": "KAZ",
                   "id": "843abd46-cc28-4728-be4c-a887965aa21d",
                   "name": "Abzal AZHGALIYEV",
-                  "team": "Kazakhstan"
+                  "team": "Kazakhstan",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/abzal-azhgaliyev.jpg"
                 },
                 "rank": null,
                 "splits": [],
@@ -4827,7 +4966,7 @@
               }
             ],
             "title": "Heat 1",
-            "video_url": "TODO"
+            "video_url": "https://gml-hackathon-isu.oss-eu-central-1.aliyuncs.com/videos/fca24ec1-f917-47f3-9fca-1d21e68d5f8a/91b1628d-5a16-46e0-9f16-6880619b7d5e.webm"
           },
           {
             "hype_score": 2.5,
@@ -4845,7 +4984,8 @@
                   "country": "POL",
                   "id": "b04d2e6d-b92c-4548-ac22-e5930ca27da4",
                   "name": "Michal NIEWINSKI",
-                  "team": "Poland"
+                  "team": "Poland",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/michal-niewinski.jpg"
                 },
                 "rank": 1,
                 "splits": [
@@ -4878,7 +5018,8 @@
                   "country": "CHN",
                   "id": "ec754c8a-dada-4421-bb64-e64926e6b4c4",
                   "name": "Shaolin LIU",
-                  "team": "China"
+                  "team": "China",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/shaolin-liu-2.jpg"
                 },
                 "rank": 2,
                 "splits": [
@@ -4911,7 +5052,8 @@
                   "country": "GBR",
                   "id": "db9e00f8-3eb5-458a-b8d1-21582b6838a9",
                   "name": "Niall TREACY",
-                  "team": "Great Britain"
+                  "team": "Great Britain",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/niall-treacy.jpg"
                 },
                 "rank": 3,
                 "splits": [
@@ -4944,7 +5086,8 @@
                   "country": "ITA",
                   "id": "996efec1-974c-4d9d-8e24-17babe3ddf17",
                   "name": "Lorenzo PREVITALI",
-                  "team": "Italy"
+                  "team": "Italy",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/lorenzo-previtali.jpg"
                 },
                 "rank": 4,
                 "splits": [
@@ -4977,7 +5120,8 @@
                   "country": "CHN",
                   "id": "2dea1d2c-3ff7-49de-b8b5-a98466f53d69",
                   "name": "Long SUN",
-                  "team": "China"
+                  "team": "China",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/long-sun.jpg"
                 },
                 "rank": null,
                 "splits": [],
@@ -4985,7 +5129,7 @@
               }
             ],
             "title": "Heat 2",
-            "video_url": "TODO"
+            "video_url": "https://gml-hackathon-isu.oss-eu-central-1.aliyuncs.com/videos/fca24ec1-f917-47f3-9fca-1d21e68d5f8a/8c81587f-f245-4234-bfb9-46911bafaab7.webm"
           }
         ]
       },
@@ -5009,7 +5153,8 @@
                   "country": "CAN",
                   "id": "f75b0c0f-107d-4474-bb47-45b2926ff298",
                   "name": "Steven DUBOIS",
-                  "team": "Canada"
+                  "team": "Canada",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/steven-dubois.jpg"
                 },
                 "rank": 1,
                 "splits": [
@@ -5042,7 +5187,8 @@
                   "country": "USA",
                   "id": "2560bda6-2a9e-4b0c-8adf-a91b273d71b2",
                   "name": "Brandon KIM",
-                  "team": "United States of America"
+                  "team": "United States of America",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/brandon-kim.jpg"
                 },
                 "rank": 2,
                 "splits": [
@@ -5075,7 +5221,8 @@
                   "country": "NED",
                   "id": "29f872c9-cead-450c-9997-3b6d6dacc1e8",
                   "name": "Itzhak DE LAAT",
-                  "team": "Netherlands"
+                  "team": "Netherlands",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/itzhak-de-laat.jpg"
                 },
                 "rank": 3,
                 "splits": [
@@ -5108,7 +5255,8 @@
                   "country": "KAZ",
                   "id": "89ebc323-0aef-4373-bc5c-6694f0b76935",
                   "name": "Denis NIKISHA",
-                  "team": "Kazakhstan"
+                  "team": "Kazakhstan",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/denis-nikisha.jpg"
                 },
                 "rank": 4,
                 "splits": [
@@ -5141,7 +5289,8 @@
                   "country": "UKR",
                   "id": "af71dca0-c9fb-4f77-be3a-8ff047e99c39",
                   "name": "Oleh HANDEI",
-                  "team": "Ukraine"
+                  "team": "Ukraine",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/oleh-handei.jpg"
                 },
                 "rank": null,
                 "splits": [],
@@ -5149,7 +5298,7 @@
               }
             ],
             "title": "Heat 1",
-            "video_url": "TODO"
+            "video_url": "https://gml-hackathon-isu.oss-eu-central-1.aliyuncs.com/videos/fca24ec1-f917-47f3-9fca-1d21e68d5f8a/7a104a86-1dc0-4b89-8b54-dbd03770017e.webm"
           },
           {
             "hype_score": 1.5,
@@ -5167,7 +5316,8 @@
                   "country": "CHN",
                   "id": "59ae22e1-2772-412d-8714-8ac113571053",
                   "name": "Shaoang LIU",
-                  "team": "China"
+                  "team": "China",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/shaoang-liu-2.jpg"
                 },
                 "rank": 1,
                 "splits": [
@@ -5200,7 +5350,8 @@
                   "country": "NED",
                   "id": "ff9963a6-23ac-4c1d-ae21-1c5028264d69",
                   "name": "Jens VAN 'T WOUT",
-                  "team": "Netherlands"
+                  "team": "Netherlands",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/jens-van-t-wout.jpg"
                 },
                 "rank": 2,
                 "splits": [
@@ -5233,7 +5384,8 @@
                   "country": "ITA",
                   "id": "694b1f62-3ad8-4d0d-bcde-31fe41f01f8c",
                   "name": "Thomas NADALINI",
-                  "team": "Italy"
+                  "team": "Italy",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/thomas-nadalini.jpg"
                 },
                 "rank": 3,
                 "splits": [
@@ -5266,7 +5418,8 @@
                   "country": "NED",
                   "id": "21cc4579-3a1c-4a8a-bf39-5a7475bb319c",
                   "name": "Teun BOER",
-                  "team": "Netherlands"
+                  "team": "Netherlands",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/teun-boer.jpg"
                 },
                 "rank": 4,
                 "splits": [
@@ -5299,7 +5452,8 @@
                   "country": "USA",
                   "id": "50ac7787-2631-46d7-8d95-edc0c560a7ff",
                   "name": "Andrew HEO",
-                  "team": "United States of America"
+                  "team": "United States of America",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/andrew-heo.jpg"
                 },
                 "rank": 5,
                 "splits": [
@@ -5320,7 +5474,7 @@
               }
             ],
             "title": "Heat 2",
-            "video_url": "TODO"
+            "video_url": "https://gml-hackathon-isu.oss-eu-central-1.aliyuncs.com/videos/fca24ec1-f917-47f3-9fca-1d21e68d5f8a/e647cf4c-c345-4eb0-9384-86d73e8bc46a.webm"
           },
           {
             "hype_score": 3.5,
@@ -5338,7 +5492,8 @@
                   "country": "JPN",
                   "id": "a15aaec4-779d-4ca4-916a-6589b7678c2f",
                   "name": "Shogo MIYATA",
-                  "team": "Japan"
+                  "team": "Japan",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/shogo-miyata.jpg"
                 },
                 "rank": 1,
                 "splits": [
@@ -5371,7 +5526,8 @@
                   "country": "CAN",
                   "id": "c4b9df64-f59a-4f18-b837-0de23875f136",
                   "name": "Jordan PIERRE-GILLES",
-                  "team": "Canada"
+                  "team": "Canada",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/jordan-pierre-gilles.jpg"
                 },
                 "rank": 2,
                 "splits": [
@@ -5404,7 +5560,8 @@
                   "country": "LAT",
                   "id": "013f54e5-d12a-4970-84bb-e2e40a383950",
                   "name": "Roberts KRUZBERGS",
-                  "team": "Latvia"
+                  "team": "Latvia",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/roberts-kruzbergs.jpg"
                 },
                 "rank": 3,
                 "splits": [
@@ -5437,7 +5594,8 @@
                   "country": "POL",
                   "id": "b04d2e6d-b92c-4548-ac22-e5930ca27da4",
                   "name": "Michal NIEWINSKI",
-                  "team": "Poland"
+                  "team": "Poland",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/michal-niewinski.jpg"
                 },
                 "rank": 4,
                 "splits": [
@@ -5470,7 +5628,8 @@
                   "country": "ITA",
                   "id": "996efec1-974c-4d9d-8e24-17babe3ddf17",
                   "name": "Lorenzo PREVITALI",
-                  "team": "Italy"
+                  "team": "Italy",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/lorenzo-previtali.jpg"
                 },
                 "rank": 5,
                 "splits": [
@@ -5503,7 +5662,8 @@
                   "country": "BEL",
                   "id": "5dc025c0-4553-4107-b42f-a7a6794f8495",
                   "name": "Stijn DESMET",
-                  "team": "Belgium"
+                  "team": "Belgium",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/stijn-desmet.jpg"
                 },
                 "rank": 6,
                 "splits": [
@@ -5532,7 +5692,7 @@
               }
             ],
             "title": "Heat 3",
-            "video_url": "TODO"
+            "video_url": "https://gml-hackathon-isu.oss-eu-central-1.aliyuncs.com/videos/fca24ec1-f917-47f3-9fca-1d21e68d5f8a/cab8b3e6-7699-4624-864f-117c0810d859.webm"
           },
           {
             "hype_score": 4.0,
@@ -5550,7 +5710,8 @@
                   "country": "CAN",
                   "id": "f7bdc857-3997-4abc-bfc9-80ee330f8563",
                   "name": "William DANDJINOU",
-                  "team": "Canada"
+                  "team": "Canada",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/william-dandjinou.jpg"
                 },
                 "rank": 1,
                 "splits": [
@@ -5583,7 +5744,8 @@
                   "country": "KOR",
                   "id": "1109e535-8491-4985-857e-610f26178f4c",
                   "name": "Tae Sung KIM",
-                  "team": "Republic of Korea"
+                  "team": "Republic of Korea",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/tae-sung-kim.jpg"
                 },
                 "rank": 2,
                 "splits": [
@@ -5616,7 +5778,8 @@
                   "country": "CRO",
                   "id": "29659c64-b0e6-4e52-8121-665fcca355d7",
                   "name": "Martin KOLENC",
-                  "team": "Croatia"
+                  "team": "Croatia",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/martin-kolenc.jpg"
                 },
                 "rank": 3,
                 "splits": [
@@ -5649,7 +5812,8 @@
                   "country": "HUN",
                   "id": "4db2541f-8c53-49cb-af7d-ff587761fd00",
                   "name": "Peter JASZAPATI",
-                  "team": "Hungary"
+                  "team": "Hungary",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/peter-jaszapati.jpg"
                 },
                 "rank": 4,
                 "splits": [
@@ -5682,7 +5846,8 @@
                   "country": "KOR",
                   "id": "46283c04-b51a-47f3-ac99-fe66e7dd778d",
                   "name": "Janghyuk PARK",
-                  "team": "Republic of Korea"
+                  "team": "Republic of Korea",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/jang-hyuk-park.jpg"
                 },
                 "rank": 5,
                 "splits": [
@@ -5715,7 +5880,8 @@
                   "country": "KOR",
                   "id": "af470988-b4c5-4d6a-b176-82176f4743e7",
                   "name": "Jiwon PARK",
-                  "team": "Republic of Korea"
+                  "team": "Republic of Korea",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/ji-won-park.jpg"
                 },
                 "rank": null,
                 "splits": [],
@@ -5723,7 +5889,7 @@
               }
             ],
             "title": "Heat 4",
-            "video_url": "TODO"
+            "video_url": "https://gml-hackathon-isu.oss-eu-central-1.aliyuncs.com/videos/fca24ec1-f917-47f3-9fca-1d21e68d5f8a/10afd586-a194-42c6-9ba6-66740ef04f95.webm"
           }
         ]
       },
@@ -5747,7 +5913,8 @@
                   "country": "CAN",
                   "id": "f75b0c0f-107d-4474-bb47-45b2926ff298",
                   "name": "Steven DUBOIS",
-                  "team": "Canada"
+                  "team": "Canada",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/steven-dubois.jpg"
                 },
                 "rank": 1,
                 "splits": [
@@ -5780,7 +5947,8 @@
                   "country": "USA",
                   "id": "2560bda6-2a9e-4b0c-8adf-a91b273d71b2",
                   "name": "Brandon KIM",
-                  "team": "United States of America"
+                  "team": "United States of America",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/brandon-kim.jpg"
                 },
                 "rank": 2,
                 "splits": [
@@ -5813,7 +5981,8 @@
                   "country": "CHN",
                   "id": "59ae22e1-2772-412d-8714-8ac113571053",
                   "name": "Shaoang LIU",
-                  "team": "China"
+                  "team": "China",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/shaoang-liu-2.jpg"
                 },
                 "rank": 3,
                 "splits": [
@@ -5846,7 +6015,8 @@
                   "country": "NED",
                   "id": "ff9963a6-23ac-4c1d-ae21-1c5028264d69",
                   "name": "Jens VAN 'T WOUT",
-                  "team": "Netherlands"
+                  "team": "Netherlands",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/jens-van-t-wout.jpg"
                 },
                 "rank": 4,
                 "splits": [
@@ -5879,7 +6049,8 @@
                   "country": "NED",
                   "id": "29f872c9-cead-450c-9997-3b6d6dacc1e8",
                   "name": "Itzhak DE LAAT",
-                  "team": "Netherlands"
+                  "team": "Netherlands",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/itzhak-de-laat.jpg"
                 },
                 "rank": 5,
                 "splits": [
@@ -5908,7 +6079,7 @@
               }
             ],
             "title": "Heat 1",
-            "video_url": "TODO"
+            "video_url": "https://gml-hackathon-isu.oss-eu-central-1.aliyuncs.com/videos/fca24ec1-f917-47f3-9fca-1d21e68d5f8a/9e2cf475-8cab-43f2-8653-9ed5d401d37a.webm"
           },
           {
             "hype_score": 5.5,
@@ -5926,7 +6097,8 @@
                   "country": "LAT",
                   "id": "013f54e5-d12a-4970-84bb-e2e40a383950",
                   "name": "Roberts KRUZBERGS",
-                  "team": "Latvia"
+                  "team": "Latvia",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/roberts-kruzbergs.jpg"
                 },
                 "rank": 1,
                 "splits": [
@@ -5959,7 +6131,8 @@
                   "country": "CAN",
                   "id": "c4b9df64-f59a-4f18-b837-0de23875f136",
                   "name": "Jordan PIERRE-GILLES",
-                  "team": "Canada"
+                  "team": "Canada",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/jordan-pierre-gilles.jpg"
                 },
                 "rank": 2,
                 "splits": [
@@ -5992,7 +6165,8 @@
                   "country": "KOR",
                   "id": "1109e535-8491-4985-857e-610f26178f4c",
                   "name": "Tae Sung KIM",
-                  "team": "Republic of Korea"
+                  "team": "Republic of Korea",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/tae-sung-kim.jpg"
                 },
                 "rank": 3,
                 "splits": [
@@ -6025,7 +6199,8 @@
                   "country": "JPN",
                   "id": "a15aaec4-779d-4ca4-916a-6589b7678c2f",
                   "name": "Shogo MIYATA",
-                  "team": "Japan"
+                  "team": "Japan",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/shogo-miyata.jpg"
                 },
                 "rank": 4,
                 "splits": [
@@ -6058,7 +6233,8 @@
                   "country": "CAN",
                   "id": "f7bdc857-3997-4abc-bfc9-80ee330f8563",
                   "name": "William DANDJINOU",
-                  "team": "Canada"
+                  "team": "Canada",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/william-dandjinou.jpg"
                 },
                 "rank": null,
                 "splits": [],
@@ -6066,7 +6242,7 @@
               }
             ],
             "title": "Heat 2",
-            "video_url": "TODO"
+            "video_url": "https://gml-hackathon-isu.oss-eu-central-1.aliyuncs.com/videos/fca24ec1-f917-47f3-9fca-1d21e68d5f8a/3b236f9b-4609-4021-8a3e-becb0deddb15.webm"
           }
         ]
       },
@@ -6090,7 +6266,8 @@
                   "country": "CAN",
                   "id": "f75b0c0f-107d-4474-bb47-45b2926ff298",
                   "name": "Steven DUBOIS",
-                  "team": "Canada"
+                  "team": "Canada",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/steven-dubois.jpg"
                 },
                 "rank": 1,
                 "splits": [
@@ -6123,7 +6300,8 @@
                   "country": "CAN",
                   "id": "c4b9df64-f59a-4f18-b837-0de23875f136",
                   "name": "Jordan PIERRE-GILLES",
-                  "team": "Canada"
+                  "team": "Canada",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/jordan-pierre-gilles.jpg"
                 },
                 "rank": 2,
                 "splits": [
@@ -6156,7 +6334,8 @@
                   "country": "LAT",
                   "id": "013f54e5-d12a-4970-84bb-e2e40a383950",
                   "name": "Roberts KRUZBERGS",
-                  "team": "Latvia"
+                  "team": "Latvia",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/roberts-kruzbergs.jpg"
                 },
                 "rank": 3,
                 "splits": [
@@ -6189,7 +6368,8 @@
                   "country": "JPN",
                   "id": "a15aaec4-779d-4ca4-916a-6589b7678c2f",
                   "name": "Shogo MIYATA",
-                  "team": "Japan"
+                  "team": "Japan",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/shogo-miyata.jpg"
                 },
                 "rank": 4,
                 "splits": [
@@ -6222,7 +6402,8 @@
                   "country": "USA",
                   "id": "2560bda6-2a9e-4b0c-8adf-a91b273d71b2",
                   "name": "Brandon KIM",
-                  "team": "United States of America"
+                  "team": "United States of America",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/brandon-kim.jpg"
                 },
                 "rank": 5,
                 "splits": [
@@ -6251,7 +6432,7 @@
               }
             ],
             "title": "Final A",
-            "video_url": "TODO"
+            "video_url": "https://gml-hackathon-isu.oss-eu-central-1.aliyuncs.com/videos/fca24ec1-f917-47f3-9fca-1d21e68d5f8a/8e64987b-7cd5-4d05-8b97-6655d3e142c4.webm"
           },
           {
             "hype_score": 1.0,
@@ -6269,7 +6450,8 @@
                   "country": "NED",
                   "id": "ff9963a6-23ac-4c1d-ae21-1c5028264d69",
                   "name": "Jens VAN 'T WOUT",
-                  "team": "Netherlands"
+                  "team": "Netherlands",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/jens-van-t-wout.jpg"
                 },
                 "rank": 1,
                 "splits": [
@@ -6302,7 +6484,8 @@
                   "country": "NED",
                   "id": "29f872c9-cead-450c-9997-3b6d6dacc1e8",
                   "name": "Itzhak DE LAAT",
-                  "team": "Netherlands"
+                  "team": "Netherlands",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/itzhak-de-laat.jpg"
                 },
                 "rank": 2,
                 "splits": [
@@ -6335,7 +6518,8 @@
                   "country": "KOR",
                   "id": "1109e535-8491-4985-857e-610f26178f4c",
                   "name": "Tae Sung KIM",
-                  "team": "Republic of Korea"
+                  "team": "Republic of Korea",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/tae-sung-kim.jpg"
                 },
                 "rank": 3,
                 "splits": [
@@ -6368,7 +6552,8 @@
                   "country": "CHN",
                   "id": "59ae22e1-2772-412d-8714-8ac113571053",
                   "name": "Shaoang LIU",
-                  "team": "China"
+                  "team": "China",
+                  "thumbnail_image": "https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Fansite/Short-Track/2024-2025/Skater-Portraits/shaoang-liu-2.jpg"
                 },
                 "rank": null,
                 "splits": [],
@@ -6376,7 +6561,7 @@
               }
             ],
             "title": "Final B",
-            "video_url": "TODO"
+            "video_url": "https://gml-hackathon-isu.oss-eu-central-1.aliyuncs.com/videos/fca24ec1-f917-47f3-9fca-1d21e68d5f8a/2449ef8c-2c11-4893-9f8f-ae0c63291495.webm"
           }
         ]
       }

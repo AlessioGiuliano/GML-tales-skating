@@ -1,12 +1,16 @@
 import React from "react";
-import { Competition } from "@/types";
+import { Competition, SupportedTeam, Race } from "@/types";
+import countryFlag, { countryToFlagMap } from "./CountryFlag";
+import { TEAMS } from "../constants";
 
 interface BracketTournamentViewProps {
     competition: Competition;
+    supportedTeam?: SupportedTeam | null;
 }
 
 const BracketTournamentView: React.FC<BracketTournamentViewProps> = ({
                                                                          competition,
+                                                                         supportedTeam,
                                                                      }) => {
     if (!competition?.phases?.length) return <p>No phases available</p>;
 
@@ -19,7 +23,7 @@ const BracketTournamentView: React.FC<BracketTournamentViewProps> = ({
     const rightPhases = [...phases.slice(0, finalsIndex)].reverse();
     const finals = phases[finalsIndex];
 
-    const splitRaces = (races: any[]) => {
+    const splitRaces = (races: Race[]) => {
         const half = Math.ceil(races.length / 2);
         return {
             left: races.slice(0, half),
@@ -38,22 +42,22 @@ const BracketTournamentView: React.FC<BracketTournamentViewProps> = ({
         </h2>
     );
 
-    // === RACE CARD WITH HYPE BADGE + CLICKABLE SCROLL ===
     const RaceCard = ({
                           title,
                           color = "white",
                           hype,
                           phaseName,
                           raceId,
+                          results,
                       }: {
         title: string;
         color?: string;
         hype?: number;
         phaseName: string;
         raceId: string;
+        results: Race["results"];
     }) => {
         const isFinal = color === "yellow";
-        hype = Math.random() * 10; // TODO: use real hype score
 
         const hypeColor =
             hype !== undefined
@@ -66,6 +70,21 @@ const BracketTournamentView: React.FC<BracketTournamentViewProps> = ({
 
         const isHot = hype !== undefined && hype >= 7;
 
+        const hasSupportedTeam =
+            supportedTeam &&
+            results?.some(
+                (r) =>
+                    r.athlete.country.toLowerCase() ===
+                    supportedTeam.toLowerCase()
+            );
+
+        const flagEmoji = hasSupportedTeam
+            ? countryToFlagMap[supportedTeam]
+            : null;
+
+        const foundTeam = TEAMS.find((t) => t.iso_name === supportedTeam);
+        const teamColor = hasSupportedTeam ? foundTeam?.bgColor : null;
+
         const anchorId = `${phaseName.toLowerCase().replace(/\s+/g, "-")}-${raceId}`;
 
         const handleClick = (e: React.MouseEvent) => {
@@ -73,50 +92,75 @@ const BracketTournamentView: React.FC<BracketTournamentViewProps> = ({
             const element = document.getElementById(anchorId);
             if (!element) return;
 
-            // Ask PhaseList to open this section
-            window.dispatchEvent(
-                new CustomEvent("closeAllPhases")
-            );
+            window.dispatchEvent(new CustomEvent("closeAllPhases"));
             window.dispatchEvent(
                 new CustomEvent("openPhaseSection", { detail: { phaseName } })
             );
 
-            // Delay scroll slightly for smoother UX
             setTimeout(() => {
                 const headerOffset = window.innerHeight / 4;
                 const elementPosition = element.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                const offsetPosition =
+                    elementPosition + window.pageYOffset - headerOffset;
                 window.scrollTo({ behavior: "smooth", top: offsetPosition });
                 setTimeout(() => {
                     element.classList.add("animate-glow-highlight");
-                    setTimeout(() => element.classList.remove("animate-glow-highlight"), 3000);
-                }, 200)
+                    setTimeout(
+                        () => element.classList.remove("animate-glow-highlight"),
+                        3000
+                    );
+                }, 200);
             }, 250);
         };
 
         return (
             <a href={`#${anchorId}`} onClick={handleClick}>
-                <div
-                    className={`relative px-3 py-3 rounded-md cursor-pointer font-semibold shadow-md transition-all duration-200 group
-        ${
-                        isFinal
-                            ? "bg-gradient-to-br from-yellow-300 to-amber-400 text-blue-900 shadow-yellow-300/30 hover:scale-105"
-                            : "bg-white/95 text-blue-900 hover:bg-white hover:shadow-xl hover:-translate-y-[2px]"
-                    }`}
-                >
-                    {title}
-
-                    {hype !== undefined && (
+                <div className="relative group">
+                    {/* === Highlight border if supported team participates === */}
+                    {hasSupportedTeam && teamColor && (
                         <div
-                            className={`absolute -top-2 -right-2 text-[10px] font-bold text-white 
-              bg-gradient-to-br ${hypeColor} rounded-full px-[6px] py-[2px] shadow-md
-              border border-white/40 ${
-                                isHot ? "animate-pulse-glow shadow-orange-500/50" : ""
-                            }`}
-                        >
-                            {hype.toFixed(1)}
-                        </div>
+                            className={`absolute -inset-[2px] rounded-lg border-2 bg-gradient-to-br ${hypeColor}
+                            ${isHot ? "animate-pulse-glow shadow-orange-500/50" : "shadow-md"}
+                            pointer-events-none`}
+                            style={{
+                                borderColor: teamColor,
+                            }}
+                        />
                     )}
+
+                    <div
+                        className={`relative px-3 py-3 rounded-md cursor-pointer font-semibold shadow-md transition-all duration-200 z-10
+                        ${
+                            isFinal
+                                ? "bg-gradient-to-br from-yellow-300 to-amber-400 text-blue-900 shadow-yellow-300/30 hover:scale-105"
+                                : "bg-white/95 text-blue-900 hover:bg-white hover:shadow-xl hover:-translate-y-[2px]"
+                        }`}
+                    >
+                        {title}
+
+                        {/* === Hype badge === */}
+                        {hype !== undefined && (
+                            <div
+                                className={`absolute -top-2 -right-2 text-[10px] font-bold text-white 
+                                bg-gradient-to-br ${hypeColor} rounded-full px-[6px] py-[2px] shadow-md
+                                border border-white/40 ${
+                                    isHot ? "animate-pulse-glow shadow-orange-500/50" : ""
+                                }`}
+                            >
+                                {hype.toFixed(1)}
+                            </div>
+                        )}
+
+                        {/* === Supported team flag === */}
+                        {hasSupportedTeam && flagEmoji && (
+                            <div
+                                className="absolute -bottom-2 -left-2 w-6 h-6 rounded-full bg-white shadow-md flex items-center justify-center text-lg"
+                                title={supportedTeam?.name}
+                            >
+                                {flagEmoji}
+                            </div>
+                        )}
+                    </div>
                 </div>
             </a>
         );
@@ -133,6 +177,23 @@ const BracketTournamentView: React.FC<BracketTournamentViewProps> = ({
             {/* Decorative glow */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[70%] h-[150px] bg-gradient-to-r from-cyan-400/30 via-blue-500/30 to-cyan-400/30 blur-3xl rounded-full opacity-50 pointer-events-none" />
 
+            {/* === Intro Section === */}
+            <div className="px-6 mb-10 text-center max-w-3xl mx-auto animate-fadeIn">
+                <h2 className="text-2xl md:text-3xl font-extrabold mb-4 bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent">
+                    Competition Breakdown
+                </h2>
+                <p className="text-white/80 leading-relaxed text-sm md:text-base">
+                    This section displays the <span className="text-cyan-300 font-semibold">list of races</span> grouped by competition phase.
+                    Each card represents an individual race. In the top right corner, you will find the
+                    <span className="text-pink-400 font-semibold"> hype score</span>, which measures how exciting and entertaining the race was.
+                </p>
+                <p className="text-white/80 leading-relaxed text-sm md:text-base mt-3">
+                    Races containing athletes from your <span className="text-orange-400 font-semibold">supported team</span> are highlighted.
+                    By clicking on a race, you will be taken directly to its
+                    <span className="text-cyan-300 font-semibold"> replay</span> with full description and precise timings.
+                </p>
+            </div>
+
             {/* ===== MOBILE VIEW ===== */}
             <div className="block xl:hidden px-6">
                 {phases.map((phase, i) => (
@@ -147,6 +208,7 @@ const BracketTournamentView: React.FC<BracketTournamentViewProps> = ({
                                         hype={race.hype_score}
                                         phaseName={phase.name}
                                         raceId={race.id}
+                                        results={race.results}
                                     />
                                 ))
                             ) : (
@@ -174,6 +236,7 @@ const BracketTournamentView: React.FC<BracketTournamentViewProps> = ({
                                     hype={r.hype_score}
                                     phaseName={preliminaries.name}
                                     raceId={r.id}
+                                    results={r.results}
                                 />
                             ))}
                         </div>
@@ -195,6 +258,7 @@ const BracketTournamentView: React.FC<BracketTournamentViewProps> = ({
                                     hype={r.hype_score}
                                     phaseName={heats.name}
                                     raceId={r.id}
+                                    results={r.results}
                                 />
                             ))}
                         </div>
@@ -208,7 +272,9 @@ const BracketTournamentView: React.FC<BracketTournamentViewProps> = ({
                     <div className="flex gap-4 justify-end items-center">
                         {leftPhases.map((phase, i) => {
                             if (
-                                ["preliminaries", "heats"].includes(phase.name.toLowerCase())
+                                ["preliminaries", "heats"].includes(
+                                    phase.name.toLowerCase()
+                                )
                             )
                                 return null;
                             const { left } = splitRaces(phase.races || []);
@@ -229,11 +295,14 @@ const BracketTournamentView: React.FC<BracketTournamentViewProps> = ({
                                                         hype={r.hype_score}
                                                         phaseName={phase.name}
                                                         raceId={r.id}
+                                                        results={r.results}
                                                     />
                                                 </li>
                                             ))
                                         ) : (
-                                            <li className="italic text-gray-300">No races</li>
+                                            <li className="italic text-gray-300">
+                                                No races
+                                            </li>
                                         )}
                                     </ul>
                                 </div>
@@ -256,6 +325,7 @@ const BracketTournamentView: React.FC<BracketTournamentViewProps> = ({
                                             hype={r.hype_score}
                                             phaseName={finals.name}
                                             raceId={r.id}
+                                            results={r.results}
                                         />
                                     </li>
                                 ))
@@ -269,7 +339,9 @@ const BracketTournamentView: React.FC<BracketTournamentViewProps> = ({
                     <div className="flex gap-4 justify-start items-center">
                         {rightPhases.map((phase, i) => {
                             if (
-                                ["preliminaries", "heats"].includes(phase.name.toLowerCase())
+                                ["preliminaries", "heats"].includes(
+                                    phase.name.toLowerCase()
+                                )
                             )
                                 return null;
                             const { right } = splitRaces(phase.races || []);
@@ -290,11 +362,14 @@ const BracketTournamentView: React.FC<BracketTournamentViewProps> = ({
                                                         hype={r.hype_score}
                                                         phaseName={phase.name}
                                                         raceId={r.id}
+                                                        results={r.results}
                                                     />
                                                 </li>
                                             ))
                                         ) : (
-                                            <li className="italic text-gray-300">No races</li>
+                                            <li className="italic text-gray-300">
+                                                No races
+                                            </li>
                                         )}
                                     </ul>
                                 </div>

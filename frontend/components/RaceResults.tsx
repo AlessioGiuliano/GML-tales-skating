@@ -1,14 +1,22 @@
 import React, { useState } from 'react';
 import { RaceResultsProps, Result } from '../types';
 import CountryFlag from './CountryFlag';
+import {TEAMS} from "../constants";
 
-const AthleteBio: React.FC<{ athlete: Result['athlete'] }> = ({ athlete }) => (
-    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 z-20 p-3 bg-gray-800 border border-gray-600 rounded-lg shadow-xl text-sm text-left opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-        <p className="font-bold">{athlete.name}</p>
-        <p className="text-xs text-white/70">{athlete.team}</p>
-        <p className="mt-2 text-white/90">{athlete.bio}</p>
-    </div>
-);
+const AthleteBio: React.FC<{ athlete: Result['athlete'] }> = ({ athlete }) => {
+    const foundTeam = TEAMS.find(
+        (t) => t.iso_name.toLowerCase() === athlete.country.toLowerCase()
+    );
+    return (
+        <div
+            className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 z-20 p-3 bg-gray-800 border border-gray-600 rounded-lg shadow-xl text-sm text-left opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+            <p className="font-bold">{athlete.name}</p>
+            <p className="text-xs text-white/70"><CountryFlag country={athlete.country}/> {foundTeam?.name ?? athlete.team}
+            </p>
+            <p className="mt-2 text-white/90 text-xs">{athlete.bio}</p>
+        </div>
+    );
+};
 
 const RaceResults: React.FC<RaceResultsProps> = ({ results }) => {
     const [expandedResult, setExpandedResult] = useState<number | null>(null);

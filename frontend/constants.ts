@@ -1,4 +1,4 @@
-import { Team, Competition } from './types';
+import {Team} from './types';
 
 export const TEAMS: Team[] = [
     { id: 1, name: 'Korean White Tigers', nameParts: ['Korean', 'White Tigers'], country: 'South Korea', iso_name: 'KOR', bgColor: '#EAEAEA', textColor: '#001F60', photo_url: '/team-photos/south_korea.png' },
@@ -15,11 +15,11 @@ export const TEAMS: Team[] = [
     { id: 12, name: 'French Roosters', nameParts: ['French', 'Roosters'], country: 'France', iso_name: 'FRA', bgColor: '#002395', textColor: '#FFFFFF', photo_url: '/team-photos/france.jpg' },
     { id: 13, name: 'British Royals', nameParts: ['British', 'Royals'], country: 'Great Britain', iso_name: 'GBR', bgColor: '#012169', textColor: '#FFFFFF', photo_url: '/team-photos/great_britain.jpg' },
     { id: 14, name: 'Ukrainian Wild Cats', nameParts: ['Ukrainian', 'Wild Cats'], country: 'Ukraine', iso_name: 'UKR', bgColor: '#0057B7', textColor: '#FFDD00', photo_url: '/team-photos/ukraine.jpg' },
-    { id: 15, name: 'Croatian Dalmatians', nameParts: ['Croatian', 'Dalmatians'], country: 'Croatia', iso_name: 'HRV', bgColor: '#1C1C1C', textColor: '#FFFFFF', photo_url: '/team-photos/croatia.jpg' },
-    { id: 16, name: 'German Wolves', nameParts: ['German', 'Wolves'], country: 'Germany', iso_name: 'DEU', bgColor: '#1C1C1C', textColor: '#FFCE00', photo_url: '/team-photos/germany.jpg' },
+    { id: 15, name: 'Croatian Dalmatians', nameParts: ['Croatian', 'Dalmatians'], country: 'Croatia', iso_name: 'CRO', bgColor: '#1C1C1C', textColor: '#FFFFFF', photo_url: '/team-photos/croatia.jpg' },
+    { id: 16, name: 'German Wolves', nameParts: ['German', 'Wolves'], country: 'Germany', iso_name: 'GER', bgColor: '#1C1C1C', textColor: '#FFCE00', photo_url: '/team-photos/germany.jpg' },
     { id: 17, name: 'Czechia Ice Spiders', nameParts: ['Czechia', 'Ice Spiders'], country: 'Czechia', iso_name: 'CZE', bgColor: '#003153', textColor: '#FFFFFF', photo_url: '/team-photos/czechia.jpg' },
-    { id: 18, name: 'Bulgarian Kings', nameParts: ['Bulgarian', 'Kings'], country: 'Bulgaria', iso_name: 'BGR', bgColor: '#222222', textColor: '#FFFFFF', photo_url: '/team-photos/bulgaria.jpg' },
-    { id: 19, name: 'Latvian Golden Stars', nameParts: ['Latvian', 'Golden Stars'], country: 'Latvia', iso_name: 'LVA', bgColor: '#FDFBF8', textColor: '#A4343A', photo_url: '/team-photos/latvia.png' },
+    { id: 18, name: 'Bulgarian Kings', nameParts: ['Bulgarian', 'Kings'], country: 'Bulgaria', iso_name: 'BUL', bgColor: '#222222', textColor: '#FFFFFF', photo_url: '/team-photos/bulgaria.jpg' },
+    { id: 19, name: 'Latvian Golden Stars', nameParts: ['Latvian', 'Golden Stars'], country: 'Latvia', iso_name: 'LAT', bgColor: '#FDFBF8', textColor: '#A4343A', photo_url: '/team-photos/latvia.png' },
     { id: 20, name: 'Australian Racing Roos', nameParts: ['Australian', 'Racing Roos'], country: 'Australia', iso_name: 'AUS', bgColor: '#006A4E', textColor: '#FFCD00', photo_url: '/team-photos/australia.jpg' },
     { id: 21, name: 'Turkish Anatolian Pars', nameParts: ['Turkish', 'Anatolian Pars'], country: 'Turkey', iso_name: 'TUR', bgColor: '#212121', textColor: '#FFFFFF', photo_url: '/team-photos/turkey.png' },
     { id: 22, name: 'Hong Kong Ice Qilins', nameParts: ['Hong Kong', 'Ice Qilins'], country: 'Hong Kong', iso_name: 'HKG', bgColor: '#E40001', textColor: '#FFFFFF', photo_url: '/team-photos/hong-kong.jpg' },
