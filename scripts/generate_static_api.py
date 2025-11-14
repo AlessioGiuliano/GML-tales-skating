@@ -352,7 +352,7 @@ def build_race(
     race: Race = {
         "id": heat["Id"],
         "title": heat["Name"],
-        "video_url": "TODO",
+        "video_url": f"https://gml-hackathon-isu.oss-eu-central-1.aliyuncs.com/videos/{competition_data["Id"]}/{heat_id}.webm",
         "hype_score": hype_score,
         "personalized_summaries": summaries,
         "results": [],

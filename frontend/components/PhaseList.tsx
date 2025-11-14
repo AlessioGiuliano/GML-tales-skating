@@ -2,24 +2,17 @@ import React, { useEffect, useState } from "react";
 import { PhaseListProps } from "../types";
 import RaceResults from "./RaceResults";
 
-const RaceVideo: React.FC<{ title: string }> = ({ title }) => {
-    const [videoSrc, setVideoSrc] = useState<string>("");
-
-    useEffect(() => {
-        const randomIndex = Math.floor(Math.random() * 9) + 1;
-        setVideoSrc(`/videos/video_${randomIndex}.webm`);
-    }, []);
-
+const RaceVideo: React.FC<{ title: string, video_url: string }> = ({ title, video_url }) => {
     return (
         <video
-            key={videoSrc}
+            key={video_url}
             controls
-            autoPlay
+            // autoPlay
             loop
             muted
             className="w-full rounded-lg border border-blue-500/30 shadow-md"
         >
-            <source src={videoSrc} type="video/webm" />
+            <source src={video_url} type="video/webm" />
             Your browser does not support the video tag.
         </video>
     );
@@ -136,7 +129,7 @@ const PhaseList: React.FC<PhaseListProps> = ({ phases, selectedTeam }) => {
                                                 <h4 className="text-lg font-semibold mb-3 text-blue-300">
                                                     Race Video
                                                 </h4>
-                                                <RaceVideo title={race.title} />
+                                                <RaceVideo title={race.title} video_url={race.video_url} />
                                             </div>
                                             <div>
                                                 <h4 className="text-lg font-semibold mb-3 text-blue-300">
